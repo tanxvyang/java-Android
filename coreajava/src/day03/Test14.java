@@ -2,12 +2,12 @@ package day03;
 
 import java.util.Scanner;
 
-/* Ð¡Ñ§ÊýÑ§¿¼ÊÔÏµÍ³
- * 10Ìâ
- * ÏµÍ³Ëæ»ú³ö2Î»ÊýµÄ+ - * ,/ ÔËËã
- * Ñ§Éú¸ø³ö´ð°¸
- * Åú¸Ä£¬²¢´ò·Ö£¬Ò»Ìâ10·Ö
- * ËùÓÐÊý¾ÝÊ¹ÓÃint ÐÍ*/
+/* Ð¡Ñ§ï¿½ï¿½Ñ§ï¿½ï¿½ï¿½ï¿½ÏµÍ³
+ * 10ï¿½ï¿½
+ * ÏµÍ³ï¿½ï¿½ï¿½ï¿½ï¿½2Î»ï¿½ï¿½ï¿½ï¿½+ - * ,/ ï¿½ï¿½ï¿½ï¿½
+ * Ñ§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½ï¿½ï¿½Ö£ï¿½Ò»ï¿½ï¿½10ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½int ï¿½ï¿½*/
 
 public class Test14 {
 
@@ -17,8 +17,8 @@ public class Test14 {
 		int	score=0;
 		
 		for(int i=0;i<10;i++){
-			System.out.println("µÚ"+(i+1)+"Ìâ:");
-		//³öÌâ£¬²¢±£´æ½á¹û
+			System.out.println("ï¿½ï¿½"+(i+1)+"ï¿½ï¿½:");
+		//ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			  int x = (int)(Math.random()*(99-10+1))+10;
 				int y = (int)(Math.random()*(99-10+1))+10;
 				int z=(int)(Math.random()*(3-0+1))+0;
@@ -45,18 +45,18 @@ public class Test14 {
 				}
 				
 				
-				//´ðÌâ
+				//ï¿½ï¿½ï¿½ï¿½
 				int result =sc.nextInt();
-				//Åú¸Ä
+				//ï¿½ï¿½ï¿½ï¿½
 			
 				if(rs==result){
-					System.out.println("ÕýÈ·");
+					System.out.println("ï¿½ï¿½È·");
 				    score+=10;
 				}else{
-					System.out.println("´íÎó");
+					System.out.println("ï¿½ï¿½ï¿½ï¿½");
 				}
 		}
-		System.out.println("³É¼¨Îª£º"+score+"·Ö");
+		System.out.println("ï¿½É¼ï¿½Îªï¿½ï¿½"+score+"ï¿½ï¿½");
 	}
 
 }

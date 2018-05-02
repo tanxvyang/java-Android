@@ -1,0 +1,26 @@
+
+hotel，test1
+某酒店有10层楼，每层12个房间
+要求为该酒店设计一套简单的前台客房管理程序
+改程序要求可以通过命令行输入命令为客户办理入驻和退房手续
+要求支持通过命令行输入以下命令来完成操作
+search:查询所有房间状态
+int 502 liheng:姓名为liheng的客人入住502房间
+out 502:502房间退房
+quit：退出程序
+
+
+101   102   103   104   105
+empty empty empty empty empty ......
+201   202   203   204   205
+empty empty empty empty emp
+
+房间号=（i+1）*100+（j+1）
+
+
+ //Scanner sc =new Scanner(System.in);
+//        int i=sc.nextInt();//获取int类型
+//        double d= sc.nextDouble();//获取double类型
+//        String s= sc.next();//获取下一个
+//   String s=sc.nextLine();//获取下一行
+//        System.out.println(s);

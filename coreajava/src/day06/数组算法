@@ -1,6 +1,6 @@
 
-hotel，test1
-某酒店有10层楼，每层12个房间
+1.hotel，test1
+     某酒店有10层楼，每层12个房间
 要求为该酒店设计一套简单的前台客房管理程序
 改程序要求可以通过命令行输入命令为客户办理入驻和退房手续
 要求支持通过命令行输入以下命令来完成操作
@@ -24,3 +24,52 @@ empty empty empty empty emp
 //        String s= sc.next();//获取下一个
 //   String s=sc.nextLine();//获取下一行
 //        System.out.println(s);
+
+
+2.讲一个数字插入到一个已经有顺序的数组中，要求结果也是有序地  test 2
+
+     // 当插入位置为1时   Exception in thread "main" java.lang.ArrayIndexOutOfBoundsException: -1  数组下标越界异常
+   交换a和b的值test3
+ 3.排序test4
+     选择排序， selectSort(a)
+     冒泡排序，  bubleSort(a);
+     插入排序， insertSort(a);
+     快速排序  quickSort(a,0,a.length-1);
+
+
+      Arrays.sort(a);方法，排序方法可直接调用
+
+   //cong1970年1月1日00点00分00秒到当前时间的毫秒数；加八小时时差
+          long start = System.currentTimeMillis();
+         selectSort(a);
+
+          System.out.println(Arrays.toString(a));
+
+4. 矩阵转换 Test5
+
+
+1  2  3  4  5
+6  7  8  9  10
+11 12 13 14 15
+16 17 18 19 20
+
+
+5 五子棋游戏  FiveChess
+  0 1 2 3 4 5 6 7 8 9 a b c d e f
+0 * * * * * * * * * * * * * * * *
+1 * * * * * * * * * * * * * * * *
+2 * * * * * * * * * * * * * * * *
+3 * * * * * * * * * * * * * * * *
+4 * * * * * * * * * * * * * * * *
+5 * * * * * * * * * * * * * * * *
+6 * * * * * * * * * * * * * * * *
+7 * * * * * * * * * * * * * * * *
+8 * * * * * * * * * * * * * * * *
+9 * * * * * * * * * * * * * * * *
+a * * * * 0 @ * * * * * * * * * *
+b * * * 0 @ * * * * * * * * * * *
+c * * 0 @ * * * * * * * * * * * *
+d * @ @ * 0 0 * * * * * * * * * *
+e * @ @ @ @ 0 0 0 * * * * * * * *
+f * * * * * * * * * * * * * * * *
+黑赢

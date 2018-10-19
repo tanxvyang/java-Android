@@ -1,0 +1,9 @@
+
+cmd  ->  mstsc
+118.24.215.72
+Administrator
+tanxvyang.610322
+
+
+tanxv.xyz
+1097751

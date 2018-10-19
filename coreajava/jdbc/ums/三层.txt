@@ -1,0 +1,63 @@
+系统架构
+表示层	ui servlet controller action
+	显示逻辑
+	跟用户做数据交互
+	并调用业务层完成核心业务逻辑
+
+
+业务层	service
+	处理核心的业务逻辑
+	并调用持久层完成持久化操作
+	处理交叉业务逻辑（事务，日志，安全，缓存等）
+
+持久层	dao
+	单一的持久化操作
+
+域层	entity	vo
+	数据的载体
+
+	
+
+
+class AccountVO{
+	int fromAccountId
+	int toAccountId
+	double money
+}
+
+
+转账(AccountVO vo){
+	//根据fromAccountId查询账户信息
+
+	//判断账户是否存在
+
+	//判断余额是否够
+
+	//fromAccount.money-money//更新数据库
+	update()
+
+	//toAccount.money+money//更新数据库
+	update()
+}
+
+select(){
+}
+
+update(){
+	update t_account
+	set money=?
+	where id=?
+}
+
+立项
+需求分析
+概要设计
+详细设计
+开发
+测试
+部署
+维护
+
+
+Emp		Dept
+  Dept d

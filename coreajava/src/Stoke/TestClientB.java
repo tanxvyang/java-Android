@@ -18,7 +18,7 @@ public class TestClientB {
         try {
 
 
-                s=new Socket("192.168.124.1",9999);//192.168.124.1
+                s=new Socket("127.0.0.1",9999);//192.168.124.1
             System.out.println("输入姓名:");
             String name=sc.nextLine();//输入一行
 

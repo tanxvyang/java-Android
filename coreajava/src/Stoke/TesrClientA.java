@@ -15,7 +15,7 @@ public class TesrClientA {
         BufferedReader br=null; //接收流读一行
         try {
             //和服务器连接
-            s=new Socket("192.168.72.1",9999);
+            s=new Socket("127.0.0.1",9999);
             in=s.getInputStream();
             br=new BufferedReader(
                       new InputStreamReader(in));

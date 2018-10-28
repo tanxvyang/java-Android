@@ -1,0 +1,15 @@
+网络
+     socket  套接字
+
+     IP
+     port
+
+     lock
+
+
+     //testclientA &  testserverA   服务器无人访问显示111,接入显示222连接后输出IP地址并将ip信息返回客户端
+
+
+     //TestClientB  & TestServerB  服务器开启,并等待,客户端输入姓名,服务器接受显示并向客户端发送hello+name
+
+     //TestClientB &TestServerC  加入阻塞状态当name=aaa时等待,暂时不返回数据,其他则先进行

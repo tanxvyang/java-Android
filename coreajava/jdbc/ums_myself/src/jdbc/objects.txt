@@ -1,2 +1,2 @@
-userDao=mmmmmmm
+userDao=dao.ompl.UserDaoImpl
 userService=service.impl.UserServiceImpl

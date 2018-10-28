@@ -1,0 +1,47 @@
+>输入输出
+	输入
+		键盘获取输入
+		Scanner in = new Scanner(System.in);
+		s=in.nextInt();
+	输出
+		System.out.print();  //不带换行的输出，输出 double值时最多输出16位
+		System.out.println();//带换行的输出，16位
+		Ststem.out.printf("%.3f");//不换行，可控制输出位数,%.3f表示接下来的数为浮点数，舍入到三位小数
+格式说明符
+	%d	十进制整数				12345
+	%08d	添加前导零，确保显示的值至少包含8位	00012345
+	%f	浮点数					6.789000
+	%.2f	舍入到两位小数				6.79
+
+>关键词：
+	final	将变量声明成final 意味着对其进行初始化后就不能再对其进行赋值,
+		(常量名全部用大写，单词连接用_连接。：final double CM_PER_INCH = 2.54 )
+
+-----------示例程序------------
+
+import java.util.Scanner;
+/*
+*将厘米数化为英寸数
+*/
+
+public class Convert{
+
+	public static void main(String[] args) {
+		double cm;
+		int feet,inches,remainder;
+		fianl double CM_PER_INCH = 2.54;
+		final int IN_PER_FOOT =12;
+		Scanner in = new Scanner(System.in);
+
+		//提示用户输入值并读取这个值
+		System.out.print("Eactly how many cm?");
+		cm = in.nexDoyble();
+
+		//转换并输出
+		inches = (int)(cm/CM_PER_INCH);
+		feet = inches / IN_PER_FOOT;
+		reainder = inchse	IN_PER_FOOT;
+		System.out.printf("%.2f cm= %d ft,%d in\n",cm,feet,remainder);
+	}
+}
+-----------------------

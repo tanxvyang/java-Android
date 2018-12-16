@@ -14,20 +14,23 @@ public class User implements Serializable {
 	private String username;
 	private String password;
 	private String phone;
-	private Date createDate;
+	private Date registDate;
 	private Integer status;
 	
 	public User() {
 		super();
 	}
 
-	public Date getCreateDate() {
-		return createDate;
+
+	public Date getRegistDate() {
+		return registDate;
 	}
 
-	public void setCreateDate(Date createDate) {
-		this.createDate = createDate;
+
+	public void setRegistDate(Date registDate) {
+		this.registDate = registDate;
 	}
+
 
 	public Integer getId() {
 		return id;

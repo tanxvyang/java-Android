@@ -1,0 +1,40 @@
+静态代理模式 Proxy
+	在不改变现有代码基础上，添加新的功能
+
+	//业务接口/代理接口
+	public interface LOL{
+		public void play();
+	}
+
+	//目标类
+	public class 拳头 implements LOL{
+		public void play(){
+			xxx
+		}
+	}
+
+	//代理类
+	public class 腾讯 implements LOL {
+		
+		private LOL lol;
+
+		public 腾讯(){
+			lol=new 拳头();
+		}
+
+		public void login(String qq){
+		}
+
+		public void play(){
+			//收费
+			lol.play();
+		}
+	}
+
+	//调用者
+	public class Player{
+		main(){
+			LOL lol=new 腾讯();
+			lol.play();
+		}
+	}

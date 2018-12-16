@@ -1,16 +1,12 @@
-package CourseDesign;
+package Stoke;
 
 import java.io.*;
 import java.net.InetSocketAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.security.PrivateKey;
-import java.security.PublicKey;
 
 public class DedignServer {
-
     public static void main(String[] args) throws Exception {
-
         /**
          * 创建服务端套接字
          */
@@ -23,6 +19,7 @@ public class DedignServer {
 
         System.out.println("《《《《网盘开始运行》》》》");
 
+
         /**
          * 监听并接受客户端socket连接,并返回一个socket
          */
@@ -33,75 +30,29 @@ public class DedignServer {
 
         while(true) {
 
-            Socket socket = ss.accept();
+                Socket socket = ss.accept();
 
-            new Thread(new UpLoad(socket)).start();
+                new Thread(new UpLoad(socket)).start();
 
         }
     }
 }
+
 class UpLoad implements Runnable{
 
     private Socket socket = null;
 
-
-
-
-
     public UpLoad(Socket socket) {
-
         this.socket = socket;
     }
 
     @Override
     public void run() {
 
-
         FileOutputStream out = null;
-        PrintWriter pw=null;
-        BufferedReader br=null;
-        OutputStream outputStream=null;
-
-            int i=1;
         try {
-
-//         加阻塞,当访问者是aaa时,sleep
-//
-//            br=new BufferedReader(
-//                    new InputStreamReader(
-//                            socket.getInputStream()));//获得输入流
-//            String name =br.readLine();
-//            System.out.println(name);
-//
-//            pw=new PrintWriter(
-//                    socket.getOutputStream()
-//            );
-//            if ("aaa".equals(name)){//让aaa等待
-//                Thread.sleep(1000);
-//            }
-//            pw.println("hello  "+name);
-//            pw.flush();
-//
-//
-
-
-
-
-
-
-            System.out.println(socket.getInetAddress().getHostAddress()+"已连接");//打印访问地址
-            outputStream=socket.getOutputStream();
-            pw=new PrintWriter(outputStream);
-            pw.println("你是第"+i+"个访问者,你的IP是:"+socket.getInetAddress());//发送数据
-            pw.flush();
-            i++;
-
             // 创建文件输入流，接收客户端的socket中的文件流
-
             InputStream in = socket.getInputStream();
-
-
-
             /**
              * 获取文件名长度
              * 文件格式：文件名长度(数字)\r\文件名\r\n文件内容\r\n
@@ -151,26 +102,12 @@ class UpLoad implements Runnable{
             in.read(by3);
             out.write(by3);
 
-            System.out.println("接收到来自"+socket.getInetAddress().getHostAddress()+"上传的文件,保存位置:"+path);
+            System.out.println("接受到来自"+socket.getInetAddress().getHostAddress()+"上传的文件"+path);
 
         } catch (IOException e) {
             e.printStackTrace();
         }finally {
             // 关闭资源
-
-
-
-            if (pw!=null){
-                pw.close();
-            }
-            if (outputStream!=null){
-                try {
-                    outputStream.close();
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-
             // 关闭输出流
 
                 if(out != null) {
@@ -178,15 +115,19 @@ class UpLoad implements Runnable{
                         out.close();
                     } catch (Exception e) {
                         e.printStackTrace();
+            }finally {
+                out = null;
             }}
             // 关闭socket
-           if (socket!=null){
-               try {
-                   socket.close();
-               } catch (IOException e) {
-
-               }
-           }
+            try {
+                if(socket != null) {
+                    socket.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }finally {
+                socket = null;
+            }
         }
     }
 

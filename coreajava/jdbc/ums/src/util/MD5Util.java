@@ -3,6 +3,8 @@ package util;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+import sun.misc.BASE64Encoder;
+
 public class MD5Util {
 	public static String md5(String src){
 		

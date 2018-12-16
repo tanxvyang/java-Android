@@ -1,25 +1,43 @@
 package service.impl;
 
+import java.sql.Connection;
 import java.util.Date;
 
-import constant.Constant;
-
 import service.UserService;
+import transaction.TransactionManager;
+import util.JdbcUtil;
 import util.MD5Util;
+import constant.Constant;
 import dao.UserDao;
 import entity.User;
 import exception.DuplicateUsernameException;
 import exception.UserDisabledException;
 import exception.UserNotFoundException;
+import factory.ObjectFactory;
 
 public class UserServiceImpl implements UserService {
 
 	public User login(String username, String password) throws UserNotFoundException, UserDisabledException {
-		return null;
+		UserDao userDao=(UserDao) ObjectFactory.getObject("userDao");
+		
+		User user=userDao.selectByUsernameAndPassword(username, MD5Util.md5(password));
+		
+		if(user==null){
+			throw new UserNotFoundException("用户名或密码错误");
+		}
+		
+		if(Constant.USER_STATUS_DISABLE.equals(user.getStatus())){
+			throw new UserDisabledException("用户被禁用");
+		}
+		
+		return user;
 	}
 
+	
 	public void regist(User user) throws DuplicateUsernameException {
-		UserDao userDao=null;
+			
+		UserDao userDao=(UserDao) ObjectFactory.getObject("userDao");
+		
 		//根据用户名查询用户
 		User u=userDao.selectByUsername(user.getUsername());
 		
@@ -30,7 +48,7 @@ public class UserServiceImpl implements UserService {
 		}
 		
 		//设置注册时间
-		user.setCreateDate(new Date());
+		user.setRegistDate(new Date());
 		
 		//设置用户状态为可用状态
 		user.setStatus(Constant.USER_STATUS_ENABLE);
@@ -40,6 +58,7 @@ public class UserServiceImpl implements UserService {
 		
 		//将用户信息保存
 		userDao.insert(user);
+			
 	}
 
 	

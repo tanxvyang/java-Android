@@ -32,6 +32,7 @@ public class Room {
     public Coustomer getCoustomer() {
         return coustomer;
     }
+
     public String toString(){
         if (false==state){
             return "空房";

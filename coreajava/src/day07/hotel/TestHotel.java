@@ -1,4 +1,4 @@
-package day07;
+package day07.hotel;
 
 public class TestHotel {
     public static void main(String[] args) {

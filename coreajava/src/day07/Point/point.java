@@ -10,7 +10,12 @@ public class point {
     private double x;
     private double y;
 
+ public static  int count=0;
 
+ public static void f(){
+     System.out.println(count);
+    // System.out.println(x);//调用失败,static是在类加载时开始的,   类加载时没有x,只有当类创建以后才有x
+ }
 
 
 
@@ -20,6 +25,9 @@ public class point {
     public point(double x, double y) {
         this.x = x;
         this.y = y;
+
+        count++;
+
     }
 
     public point() {

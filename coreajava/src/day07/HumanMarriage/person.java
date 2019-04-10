@@ -1,7 +1,5 @@
 package day07.HumanMarriage;
 
-import day07.Person;
-
 public class person {
     private String name;
     private boolean  sex;

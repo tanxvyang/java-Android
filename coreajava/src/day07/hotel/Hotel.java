@@ -1,4 +1,4 @@
-package day07;
+package day07.hotel;
 
 //酒店
 public class Hotel {

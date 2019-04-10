@@ -1,4 +1,4 @@
-package day07;
+package day07.hotel;
 
 public class Person {
     //特征 属性

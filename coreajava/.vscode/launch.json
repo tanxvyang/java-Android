@@ -1,0 +1,469 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-DedignServer<coreajava>",
+            "request": "launch",
+            "mainClass": "Stoke.DedignServer",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-DesignClient<coreajava>",
+            "request": "launch",
+            "mainClass": "Stoke.DesignClient",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TesrClientA<coreajava>",
+            "request": "launch",
+            "mainClass": "Stoke.TesrClientA",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestClientB<coreajava>",
+            "request": "launch",
+            "mainClass": "Stoke.TestClientB",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestNetwork<coreajava>",
+            "request": "launch",
+            "mainClass": "Stoke.TestNetwork",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestServerA<coreajava>",
+            "request": "launch",
+            "mainClass": "Stoke.TestServerA",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestServerB<coreajava>",
+            "request": "launch",
+            "mainClass": "Stoke.TestServerB",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestServerC<coreajava>",
+            "request": "launch",
+            "mainClass": "Stoke.TestServerC",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test10<coreajava>",
+            "request": "launch",
+            "mainClass": "day03.Test10",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test11<coreajava>",
+            "request": "launch",
+            "mainClass": "day03.Test11",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test12<coreajava>",
+            "request": "launch",
+            "mainClass": "day03.Test12",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test13<coreajava>",
+            "request": "launch",
+            "mainClass": "day03.Test13",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test14<coreajava>",
+            "request": "launch",
+            "mainClass": "day03.Test14",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test15<coreajava>",
+            "request": "launch",
+            "mainClass": "day03.Test15",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test4<coreajava>",
+            "request": "launch",
+            "mainClass": "day03.Test4",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test5<coreajava>",
+            "request": "launch",
+            "mainClass": "day03.Test5",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test6<coreajava>",
+            "request": "launch",
+            "mainClass": "day03.Test6",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test7<coreajava>",
+            "request": "launch",
+            "mainClass": "day03.Test7",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test8<coreajava>",
+            "request": "launch",
+            "mainClass": "day03.Test8",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test9<coreajava>",
+            "request": "launch",
+            "mainClass": "day03.Test9",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test1<coreajava>",
+            "request": "launch",
+            "mainClass": "day04.Test1",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test2<coreajava>",
+            "request": "launch",
+            "mainClass": "day04.Test2",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test3<coreajava>",
+            "request": "launch",
+            "mainClass": "day04.Test3",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test1<coreajava>(1)",
+            "request": "launch",
+            "mainClass": "day05.Test1",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test2<coreajava>(1)",
+            "request": "launch",
+            "mainClass": "day05.Test2",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test3<coreajava>(1)",
+            "request": "launch",
+            "mainClass": "day05.Test3",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test4<coreajava>(1)",
+            "request": "launch",
+            "mainClass": "day05.Test4",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test5<coreajava>(1)",
+            "request": "launch",
+            "mainClass": "day05.Test5",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test6<coreajava>(1)",
+            "request": "launch",
+            "mainClass": "day05.Test6",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test7<coreajava>(1)",
+            "request": "launch",
+            "mainClass": "day05.Test7",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-FiveChess<coreajava>",
+            "request": "launch",
+            "mainClass": "day06.FiveChess",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Hotel<coreajava>",
+            "request": "launch",
+            "mainClass": "day06.Hotel",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test1<coreajava>(2)",
+            "request": "launch",
+            "mainClass": "day06.Test1",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test2<coreajava>(2)",
+            "request": "launch",
+            "mainClass": "day06.Test2",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test3<coreajava>(2)",
+            "request": "launch",
+            "mainClass": "day06.Test3",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test4<coreajava>(2)",
+            "request": "launch",
+            "mainClass": "day06.Test4",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test5<coreajava>(2)",
+            "request": "launch",
+            "mainClass": "day06.Test5",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-number<coreajava>",
+            "request": "launch",
+            "mainClass": "day06.number",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-test<coreajava>",
+            "request": "launch",
+            "mainClass": "day07.Animal.test",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-test01<coreajava>",
+            "request": "launch",
+            "mainClass": "day07.Complete.test01",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-test<coreajava>(1)",
+            "request": "launch",
+            "mainClass": "day07.HumanMarriage.test",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-test<coreajava>(2)",
+            "request": "launch",
+            "mainClass": "day07.IntStaic.test",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestPoint<coreajava>",
+            "request": "launch",
+            "mainClass": "day07.Point.TestPoint",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-test02<coreajava>",
+            "request": "launch",
+            "mainClass": "day07.Point.test02",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestSingleton<coreajava>",
+            "request": "launch",
+            "mainClass": "day07.Singleton.TestSingleton",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test<coreajava>",
+            "request": "launch",
+            "mainClass": "day07.hotel.Test",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestHotel<coreajava>",
+            "request": "launch",
+            "mainClass": "day07.hotel.TestHotel",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-test<coreajava>(3)",
+            "request": "launch",
+            "mainClass": "day08.test",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ObjectFactory<coreajava>",
+            "request": "launch",
+            "mainClass": "jdbc.factory.ObjectFactory",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestJDBC<coreajava>",
+            "request": "launch",
+            "mainClass": "jdbc.test.TestJDBC",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Testjdbc3<coreajava>",
+            "request": "launch",
+            "mainClass": "jdbc.test.Testjdbc3",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-test2<coreajava>",
+            "request": "launch",
+            "mainClass": "jdbc.test.test2",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-testjdbc2<coreajava>",
+            "request": "launch",
+            "mainClass": "jdbc.test.testjdbc2",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestBatch<coreajava>",
+            "request": "launch",
+            "mainClass": "jdbc.testJDBC_1109.TestBatch",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestGetPK<coreajava>",
+            "request": "launch",
+            "mainClass": "jdbc.testJDBC_1109.TestGetPK",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-testBlob<coreajava>",
+            "request": "launch",
+            "mainClass": "jdbc.testJDBC_1115.testBlob",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestTheadA<coreajava>",
+            "request": "launch",
+            "mainClass": "jdbc.testJDBC_1128.TestTheadA",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestTheadB<coreajava>",
+            "request": "launch",
+            "mainClass": "jdbc.testJDBC_1128.TestTheadB",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TestThreadC<coreajava>",
+            "request": "launch",
+            "mainClass": "jdbc.testJDBC_1128.TestThreadC",
+            "projectName": "coreajava"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-DocsConnectionPropsHelper<ums>",
+            "request": "launch",
+            "mainClass": "com.mysql.jdbc.DocsConnectionPropsHelper",
+            "projectName": "ums"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ErrorMappingsDocGenerator<ums>",
+            "request": "launch",
+            "mainClass": "com.mysql.jdbc.util.ErrorMappingsDocGenerator",
+            "projectName": "ums"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PropertiesDocGenerator<ums>",
+            "request": "launch",
+            "mainClass": "com.mysql.jdbc.util.PropertiesDocGenerator",
+            "projectName": "ums"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TimezoneDump<ums>",
+            "request": "launch",
+            "mainClass": "com.mysql.jdbc.util.TimezoneDump",
+            "projectName": "ums"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-VersionFSHierarchyMaker<ums>",
+            "request": "launch",
+            "mainClass": "com.mysql.jdbc.util.VersionFSHierarchyMaker",
+            "projectName": "ums"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test<ums>",
+            "request": "launch",
+            "mainClass": "test.Test",
+            "projectName": "ums"
+        }
+    ]
+}

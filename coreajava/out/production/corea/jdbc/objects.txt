@@ -1,2 +1,0 @@
-userDao=mmmmmmm
-userService=service.impl.UserServiceImpl

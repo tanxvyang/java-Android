@@ -20,4 +20,10 @@ public class Bird extends Animal{
     public void sing(){
         System.out.println("singsong");
     }
+
+    public void eat(){
+        // System.out.println(name+"正在吃虫");
+        System.out.println(getName()+"正在吃虫");
+    }
+
 }

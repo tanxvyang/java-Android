@@ -4,8 +4,8 @@ public class Animal {
 
     private String name;
     private int age;
-
     //加构造方法后子类报错,是因为没有调用父类构造方法
+
     public Animal(String name) {
         this.name = name;
         age=1;
@@ -15,6 +15,7 @@ public class Animal {
      public void eat(){
          System.out.println("吃");
      }
+
 
 
 

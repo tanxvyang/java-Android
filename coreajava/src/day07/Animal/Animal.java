@@ -1,6 +1,6 @@
 package day07.Animal;
 
-public class Animal {
+public abstract class Animal {
 
     private String name;
     private int age;
@@ -12,9 +12,10 @@ public class Animal {
     }
 
     //方法的同样可以继承
-     public void eat(){
+     public abstract void eat();
+    /*{
          System.out.println("吃");
-     }
+     }*/
 
 
 

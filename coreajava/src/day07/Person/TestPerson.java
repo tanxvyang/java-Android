@@ -16,6 +16,12 @@ public class TestPerson {
         p.move(train);
 
 
+        //-----------------------------------
+
+
+        Transport t =new Train();
+         // Transport t=new Transport() ; //抽象类是不能实例化的
+
 
     }
 }

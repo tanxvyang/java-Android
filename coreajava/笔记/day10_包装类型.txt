@@ -1,0 +1,93 @@
+包装类型
+为了保证性能，Java中并非所有内容都是对象。还有一些基本类型，例如，int、long、float和double等。当基本类型和对象都使用的时候，常常是需要在基本类型和对象之间来回转换。为此，可以使用一个java.util.Collection对象（将在第14章介绍）来存储对象，而不是使用基本类型。如果想要将基本类型值存储到一个Collection中，必须先将它们转换为对象。
+
+java.lang包有几个类，它们充当基本类型的包装器。它们是Boolean、Character、Byte、Double、Float、Integer、Long和Short。Byte、Double、Float、Integer、Long和Short具有类似的方法，因此，这里将只介绍Integer。你可以查看Javadoc了解其他的包装器的信息。
+
+java.lang.Integer类包装了一个int类型。Integer类有两个int类型的静态的final字段：MIN_VALUE和MAX_VALUE。MIN_VALUE包含了一个int类型可能的最小的值（−231），而MAX_VALUE包含了一个int类型可能的最大的值（231−1）。
+
+        Number
+                Byte Short Integer Long Float Double
+
+
+        Boolean
+
+        Character
+
+    BigDecimal  精确计算
+            BigDecimal类提供了算术，缩放操作，舍入，比较，散列和格式转换的操作。 toString()方法提供了一个BigDecimal的规范BigDecimal 。
+
+            BigDecimal类使用户完全控制舍入行为。 如果未指定舍入模式，并且无法表示确切的结果，则抛出异常; 否则，可以通过向操作提供适当的MathContext对象来进行计算，以选择精度和舍入模式。
+
+BigInteger  大整数计算
+
+        不可变的任意精度整数。 所有操作的行为就好像BigIntegers以二进制补码表示（如Java的原始整数类型）表示。
+         BigInteger提供了所有Java的原始整数运算符和java.lang.Math中所有相关方法的类比。 此外，BigInteger还提供了模数运算，GCD计算，原始测试，初级生成，位操作以及其他一些其他操作的操作。
+
+ 日期  java.util包
+
+        long        内部表示日期只有long
+
+        Date        日期  java.util
+
+        Calendar        日历  对日期进行计算  java.util  java.util.Calendar
+
+
+java.text.Format
+java.text.DateFormat
+
+        DateFormat是日期/时间格式化子类的抽象类，它以语言无关的方式格式化和分析日期或时间。 日期/时间格式化子类（如SimpleDateFormat ）允许格式化（即日期文本），解析（文本日期）和归一化。 该日期表示为一个Date对象，或自1970年1月1日00:00:00 GMT以来的毫秒。
+        DateFormat提供了许多类方法，用于根据默认或给定的区域设置和多个格式化样式获取默认的日期/时间格式化程序。 格式化风格包括FULL ， LONG ， MEDIUM和SHORT 。 方法说明中提供了更多细节和使用这些样式的示例。
+myString = DateFormat.getDateInstance().format(myDate);
+
+
+
+*********************************** DateFormat 使用 new 一个 SimpleDateFormat对象
+ // DateFormat format= new SimpleDateFormat("yyyy年MM月dd日 HH时mm分ss秒 E");
+        DateFormat format= new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+
+
+
+                     //        String s=format.format(date);
+ //        System.out.println(s);
+
+  //String ->>Date
+
+    String s ="2017/08/08 15:23:40";
+
+                             Date date1=format.parse(s);
+    System.out.println(date1);
+
+8********************************
+
+
+
+
+
+
+
+定时关机程序  TestPowerOff
+
+        用户控制台输入一个日期
+        日期格式类似于 2019/08/08 00:00:00
+        到这个时间关机
+
+        如果输入的字符串不是个格式重新输入
+
+        用户必须输入当前日期之后的日期
+        如果是之前的日期重新输入
+        让程序执行到这句话时,挺好秒
+        Thread.sleep()
+
+        调用系统命令
+        Runtime.getRuntime
+
+
+
+
+------------------------------------------------------------
+        枚举
+          有时候要使用静态的final字段作为枚举值。
+          Java 5添加了一种新的类型——枚举（enum），用于枚举值
+
+71
+

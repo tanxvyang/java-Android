@@ -1,5 +1,6 @@
 package day09.String;
 
+import com.sun.deploy.util.StringUtils;
 import org.omg.CORBA.ARG_OUT;
 import sun.management.Agent;
 
@@ -8,7 +9,30 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class TestString {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws  Exception {
+
+
+        //转换字符串和编码
+        // String string = "中";
+        // System.out.println(string);
+        // byte[] bytes = string.getBytes("utf-8");
+        // System.out.println(bytes.length);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // String s1=new String("abc");
         // String s2="abc";
         // String s3="ab"+"c";
@@ -84,18 +108,18 @@ public class TestString {
         // System.out.println(s.length()-s2.length());
 
 
-        //025-12345678
-        //  Scanner sc = new Scanner(System.in);
-        //
-        //  String s1 = sc.nextLine();
-        //
-        //  String regex = "\\d{3,4}-\\d{8}";//"[a-z]"; //"[abc]"; "[\\d]";/输入的是数字,\d
-        //
-        //  System.out.println(s1.matches(regex));//判断s1是否属于abc
+       // 025-12345678
+       //   Scanner sc = new Scanner(System.in);
+       //
+       //   String s1 = sc.nextLine();
+       //
+       //   String regex = "\\d{3,4}-\\d{8}";//"[a-z]"; //"[abc]"; "[\\d]";/输入的是数字,\d
+       //
+       //   System.out.println(s1.matches(regex));//判断s1是否属于abc
         //
         // // System.out.println("\\");
 
-        String s5 = "12345678909,09876543212,12354676543,25343456789,13182856528";
+       // String s5 = "12345678909,09876543212,12354676543,25343456789,13182856528";
         //将中间几位替换成*  ,只替换一部分,$1表示位置
         //System.out.println(s5.replaceAll("(\\d{3})(\\d{5})(\\d{3})","$1*****$3"));
 
@@ -105,7 +129,6 @@ public class TestString {
 //              System.out.println(ss[i]);
 //     }
 //
-//
 // String s7 = "adfaff";
 //         char[] cs = s7.toCharArray();
 //         System.out.println(Arrays.toString(cs));
@@ -113,9 +136,15 @@ public class TestString {
 
         // String[] arr = {"a","b","c","d"};
         // String s = join(arr,","); //"a,b,c"
-        String[] arr = {"a", "b", "c", "d"};
-        String s=StringUtil.join(arr,",");
-        System.out.println(s);
+
+
+        // String[] arr = {"a", "b", "c", "d"};
+        // String s=StringUtil.join(arr,",");
+        // System.out.println(s);
+
+
+
+
 
     }
 }

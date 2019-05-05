@@ -243,3 +243,15 @@ String         replaceAll(String regex, String replacement)
 
 char[]       toCharArray()
             将此字符串转换为新的字符数组。
+
+
+
+
+
+===========================            ===========
+StringBuffer
+StringBuilder
+            对长字符串进行反复修改 两者方法是相同的
+            api完全相同
+            StringBuffer线程安全,性能相对StringBuilder低一点
+            StringBuilder线程不安全

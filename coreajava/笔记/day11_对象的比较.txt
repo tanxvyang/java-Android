@@ -1,0 +1,64 @@
+对象的比较
+        ======
+
+        .equals
+
+        可以比较
+                是可以比较的
+                Comparable
+                实现这个接口的类是可以比较的
+        比较器
+                工具
+                临时根据业务规则作比较
+                Comparator
+
+                compareTo(String anotherString)
+                          按字典顺序比较两个字符串。
+
+        练习
+        定义一个图形类 Graphics
+        其中有个计算面积的方法  area
+        并能复制一个图形
+        圆形Circle, 矩形 Rectangle ,三角形 Triangle
+        定义 一个图形数组,     里面放六个图形
+
+
+
+
+
+
+
+    ==============================================
+TestParam
+    可变长参数
+        就是数组
+
+
+      ==============================================
+
+      泛型
+            类的参数
+            参数值是类型
+                当不确定参数是什么类型,传一个参数
+            作用:
+                设计,安全 , 方便
+
+            public void f( String s ){
+                s
+            }
+
+            public class C<E>{
+                private E e;
+            }
+
+            通用的数据访问对象
+            GenericDao
+
+        Dao
+            Data Access Object
+            数据  访问  对象
+
+            访问数据库的
+            insert( E e ){
+
+            }

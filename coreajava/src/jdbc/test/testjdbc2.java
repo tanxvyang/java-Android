@@ -4,9 +4,9 @@ import java.sql.*;
 
 public class testjdbc2 {
     private static String driverClassName="com.mysql.jdbc.Driver";
-    private  static  String url="jdbc:mysql://192.168.140.1:3306/jdbc";
+    private  static  String url="jdbc:mysql://10.0.0.1:3306/txy";
     private  static  String username="root" ;
-    private  static  String password="610322";
+    private  static  String password="tan610322";
 
     public static void main(String[] args) {
         create();

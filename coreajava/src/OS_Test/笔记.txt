@@ -1,0 +1,9 @@
+Set使用Map实现,使用了Map的key(适配器模式)
+
+
+
+ Map
+
+
+
+Map.Entry<k,v>表示Map中的每一对key和value

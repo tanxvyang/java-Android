@@ -1,3 +1,4 @@
+/*
 package jdbc.testJDBC_1128.倒计时牌;
 
 import javax.swing.*;
@@ -14,3 +15,4 @@ public class TimeFram {
         jl1=new JLabel("距离"+"");
     }
 }
+*/

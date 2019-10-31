@@ -5,9 +5,9 @@ import java.util.Scanner;
 
 public class test2 {
     private static String driverClassName="com.mysql.jdbc.Driver";
-    private  static  String url="jdbc:mysql://192.168.140.1:3306/jdbc";
+    private  static  String url="jdbc:mysql://192.168.137.1:3306/jdbc";
     private  static  String username="root" ;
-    private  static  String password="610322";
+    private  static  String password="tan610322";
 
     public static void main(String[] args) {
          Scanner sc=new Scanner(System.in);

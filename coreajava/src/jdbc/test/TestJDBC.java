@@ -3,18 +3,18 @@ import java.sql.*;
 
 public class TestJDBC {
     private static String driverClassName="com.mysql.jdbc.Driver";
-    private  static  String url="jdbc:mysql://192.168.140.1:3306/test";
+    private  static  String url="jdbc:mysql://10.0.0.1:3306/txy";
     private  static  String username="root" ;
     private  static  String password="610322";
 
     public static void main(String[] args)  {
-        //create();
-        //insert();
-        //delete();
+        create();
+       //  insert();
+       //  delete();
        // update();
        // selectAll();
-        //selectById(3);
-        selectByname("e3");
+       //  selectById(3);
+       //  selectByname("e3");
     }
 
     public static void selectByname(String name){

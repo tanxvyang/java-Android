@@ -16,31 +16,29 @@ public class Test1 {
         // System.out.println(Integer.MAX_VALUE);
 
 
-
         // String s="123";
         // int i=Integer.parseInt(s);  //字符串转int
         // System.out.println(i+1);
 
- //        int i=1;
- //        String s =i+"";   //int 转字符串
- //        System.out.println(s+1);
- //
- //int ->String
+        //        int i=1;
+        //        String s =i+"";   //int 转字符串
+        //        System.out.println(s+1);
+        //
+        //int ->String
 
 
- //int -> Integer
-          //   Integer i=1;  //auto boxing
-    //  System.out.println(i+1);
+        //int -> Integer
+        //   Integer i=1;  //auto boxing
+        //  System.out.println(i+1);
 
 //integer -> int
-      // int i= new Integer(1);//auto unboxing
-      //System.out.println(i+1);
-
+        // int i= new Integer(1);//auto unboxing
+        //System.out.println(i+1);
 
 
 //Long -> Integer
 // integer.intValue();
-            //int i= (int) 1L;
+        //int i= (int) 1L;
         //Integer i=1L;
         //Integer i=new  Long(1).intValue();
 
@@ -52,13 +50,13 @@ public class Test1 {
 //
 
 //BigDecimal 精确计算
-        BigDecimal b1=new BigDecimal("12.345");
-        BigDecimal b2=new BigDecimal("12");
+        BigDecimal b1 = new BigDecimal("12.345");
+        BigDecimal b2 = new BigDecimal("12");
         System.out.println(b1.subtract(b2));
 
 //BigInteger  大整数计算
-        BigInteger b3 = new BigInteger("12121212312312331231231313") ;
-        BigInteger b4 = new BigInteger("12121212312312331231231313") ;
+        BigInteger b3 = new BigInteger("12121212312312331231231313");
+        BigInteger b4 = new BigInteger("12121212312312331231231313");
         System.out.println(b3.subtract(b4));
     }
 }

@@ -16,7 +16,7 @@ public class ImageSearchTask implements Runnable {
     private AtomicInteger fileCounter;
 
     public ImageSearchTask(Path searchDir, Executor executor, DefaultListModel listModel,
-            AtomicInteger fileCounter) {
+                           AtomicInteger fileCounter) {
         this.searchDir = searchDir;
         this.executor = executor;
         this.listModel = listModel;
@@ -28,31 +28,31 @@ public class ImageSearchTask implements Runnable {
         if (fileCounter.get() > ImageSearcher.MAX_RESULT) {
             return;
         }
-        try (DirectoryStream<Path> children = 
-                Files.newDirectoryStream(searchDir)) {
+        try (DirectoryStream<Path> children =
+                     Files.newDirectoryStream(searchDir)) {
             for (final Path child : children) {
                 if (Files.isDirectory(child)) {
-                    executor.execute(new ImageSearchTask(child, 
+                    executor.execute(new ImageSearchTask(child,
                             executor, listModel, fileCounter));
                 } else if (Files.isRegularFile(child)) {
                     String name = child.getFileName()
                             .toString().toLowerCase();
                     if (name.endsWith(".jpg")) {
-                        final int fileNumber = 
+                        final int fileNumber =
                                 fileCounter.getAndIncrement();
-                        if (fileNumber > ImageSearcher.MAX_RESULT){
+                        if (fileNumber > ImageSearcher.MAX_RESULT) {
                             break;
                         }
 
                         SwingUtilities.invokeLater(new Runnable() {
                             public void run() {
-                                listModel.addElement(fileNumber + 
+                                listModel.addElement(fileNumber +
                                         ": " + child);
                             }
                         });
                     }
                 }
-            }            
+            }
         } catch (IOException e) {
             System.out.println(e.getMessage());
         }

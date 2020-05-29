@@ -18,98 +18,101 @@ import com.ttb.service.GoodService;
 import com.ttb.service.impl.GoodServiceImpl;
 
 public class MainFrame {
-	private static double shopMoney = 100;
-	JFrame mainFrame = null;
-	JPanel searchResultPane = null;
-	JTextField searchTextField = null;
-	JButton searchButton = null;
-	User user = null;//±£´æµ±Ç°µÇÂ¼µÄÓÃ»§ÐÅÏ¢
-	GoodService gs = null;
+    private static double shopMoney = 100;
+    JFrame mainFrame = null;
+    JPanel searchResultPane = null;
+    JTextField searchTextField = null;
+    JButton searchButton = null;
+    User user = null;//ï¿½ï¿½ï¿½æµ±Ç°ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ï¢
+    GoodService gs = null;
 
-	public MainFrame(User user){
-		this.user = user;
-	}
-	
-	public void init(){
-		mainFrame = new JFrame("ÌÔÌÔ±¦ - Ö÷Ò³Ãæ");
-		searchTextField = new JTextField();
-		searchButton = new JButton("²éÑ¯");
-		searchResultPane = new JPanel();
-		gs = new GoodServiceImpl();
-	}
-	public void build(){
-		mainFrame.setSize(400, 600);
-		mainFrame.setLocation(500, 100);
-		mainFrame.setLayout(null);
-		mainFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		
-		searchTextField.setBounds(70, 30, 200, 25);
-		mainFrame.add(searchTextField);
-		
-		searchButton.setBounds(300, 30, 70, 25);
-		mainFrame.add(searchButton);
-		
-		searchResultPane.setBounds(0, 100, 400, 500);
-		mainFrame.add(searchResultPane);
-		
-		mainFrame.setVisible(true);
-	}
-	public void addAction(){
-		searchButton.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				search();
-			}
-		});
-	}
-	
-	public void search(){
-		String goodName = searchTextField.getText();
-		List<Good> goods = gs.queryGoodsByGoodName(goodName);
-		searchResultPane.removeAll();
-		for (int i = 0; i < goods.size(); i++) {
-			final Good good = goods.get(i);
-			JLabel goodNameLabel = new JLabel(good.getGoodName());
-			goodNameLabel.setBounds(16, (i*(25+15)), 80, 25);
-			JLabel goodPriceLabel = new JLabel(String.valueOf(good.getGoodPrice()));
-			goodPriceLabel.setBounds(16+80+16, (i*(25+15)), 80, 25);
-			JLabel goodNumsLabel = new JLabel(String.valueOf(good.getNums()));
-			goodNumsLabel.setBounds(16+80+16+80+16, (i*(25+15)), 80, 25);
-			JButton buyButton = new JButton("¹ºÂò");
-			buyButton.addActionListener(new ActionListener() {
-				@Override
-				public void actionPerformed(ActionEvent arg0) {
-					GoodServiceImpl gs = new GoodServiceImpl();
-					//»ñÈ¡¹ºÂòÊýÁ¿
-					String str = JOptionPane.showInputDialog(searchResultPane, "ÇëÊäÈëÒª¹ºÂòµÄÊýÁ¿", "¹ºÂòÊýÁ¿", JOptionPane.QUESTION_MESSAGE);
-					try {
-						Integer buyNums = Integer.parseInt(str);
-						gs.buy(user,good,buyNums);
-					} catch (Exception e) {
-						JOptionPane.showMessageDialog(searchResultPane, "ÊäÈëµÄÊýÁ¿¸ñÊ½²»ÕýÈ·", "´íÎóÌáÊ¾", JOptionPane.ERROR_MESSAGE);
-					}
-				}
-			});
-			buyButton.setBounds(16+80+16+80+16+80+16, (i*(25+15)), 80, 25);
-			searchResultPane.add(goodNameLabel);
-			searchResultPane.add(goodPriceLabel);
-			searchResultPane.add(goodNumsLabel);
-			searchResultPane.add(buyButton);
-		}
-		mainFrame.repaint();
-	}
-	public void start(){
-		init();
-		addAction();
-		build();
-	}
+    public MainFrame(User user) {
+        this.user = user;
+    }
 
-	public static double getShopMoney() {
-		return shopMoney;
-	}
+    public void init() {
+        mainFrame = new JFrame("ï¿½ï¿½ï¿½Ô±ï¿½ - ï¿½ï¿½Ò³ï¿½ï¿½");
+        searchTextField = new JTextField();
+        searchButton = new JButton("ï¿½ï¿½Ñ¯");
+        searchResultPane = new JPanel();
+        gs = new GoodServiceImpl();
+    }
 
-	public static void setShopMoney(double shopMoney) {
-		MainFrame.shopMoney = shopMoney;
-	}
+    public void build() {
+        mainFrame.setSize(400, 600);
+        mainFrame.setLocation(500, 100);
+        mainFrame.setLayout(null);
+        mainFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+
+        searchTextField.setBounds(70, 30, 200, 25);
+        mainFrame.add(searchTextField);
+
+        searchButton.setBounds(300, 30, 70, 25);
+        mainFrame.add(searchButton);
+
+        searchResultPane.setBounds(0, 100, 400, 500);
+        mainFrame.add(searchResultPane);
+
+        mainFrame.setVisible(true);
+    }
+
+    public void addAction() {
+        searchButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                search();
+            }
+        });
+    }
+
+    public void search() {
+        String goodName = searchTextField.getText();
+        List<Good> goods = gs.queryGoodsByGoodName(goodName);
+        searchResultPane.removeAll();
+        for (int i = 0; i < goods.size(); i++) {
+            final Good good = goods.get(i);
+            JLabel goodNameLabel = new JLabel(good.getGoodName());
+            goodNameLabel.setBounds(16, (i * (25 + 15)), 80, 25);
+            JLabel goodPriceLabel = new JLabel(String.valueOf(good.getGoodPrice()));
+            goodPriceLabel.setBounds(16 + 80 + 16, (i * (25 + 15)), 80, 25);
+            JLabel goodNumsLabel = new JLabel(String.valueOf(good.getNums()));
+            goodNumsLabel.setBounds(16 + 80 + 16 + 80 + 16, (i * (25 + 15)), 80, 25);
+            JButton buyButton = new JButton("ï¿½ï¿½ï¿½ï¿½");
+            buyButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent arg0) {
+                    GoodServiceImpl gs = new GoodServiceImpl();
+                    //ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                    String str = JOptionPane.showInputDialog(searchResultPane, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½", JOptionPane.QUESTION_MESSAGE);
+                    try {
+                        Integer buyNums = Integer.parseInt(str);
+                        gs.buy(user, good, buyNums);
+                    } catch (Exception e) {
+                        JOptionPane.showMessageDialog(searchResultPane, "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½È·", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾", JOptionPane.ERROR_MESSAGE);
+                    }
+                }
+            });
+            buyButton.setBounds(16 + 80 + 16 + 80 + 16 + 80 + 16, (i * (25 + 15)), 80, 25);
+            searchResultPane.add(goodNameLabel);
+            searchResultPane.add(goodPriceLabel);
+            searchResultPane.add(goodNumsLabel);
+            searchResultPane.add(buyButton);
+        }
+        mainFrame.repaint();
+    }
+
+    public void start() {
+        init();
+        addAction();
+        build();
+    }
+
+    public static double getShopMoney() {
+        return shopMoney;
+    }
+
+    public static void setShopMoney(double shopMoney) {
+        MainFrame.shopMoney = shopMoney;
+    }
 }

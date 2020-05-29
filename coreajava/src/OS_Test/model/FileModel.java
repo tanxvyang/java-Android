@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class FileModel {
-    public Map<String , FileModel> subMap = new HashMap<String, FileModel>();
+    public Map<String, FileModel> subMap = new HashMap<String, FileModel>();
     private String name;    //文件名或目录
     private String type;    //文件类型
     private int attr;       //用来识别是文件还是目录

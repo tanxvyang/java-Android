@@ -1,4 +1,5 @@
 package com.example.photoeditor;
+
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -49,7 +50,7 @@ public class MainActivity extends Activity {
             Bitmap> {
         protected Bitmap doInBackground(Bitmap... bitmap) {
             Bitmap input = bitmap[0];
-            Bitmap result = input.copy(input.getConfig(), 
+            Bitmap result = input.copy(input.getConfig(),
                     /*isMutable'*/true);
             int width = input.getWidth();
             int height = input.getHeight();
@@ -60,7 +61,7 @@ public class MainActivity extends Activity {
                     a = a | (~pixel & 0x00ffffff);
                     result.setPixel(j, i, a);
                 }
-                int progress = (int) (100*(i+1)/height);
+                int progress = (int) (100 * (i + 1) / height);
                 publishProgress(progress);
             }
             return result;
@@ -82,7 +83,7 @@ public class MainActivity extends Activity {
             Bitmap> {
         protected Bitmap doInBackground(Bitmap... bitmap) {
             Bitmap input = bitmap[0];
-            Bitmap result = input.copy(input.getConfig(), 
+            Bitmap result = input.copy(input.getConfig(),
                     /*isMutable=*/ true);
             int width = bitmap[0].getWidth();
             int height = bitmap[0].getHeight();
@@ -94,13 +95,13 @@ public class MainActivity extends Activity {
                     int r = (pixel >> 16) & 0xff;
                     int g = (pixel >> 8) & 0xff;
                     int b = pixel & 0xff;
-                    r = (r+level)/2;
-                    g = (g+level)/2;
-                    b = (b+level)/2;
+                    r = (r + level) / 2;
+                    g = (g + level) / 2;
+                    b = (b + level) / 2;
                     int gray = a | (r << 16) | (g << 8) | b;
                     result.setPixel(j, i, gray);
                 }
-                int progress = (int) (100*(i+1)/height);
+                int progress = (int) (100 * (i + 1) / height);
                 publishProgress(progress);
             }
             return result;

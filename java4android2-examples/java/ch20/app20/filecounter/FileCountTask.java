@@ -1,4 +1,5 @@
 package app20.filecounter;
+
 import java.io.IOException;
 import java.nio.file.DirectoryStream;
 import java.nio.file.Files;
@@ -11,6 +12,7 @@ import java.util.concurrent.Callable;
 public class FileCountTask implements Callable {
     Path dir;
     long fileCount = 0L;
+
     public FileCountTask(Path dir) {
         this.dir = dir;
     }
@@ -19,8 +21,8 @@ public class FileCountTask implements Callable {
         if (Files.notExists(parent)) {
             return;
         }
-        try (DirectoryStream<Path> children = 
-                    Files.newDirectoryStream(parent)) {
+        try (DirectoryStream<Path> children =
+                     Files.newDirectoryStream(parent)) {
             for (Path child : children) {
                 if (Files.isDirectory(child)) {
                     doCount(child);

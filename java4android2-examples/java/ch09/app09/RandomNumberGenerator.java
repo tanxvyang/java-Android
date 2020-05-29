@@ -11,7 +11,7 @@ public class RandomNumberGenerator {
     }
 
     public static void main(String[] args) {
-        RandomNumberGenerator generator = 
+        RandomNumberGenerator generator =
                 new RandomNumberGenerator();
         for (int i = 0; i < 10; i++) {
             System.out.println(generator.generate());

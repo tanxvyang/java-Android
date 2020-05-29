@@ -1,4 +1,5 @@
 package app19;
+
 public class LightAndConsistent {
     static volatile boolean started = false;
 

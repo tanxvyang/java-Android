@@ -1,7 +1,6 @@
 package factory;
 
-public class 厨师 implements 菜单{
-
+public class 厨师 implements 菜单 {
 
 
 }

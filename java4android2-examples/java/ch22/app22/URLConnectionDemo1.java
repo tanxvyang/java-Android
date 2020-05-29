@@ -1,4 +1,5 @@
 package app22;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -15,11 +16,11 @@ public class URLConnectionDemo1 {
         try {
             URL url = new URL("http://www.java.com/");
             URLConnection urlConnection = url.openConnection();
-            Map<String, List<String>> headers = 
+            Map<String, List<String>> headers =
                     urlConnection.getHeaderFields();
-            Set<Map.Entry<String, List<String>>> entrySet = 
+            Set<Map.Entry<String, List<String>>> entrySet =
                     headers.entrySet();
-            for (Map.Entry<String, List<String>> entry : entrySet){
+            for (Map.Entry<String, List<String>> entry : entrySet) {
                 String headerName = entry.getKey();
                 System.out.println("Header Name:" + headerName);
                 List<String> headerValues = entry.getValue();
@@ -29,10 +30,10 @@ public class URLConnectionDemo1 {
                 System.out.println();
                 System.out.println();
             }
-            InputStream inputStream = 
+            InputStream inputStream =
                     urlConnection.getInputStream();
             BufferedReader bufferedReader = new BufferedReader(
-                        new InputStreamReader(inputStream));
+                    new InputStreamReader(inputStream));
             String line = bufferedReader.readLine();
             while (line != null) {
                 System.out.println(line);

@@ -20,124 +20,121 @@ import com.ttb.service.GoodService;
 import com.ttb.service.impl.GoodServiceImpl;
 
 public class AdminFrame {
-	JFrame mainFrame = null;
-	JLabel goodNameLabel = null;
-	JTextField goodNameField = null;
-	JButton searchButton = null;
-	JButton addButton = null;
-	JButton removeButton = null;
-	JScrollPane jsp = null;
-	JTable resultTable = null;
-	GoodService gs = null;
-	public void init(){
-		mainFrame = new JFrame("ÌÔÌÔ±¦ - ºóÌ¨Ò³Ãæ");
-		goodNameLabel = new JLabel("ÉÌÆ·Ãû£º");
-		goodNameField = new JTextField();
-		searchButton = new JButton("²éÑ¯");
-		addButton = new JButton("Ìí¼Ó");
-		removeButton = new JButton("É¾³ý");
-		resultTable = new JTable();
-		jsp = new JScrollPane(resultTable);
-		gs = new GoodServiceImpl();
-	}
-	public void setFont(){
-		mainFrame.setSize(500, 500);
-		mainFrame.setLocation(500,100);
-		mainFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		mainFrame.setLayout(null);
-		
-		goodNameLabel.setBounds(30, 30, 55, 25);
-		mainFrame.add(goodNameLabel);
-		
-		goodNameField.setBounds(90, 30, 100, 25);
-		mainFrame.add(goodNameField);
-		
-		searchButton.setBounds(200, 30, 70, 25);
-		mainFrame.add(searchButton);
-		
-		addButton.setBounds(300, 30, 70, 25);
-		mainFrame.add(addButton);
+    JFrame mainFrame = null;
+    JLabel goodNameLabel = null;
+    JTextField goodNameField = null;
+    JButton searchButton = null;
+    JButton addButton = null;
+    JButton removeButton = null;
+    JScrollPane jsp = null;
+    JTable resultTable = null;
+    GoodService gs = null;
 
-		removeButton.setBounds(400, 30, 70, 25);
-		mainFrame.add(removeButton);
-		
-		jsp.setBounds(10, 70, 460, 380);
-		mainFrame.add(jsp);
-		
-		mainFrame.setVisible(true);
-	}
-	public void addAction(){
-		searchButton.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				search();
-			}
-		});
-		
-		addButton.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				new AddGoodFrame(getInstance()).start();
-			}
-		});
-		
-		removeButton.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				remove();
-			}
-		});
-	}
-	public AdminFrame getInstance(){
-		return this;
-	}
-	public void search(){
-		String goodName = goodNameField.getText();
-		//±íµ¥ÑéÖ¤view£¨Êý¾ÝÊÇ·ñÎª¿Õ£¬Êý¾ÝÀàÐÍÊÇ·ñºÏ·¨£¬Êý¾Ý³¤¶ÈÊÇ·ñºÏ·¨£©
-//		    Âß¼­ÅÐ¶Ïservice£¨ÉÌÆ·Ãû³ÆÊÇ·ñÖØ¸´£©
-		List<Good> goods = gs.queryGoodsByGoodName(goodName);
-		//±íÍ·ÈçºÎ»ñµÃ
-		String[] columnNames = {"±àºÅ","ÉÌÆ·Ãû³Æ","ÉÌÆ·¼Û¸ñ","ÉÌÆ·½éÉÜ","¿â´æÊýÁ¿"};
-		Object[][] data = new Object[goods.size()][columnNames.length];
-		for (int i = 0; i < goods.size(); i++) {
-			Good good = goods.get(i);
-			data[i][0] = good.getGid();
-			data[i][1] = good.getGoodName();
-			data[i][2] = good.getGoodPrice();
-			data[i][3] = good.getGoodIntro();
-			data[i][4] = good.getNums();
-		}
-		DefaultTableModel dtm = new DefaultTableModel(data, columnNames);
-		resultTable.setModel(dtm);
-	}
-	
-	public void remove(){
-		int row = resultTable.getSelectedRow();
-		int col = 0;
-		Object value = resultTable.getValueAt(row, col);
-		Integer gid = Integer.valueOf(String.valueOf(value));
-		try {
-			gs.removeGood(gid);
-		} catch (GoodNotFoundException e) {
-			JOptionPane.showMessageDialog(mainFrame, e.getMessage(), "É¾³ýÉÌÆ·´íÎó", JOptionPane.ERROR_MESSAGE);
-		}
-		search();
-	}
-	
-	public void start(){
-		init();
-		addAction();
-		search();
-		setFont();
-	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+    public void init() {
+        mainFrame = new JFrame("ï¿½ï¿½ï¿½Ô±ï¿½ - ï¿½ï¿½Ì¨Ò³ï¿½ï¿½");
+        goodNameLabel = new JLabel("ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½");
+        goodNameField = new JTextField();
+        searchButton = new JButton("ï¿½ï¿½Ñ¯");
+        addButton = new JButton("ï¿½ï¿½ï¿½");
+        removeButton = new JButton("É¾ï¿½ï¿½");
+        resultTable = new JTable();
+        jsp = new JScrollPane(resultTable);
+        gs = new GoodServiceImpl();
+    }
+
+    public void setFont() {
+        mainFrame.setSize(500, 500);
+        mainFrame.setLocation(500, 100);
+        mainFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        mainFrame.setLayout(null);
+
+        goodNameLabel.setBounds(30, 30, 55, 25);
+        mainFrame.add(goodNameLabel);
+
+        goodNameField.setBounds(90, 30, 100, 25);
+        mainFrame.add(goodNameField);
+
+        searchButton.setBounds(200, 30, 70, 25);
+        mainFrame.add(searchButton);
+
+        addButton.setBounds(300, 30, 70, 25);
+        mainFrame.add(addButton);
+
+        removeButton.setBounds(400, 30, 70, 25);
+        mainFrame.add(removeButton);
+
+        jsp.setBounds(10, 70, 460, 380);
+        mainFrame.add(jsp);
+
+        mainFrame.setVisible(true);
+    }
+
+    public void addAction() {
+        searchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                search();
+            }
+        });
+
+        addButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                new AddGoodFrame(getInstance()).start();
+            }
+        });
+
+        removeButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                remove();
+            }
+        });
+    }
+
+    public AdminFrame getInstance() {
+        return this;
+    }
+
+    public void search() {
+        String goodName = goodNameField.getText();
+        //ï¿½ï¿½ï¿½ï¿½Ö¤viewï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Îªï¿½Õ£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý³ï¿½ï¿½ï¿½ï¿½Ç·ï¿½Ï·ï¿½ï¿½ï¿½
+//		    ï¿½ß¼ï¿½ï¿½Ð¶ï¿½serviceï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ø¸ï¿½ï¿½ï¿½
+        List<Good> goods = gs.queryGoodsByGoodName(goodName);
+        //ï¿½ï¿½Í·ï¿½ï¿½Î»ï¿½ï¿½
+        String[] columnNames = {"ï¿½ï¿½ï¿½", "ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½Æ·ï¿½Û¸ï¿½", "ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½", "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"};
+        Object[][] data = new Object[goods.size()][columnNames.length];
+        for (int i = 0; i < goods.size(); i++) {
+            Good good = goods.get(i);
+            data[i][0] = good.getGid();
+            data[i][1] = good.getGoodName();
+            data[i][2] = good.getGoodPrice();
+            data[i][3] = good.getGoodIntro();
+            data[i][4] = good.getNums();
+        }
+        DefaultTableModel dtm = new DefaultTableModel(data, columnNames);
+        resultTable.setModel(dtm);
+    }
+
+    public void remove() {
+        int row = resultTable.getSelectedRow();
+        int col = 0;
+        Object value = resultTable.getValueAt(row, col);
+        Integer gid = Integer.valueOf(String.valueOf(value));
+        try {
+            gs.removeGood(gid);
+        } catch (GoodNotFoundException e) {
+            JOptionPane.showMessageDialog(mainFrame, e.getMessage(), "É¾ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½", JOptionPane.ERROR_MESSAGE);
+        }
+        search();
+    }
+
+    public void start() {
+        init();
+        addAction();
+        search();
+        setFont();
+    }
+
+
 }

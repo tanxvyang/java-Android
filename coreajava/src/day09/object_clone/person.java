@@ -1,9 +1,9 @@
 package day09.object_clone;
 
-public class person implements Cloneable{
+public class person implements Cloneable {
     private String id;
-    private  String name;
-    private  int age;
+    private String name;
+    private int age;
     private boolean sex;
     private Addres addr;
 
@@ -57,6 +57,6 @@ public class person implements Cloneable{
 
     @Override
     public String toString() {
-        return id+" "+name;
+        return id + " " + name;
     }
 }

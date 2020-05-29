@@ -10,10 +10,9 @@ public class threadtest extends Thread {
     JTextArea text;
 
 
-
     @Override
     public void run() {
-       text.setText(inputSQL.getText());
+        text.setText(inputSQL.getText());
     }
 }
 

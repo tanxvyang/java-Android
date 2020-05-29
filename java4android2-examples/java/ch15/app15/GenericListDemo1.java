@@ -1,4 +1,5 @@
 package app15;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -11,7 +12,7 @@ public class GenericListDemo1 {
         // cast to java.lang.String
         String s1 = (String) stringList1.get(0);
         System.out.println(s1.toUpperCase());
-    
+
         // with generics and diamond
         List<String> stringList2 = new ArrayList<>();
         stringList2.add("Java");

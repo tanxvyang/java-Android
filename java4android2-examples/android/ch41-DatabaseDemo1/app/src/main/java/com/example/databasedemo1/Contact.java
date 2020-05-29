@@ -1,4 +1,5 @@
 package com.example.databasedemo1;
+
 public class Contact {
     private long id;
     private String firstName;

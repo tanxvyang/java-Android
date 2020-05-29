@@ -1,4 +1,5 @@
 package com.example.databasedemo1;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.database.Cursor;
@@ -31,9 +32,9 @@ public class MainActivity extends Activity {
                 this,
                 android.R.layout.two_line_list_item,
                 cursor,
-                new String[] {DatabaseManager.FIRST_NAME_FIELD,
+                new String[]{DatabaseManager.FIRST_NAME_FIELD,
                         DatabaseManager.LAST_NAME_FIELD},
-                new int[] {android.R.id.text1, android.R.id.text2},
+                new int[]{android.R.id.text1, android.R.id.text2},
                 CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
 
         listView.setAdapter(adapter);

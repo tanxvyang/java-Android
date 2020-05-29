@@ -2,7 +2,7 @@ package day11.Graphics;
 
 import java.awt.geom.RoundRectangle2D;
 
-public class Rectangle extends Graphics{
+public class Rectangle extends Graphics {
     private Double w;
     private Double h;
 
@@ -32,6 +32,6 @@ public class Rectangle extends Graphics{
 
     @Override
     public Double area() {
-        return w*h;
+        return w * h;
     }
 }

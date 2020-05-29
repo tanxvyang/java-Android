@@ -1,4 +1,5 @@
 package app20.imagesearcher;
+
 import java.awt.BorderLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,7 +14,7 @@ import javax.swing.JFrame;
 import javax.swing.JList;
 import javax.swing.JScrollPane;
 
-public class ImageSearcher extends JFrame 
+public class ImageSearcher extends JFrame
         implements ActionListener {
     public static final int MAX_RESULT = 300;
     JButton searchButton = new JButton("Search");
@@ -21,7 +22,7 @@ public class ImageSearcher extends JFrame
     JList imageList;
     Executor executor = Executors.newFixedThreadPool(10);
     AtomicInteger fileCounter = new AtomicInteger(1);
-    
+
     public ImageSearcher(String title) {
         super(title);
         init();
@@ -46,12 +47,12 @@ public class ImageSearcher extends JFrame
         JFrame.setDefaultLookAndFeelDecorated(true);
         ImageSearcher frame = new ImageSearcher("Image Searcher");
     }
-    
+
     public void actionPerformed(ActionEvent e) {
-        Iterable<Path> roots = 
+        Iterable<Path> roots =
                 FileSystems.getDefault().getRootDirectories();
         for (Path root : roots) {
-            executor.execute(new ImageSearchTask(root, executor, 
+            executor.execute(new ImageSearchTask(root, executor,
                     listModel, fileCounter));
         }
     }

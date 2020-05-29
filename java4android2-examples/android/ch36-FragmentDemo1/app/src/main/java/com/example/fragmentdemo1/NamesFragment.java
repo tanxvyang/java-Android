@@ -1,4 +1,5 @@
 package com.example.fragmentdemo1;
+
 import android.app.Activity;
 import android.app.Fragment;
 import android.os.Bundle;
@@ -28,15 +29,15 @@ public class NamesFragment extends Fragment {
 
         listView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         listView.setOnItemClickListener(new
-                AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> parent,
-                                            final View view, int position, long id) {
-                        if (callback != null) {
-                            callback.onItemSelected(names[position]);
-                        }
-                    }
-                });
+                                                AdapterView.OnItemClickListener() {
+                                                    @Override
+                                                    public void onItemClick(AdapterView<?> parent,
+                                                                            final View view, int position, long id) {
+                                                        if (callback != null) {
+                                                            callback.onItemSelected(names[position]);
+                                                        }
+                                                    }
+                                                });
         listView.setAdapter(adapter);
         return view;
     }
@@ -54,6 +55,7 @@ public class NamesFragment extends Fragment {
             callback = (Callback) activity;
         }
     }
+
     @Override
     public void onDetach() {
         super.onDetach();

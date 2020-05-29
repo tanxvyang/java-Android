@@ -22,8 +22,8 @@ public class WakeUpActivity extends Activity {
         Log.d("wakeup", "called. oncreate");
         window.addFlags(
                 WindowManager.LayoutParams.FLAG_SHOW_WHEN_LOCKED
-                | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
-                | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
+                        | WindowManager.LayoutParams.FLAG_DISMISS_KEYGUARD
+                        | WindowManager.LayoutParams.FLAG_TURN_SCREEN_ON);
         setContentView(R.layout.activity_wake_up);
         addNotification();
     }
@@ -53,14 +53,14 @@ public class WakeUpActivity extends Activity {
     private void addNotification() {
         NotificationManager notificationMgr = (NotificationManager)
                 getSystemService(NOTIFICATION_SERVICE);
-        Notification notification  = new Notification.Builder(this)
+        Notification notification = new Notification.Builder(this)
                 .setContentTitle("Wake up")
                 .setSmallIcon(android.R.drawable.star_on)
                 .setAutoCancel(false)
                 .build();
-        notification.defaults|= Notification.DEFAULT_SOUND;
-        notification.defaults|= Notification.DEFAULT_LIGHTS;
-        notification.defaults|= Notification.DEFAULT_VIBRATE;
+        notification.defaults |= Notification.DEFAULT_SOUND;
+        notification.defaults |= Notification.DEFAULT_LIGHTS;
+        notification.defaults |= Notification.DEFAULT_VIBRATE;
         notification.flags |= Notification.FLAG_INSISTENT;
         notification.flags |= Notification.FLAG_AUTO_CANCEL;
         notificationMgr.notify(NOTIFICATION_ID, notification);

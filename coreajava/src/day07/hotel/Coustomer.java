@@ -10,11 +10,10 @@ public class Coustomer {
     public String getName() {   //获得姓名
         return name;
     }
-    public String toString(){
+
+    public String toString() {
         return name;
     }
-
-
 
 
 }

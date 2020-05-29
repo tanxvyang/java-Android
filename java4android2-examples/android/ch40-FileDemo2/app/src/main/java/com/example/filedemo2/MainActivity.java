@@ -1,4 +1,5 @@
 package com.example.filedemo2;
+
 import java.io.File;
 import java.util.Arrays;
 import java.util.List;
@@ -17,10 +18,12 @@ public class MainActivity extends Activity {
     class KeyValue {
         public String key;
         public String value;
+
         public KeyValue(String key, String value) {
             this.key = key;
             this.value = value;
         }
+
         @Override
         public String toString() {
             return key;
@@ -56,14 +59,14 @@ public class MainActivity extends Activity {
         listView1.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         listView1.setAdapter(arrayAdapter);
         listView1.setOnItemClickListener(new
-             OnItemClickListener() {
-                 @Override
-                 public void onItemClick(AdapterView<?> adapterView,
-                                         View view, int position, long id) {
-                     KeyValue keyValue = keyValues.get(position);
-                     listDir(keyValue.value);
-                 }
-             });
+                                                 OnItemClickListener() {
+                                                     @Override
+                                                     public void onItemClick(AdapterView<?> adapterView,
+                                                                             View view, int position, long id) {
+                                                         KeyValue keyValue = keyValues.get(position);
+                                                         listDir(keyValue.value);
+                                                     }
+                                                 });
     }
 
     @Override

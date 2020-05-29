@@ -1,4 +1,5 @@
 package app18;
+
 interface Printable {
     void print(String message);
 }

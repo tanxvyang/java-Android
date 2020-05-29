@@ -1,4 +1,5 @@
 package app16;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.ObjectInputStream;
@@ -14,13 +15,13 @@ public class ObjectSerializationDemo1 {
     public static void main(String[] args) {
         // Serialize
         Path path = Paths.get("C:\\temp\\objectOutput");
-        Customer customer = new Customer(1, "Joe Blog", 
+        Customer customer = new Customer(1, "Joe Blog",
                 "12 West Cost");
-        try (OutputStream outputStream = 
-                Files.newOutputStream(path, 
-                        StandardOpenOption.CREATE);
-            ObjectOutputStream oos = new 
-                    ObjectOutputStream(outputStream)) {
+        try (OutputStream outputStream =
+                     Files.newOutputStream(path,
+                             StandardOpenOption.CREATE);
+             ObjectOutputStream oos = new
+                     ObjectOutputStream(outputStream)) {
 
             // write first object
             oos.writeObject(customer);
@@ -31,10 +32,10 @@ public class ObjectSerializationDemo1 {
         }
 
         // Deserialize
-        try (InputStream inputStream = Files.newInputStream(path, 
+        try (InputStream inputStream = Files.newInputStream(path,
                 StandardOpenOption.READ);
-            ObjectInputStream ois = new 
-                    ObjectInputStream(inputStream)) {
+             ObjectInputStream ois = new
+                     ObjectInputStream(inputStream)) {
             // read first object
             Customer customer2 = (Customer) ois.readObject();
             System.out.println("First Object: ");

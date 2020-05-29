@@ -17,10 +17,10 @@ public class TestFileSystem {
         }
     }
 
-    public static void meun(OSManager manager){
+    public static void meun(OSManager manager) {
         Scanner s = new Scanner(System.in);
         String str = null;
-        System.out.println("##########"+"欢迎使用文件模拟操作系统"+"##########");
+        System.out.println("##########" + "欢迎使用文件模拟操作系统" + "##########");
         System.out.println();
         manager.showFile();
 
@@ -31,56 +31,56 @@ public class TestFileSystem {
                 break;
             }
             String[] strs = editStr(str);//@@@@@@@@@
-            switch (strs[0]){
-                case"ls":
+            switch (strs[0]) {
+                case "ls":
                     manager.showFile();
                     break;
-                case  "createFile":
+                case "createFile":
                     if (strs.length < 4) {
                         System.out.println("您输入的命令有误,请检查");
                     } else {
-                        manager.createFile(strs[1],strs[2],Integer.parseInt(strs[3]));
+                        manager.createFile(strs[1], strs[2], Integer.parseInt(strs[3]));
                     }
                     break;
-                case  "createCatalog":
+                case "createCatalog":
                     if (strs.length < 2) {
                         System.out.println("您输入的命令有误,请检查");
                     } else {
                         manager.createCatalog(strs[1]);
                     }
                     break;
-                case  "open":
+                case "open":
                     if (strs.length < 2) {
                         System.out.println("您输入的命令有误,请检查");
                     } else {
                         manager.openFile(strs[1]);
                     }
                     break;
-                case  "cd":
+                case "cd":
                     if (strs.length < 2) {
                         System.out.println("您输入的命令有误,请检查");
                     } else {
                         manager.openFile(strs[1]);
                     }
                     break;
-                case  "cd..":
-                     manager.backFile();
+                case "cd..":
+                    manager.backFile();
                     break;
-                case  "delete":
+                case "delete":
                     if (strs.length < 2) {
                         System.out.println("您输入的命令有误,请检查");
                     } else {
                         manager.deleteFile(strs[1]);
                     }
                     break;
-                case  "rename":
+                case "rename":
                     if (strs.length < 3) {
                         System.out.println("您输入的命令有误,请检查");
                     } else {
-                        manager.reName(strs[1],strs[2]);
+                        manager.reName(strs[1], strs[2]);
                     }
                     break;
-                case  "search":
+                case "search":
                     if (strs.length < 2) {
                         System.out.println("您输入的命令有误,请检查");
                     } else {
@@ -88,21 +88,21 @@ public class TestFileSystem {
                         manager.serchFile(roadName);
                     }
                     break;
-                case  "showFAT":
+                case "showFAT":
                     manager.showFAT();
                     break;
-                case  "addContents":
+                case "addContents":
                     if (strs.length < 5) {
                         System.out.println("您输入的命令有误,请检查");
                     } else {
-                        manager.reAdd(strs[1],Integer.parseInt(strs[2]), Integer.parseInt(strs[3]),Integer.parseInt(strs[4]));
+                        manager.reAdd(strs[1], Integer.parseInt(strs[2]), Integer.parseInt(strs[3]), Integer.parseInt(strs[4]));
                     }
                     break;
-                case  "changeType":
+                case "changeType":
                     if (strs.length < 3) {
                         System.out.println("您输入的命令有误,请检查");
                     } else {
-                        manager.changType(strs[1],strs[2]);
+                        manager.changType(strs[1], strs[2]);
                     }
                     break;
                 case "find":
@@ -112,7 +112,7 @@ public class TestFileSystem {
                         manager.findone(strs[1], Integer.parseInt(strs[2]));
                     }
                     break;
-                case  "help": {
+                case "help": {
                     System.out.println("命令如下（空格不能省略）：");
                     System.out
                             .println("createFile FileName fileType fileSize");
@@ -193,7 +193,7 @@ public class TestFileSystem {
 
         for (int i = 1; i < strs.length; i++) {//判断除命令以外的每一个参数是否含有"."
             int j = strs[i].indexOf(".");
-            if (j != -1){//若含有"."将其切割  取前部分作为文件名
+            if (j != -1) {//若含有"."将其切割  取前部分作为文件名
                 String[] index = strs[i].split("\\.");//转义字符"\\."
                 strs[i] = index[0];
             }

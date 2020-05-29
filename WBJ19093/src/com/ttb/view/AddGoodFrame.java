@@ -20,152 +20,156 @@ import com.ttb.service.impl.GoodServiceImpl;
 import com.ttb.util.StringUtil;
 
 public class AddGoodFrame {
-	JFrame mainFrame = null;
-	JLabel goodNameLabel = null;
-	JLabel goodPriceLabel = null;
-	JLabel goodIntroLabel = null;
-	JLabel numsLabel = null;
-	JTextField goodNameField = null;
-	JTextField goodPriceField = null;
-	JTextArea goodIntroArea = null;
-	JTextField numsField = null;
-	JButton saveButton = null;
-	JButton cancelButton = null;
-	AdminFrame masterFrame = null;
-	GoodService gs = null;
-	public AddGoodFrame(AdminFrame adminFrame) {
-		masterFrame = adminFrame;
-	}
-	public void init(){
-		mainFrame = new JFrame("ÌÔÌÔ±¦ - Ìí¼ÓÉÌÆ·");
-		goodNameLabel = new JLabel("Ãû³Æ£º");
-		goodPriceLabel = new JLabel("¼Û¸ñ£º");
-		goodIntroLabel = new JLabel("¼ò½é£º");
-		numsLabel = new JLabel("ÊýÁ¿");
-		goodNameField = new JTextField();
-		goodPriceField = new JTextField();
-		numsField = new JTextField();
-		goodIntroArea = new JTextArea();
-		saveButton = new JButton("È·ÈÏ");
-		cancelButton = new JButton("È¡Ïû");
-		gs = new GoodServiceImpl();
-	}
-	public void build(){
-		mainFrame.setSize(400, 200);
-		mainFrame.setLocation(550, 250);
-		mainFrame.setLayout(null);
-		
-		goodNameLabel.setBounds(10, 10, 55, 25);
-		mainFrame.add(goodNameLabel);
-		
-		goodNameField.setBounds(70, 10, 95, 25);
-		mainFrame.add(goodNameField);
-		
-		goodPriceLabel.setBounds(10, 40, 55, 25);
-		mainFrame.add(goodPriceLabel);
-		
-		goodPriceField.setBounds(70, 40, 95, 25);
-		mainFrame.add(goodPriceField);
-		
-		numsLabel.setBounds(10, 70, 55, 25);
-		mainFrame.add(numsLabel);
-		
-		numsField.setBounds(70, 70, 95, 25);
-		mainFrame.add(numsField);
-		
-		goodIntroLabel.setBounds(200, 10, 55, 25);
-		mainFrame.add(goodIntroLabel);
-		
-		goodIntroArea.setBounds(260, 10, 95, 85);
-		mainFrame.add(goodIntroArea);
-		
-		saveButton.setBounds(90, 110, 75, 25);
-		mainFrame.add(saveButton);
-		
-		cancelButton.setBounds(200, 110, 75, 25);
-		mainFrame.add(cancelButton);
-		
-		mainFrame.setVisible(true);
-	}
-	public void addAction(){
-		saveButton.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				List<String> errorMessages = new ArrayList<String>();
-				//±íµ¥ÑéÖ¤
-				String goodName = goodNameField.getText();
-				if(StringUtil.checkString(goodName)){
-					errorMessages.add( "ÉÌÆ·Ãû²»ÄÜÎª¿Õ");
-				}
-				
-				Double goodPrice = null;
-				try {
-					goodPrice = Double.valueOf(goodPriceField.getText());
-					if(goodPrice < 0){
-						errorMessages.add( "ÉÌÆ·¼Û¸ñ²»ÄÜÐ¡ÓÚ0");
-					}
-				} catch (Exception e) {
-					errorMessages.add( "ÉÌÆ·¼Û¸ñ¸ñÊ½´íÎó");
-				}
-				
-				Integer nums = null;
-				try {
-					nums = Integer.valueOf(numsField.getText());
-					if(nums < 0){
-						errorMessages.add( "ÉÌÆ·ÊýÁ¿²»ÄÜÐ¡ÓÚ0");
-					}
-				} catch (Exception e) {
-					errorMessages.add( "ÉÌÆ·ÊýÁ¿¸ñÊ½´íÎó");
-				}
-				
-				String goodIntro = goodIntroArea.getText();
-				if(StringUtil.checkString(goodIntro)){
-					errorMessages.add( "ÉÌÆ·¼ò½é²»ÄÜÎª¿Õ");
-				}
-				
-				if(errorMessages.size() != 0){
-					StringBuffer sb = new StringBuffer();
-					for (String string : errorMessages) {
-						sb.append(string).append("\n");
-					}
-					JOptionPane.showMessageDialog(mainFrame, sb.toString(), "Ìí¼ÓÉÌÆ·´íÎó", JOptionPane.ERROR_MESSAGE);
-					return;
-				}
-				
-				Good good = new Good();
-				good.setGoodIntro(goodIntro);
-				good.setGoodName(goodName);
-				good.setNums(nums);
-				good.setGoodPrice(goodPrice);
+    JFrame mainFrame = null;
+    JLabel goodNameLabel = null;
+    JLabel goodPriceLabel = null;
+    JLabel goodIntroLabel = null;
+    JLabel numsLabel = null;
+    JTextField goodNameField = null;
+    JTextField goodPriceField = null;
+    JTextArea goodIntroArea = null;
+    JTextField numsField = null;
+    JButton saveButton = null;
+    JButton cancelButton = null;
+    AdminFrame masterFrame = null;
+    GoodService gs = null;
 
-				try {
-					gs.addGood(good);
-				} catch (GoodAlreadyExistException e) {
-					e.printStackTrace();
-				} catch (MoneyNotEnoughException e) {
-					e.printStackTrace();
-				}
-				
-				masterFrame.search();
-				
-				mainFrame.setVisible(false);
-			}
-		});
-		
-		cancelButton.addActionListener(new ActionListener() {
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				mainFrame.setVisible(false);
-			}
-		});
-	}
-	
-	public void start(){
-		init();
-		addAction();
-		build();
-	}
-	
+    public AddGoodFrame(AdminFrame adminFrame) {
+        masterFrame = adminFrame;
+    }
+
+    public void init() {
+        mainFrame = new JFrame("ï¿½ï¿½ï¿½Ô±ï¿½ - ï¿½ï¿½ï¿½ï¿½ï¿½Æ·");
+        goodNameLabel = new JLabel("ï¿½ï¿½ï¿½Æ£ï¿½");
+        goodPriceLabel = new JLabel("ï¿½Û¸ï¿½");
+        goodIntroLabel = new JLabel("ï¿½ï¿½é£º");
+        numsLabel = new JLabel("ï¿½ï¿½ï¿½ï¿½");
+        goodNameField = new JTextField();
+        goodPriceField = new JTextField();
+        numsField = new JTextField();
+        goodIntroArea = new JTextArea();
+        saveButton = new JButton("È·ï¿½ï¿½");
+        cancelButton = new JButton("È¡ï¿½ï¿½");
+        gs = new GoodServiceImpl();
+    }
+
+    public void build() {
+        mainFrame.setSize(400, 200);
+        mainFrame.setLocation(550, 250);
+        mainFrame.setLayout(null);
+
+        goodNameLabel.setBounds(10, 10, 55, 25);
+        mainFrame.add(goodNameLabel);
+
+        goodNameField.setBounds(70, 10, 95, 25);
+        mainFrame.add(goodNameField);
+
+        goodPriceLabel.setBounds(10, 40, 55, 25);
+        mainFrame.add(goodPriceLabel);
+
+        goodPriceField.setBounds(70, 40, 95, 25);
+        mainFrame.add(goodPriceField);
+
+        numsLabel.setBounds(10, 70, 55, 25);
+        mainFrame.add(numsLabel);
+
+        numsField.setBounds(70, 70, 95, 25);
+        mainFrame.add(numsField);
+
+        goodIntroLabel.setBounds(200, 10, 55, 25);
+        mainFrame.add(goodIntroLabel);
+
+        goodIntroArea.setBounds(260, 10, 95, 85);
+        mainFrame.add(goodIntroArea);
+
+        saveButton.setBounds(90, 110, 75, 25);
+        mainFrame.add(saveButton);
+
+        cancelButton.setBounds(200, 110, 75, 25);
+        mainFrame.add(cancelButton);
+
+        mainFrame.setVisible(true);
+    }
+
+    public void addAction() {
+        saveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                List<String> errorMessages = new ArrayList<String>();
+                //ï¿½ï¿½ï¿½ï¿½Ö¤
+                String goodName = goodNameField.getText();
+                if (StringUtil.checkString(goodName)) {
+                    errorMessages.add("ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½");
+                }
+
+                Double goodPrice = null;
+                try {
+                    goodPrice = Double.valueOf(goodPriceField.getText());
+                    if (goodPrice < 0) {
+                        errorMessages.add("ï¿½ï¿½Æ·ï¿½Û¸ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½0");
+                    }
+                } catch (Exception e) {
+                    errorMessages.add("ï¿½ï¿½Æ·ï¿½Û¸ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½");
+                }
+
+                Integer nums = null;
+                try {
+                    nums = Integer.valueOf(numsField.getText());
+                    if (nums < 0) {
+                        errorMessages.add("ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½0");
+                    }
+                } catch (Exception e) {
+                    errorMessages.add("ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½");
+                }
+
+                String goodIntro = goodIntroArea.getText();
+                if (StringUtil.checkString(goodIntro)) {
+                    errorMessages.add("ï¿½ï¿½Æ·ï¿½ï¿½é²»ï¿½ï¿½Îªï¿½ï¿½");
+                }
+
+                if (errorMessages.size() != 0) {
+                    StringBuffer sb = new StringBuffer();
+                    for (String string : errorMessages) {
+                        sb.append(string).append("\n");
+                    }
+                    JOptionPane.showMessageDialog(mainFrame, sb.toString(), "ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½", JOptionPane.ERROR_MESSAGE);
+                    return;
+                }
+
+                Good good = new Good();
+                good.setGoodIntro(goodIntro);
+                good.setGoodName(goodName);
+                good.setNums(nums);
+                good.setGoodPrice(goodPrice);
+
+                try {
+                    gs.addGood(good);
+                } catch (GoodAlreadyExistException e) {
+                    e.printStackTrace();
+                } catch (MoneyNotEnoughException e) {
+                    e.printStackTrace();
+                }
+
+                masterFrame.search();
+
+                mainFrame.setVisible(false);
+            }
+        });
+
+        cancelButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                mainFrame.setVisible(false);
+            }
+        });
+    }
+
+    public void start() {
+        init();
+        addAction();
+        build();
+    }
+
 }
 
 

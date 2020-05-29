@@ -1,4 +1,5 @@
 package app19;
+
 public class RunnableDemo1 implements Runnable {
     public void run() {
         for (int i = 1; i <= 10; i++) {

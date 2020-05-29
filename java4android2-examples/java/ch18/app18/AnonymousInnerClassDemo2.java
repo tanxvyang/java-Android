@@ -1,4 +1,5 @@
 package app18;
+
 abstract class Printable2 {
     void print(String message) {
     }

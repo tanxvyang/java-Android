@@ -13,7 +13,7 @@ public class Test {
         // SeasonB seasonB=SeasonB.SUMMER;
         // f(SeasonB.SUMMER);
 
-        SeasonC seasonC=SeasonC.SPRING;
+        SeasonC seasonC = SeasonC.SPRING;
         f(SeasonC.SUMMER);
     }
     // public static String f(int season){
@@ -38,16 +38,19 @@ public class Test {
     //     return null;
     // }
 
-    public static String f(SeasonC seasonC){
-        switch (seasonC){
-            case SPRING:return "春天";
-            case SUMMER:return "夏天";
-            case AUTUMN:return "秋天";
-            case WINTER:return "冬天";
+    public static String f(SeasonC seasonC) {
+        switch (seasonC) {
+            case SPRING:
+                return "春天";
+            case SUMMER:
+                return "夏天";
+            case AUTUMN:
+                return "秋天";
+            case WINTER:
+                return "冬天";
         }
         return null;
     }
-
 
 
 }

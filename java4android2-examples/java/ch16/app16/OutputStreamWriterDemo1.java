@@ -1,4 +1,5 @@
 package app16;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
@@ -14,15 +15,15 @@ public class OutputStreamWriterDemo1 {
         chars[0] = '\u4F60'; // representing 你
         chars[1] = '\u597D'; // representing 好;
         Path path = Paths.get("C:\\temp\\myFile.txt");
-        Charset chineseSimplifiedCharset = 
+        Charset chineseSimplifiedCharset =
                 Charset.forName("GB2312");
 
-        try (OutputStream outputStream = 
-                Files.newOutputStream(path, 
-                StandardOpenOption.CREATE);
-            OutputStreamWriter writer = new OutputStreamWriter(
-                    outputStream, chineseSimplifiedCharset)) {
-            
+        try (OutputStream outputStream =
+                     Files.newOutputStream(path,
+                             StandardOpenOption.CREATE);
+             OutputStreamWriter writer = new OutputStreamWriter(
+                     outputStream, chineseSimplifiedCharset)) {
+
             writer.write(chars);
         } catch (IOException e) {
             e.printStackTrace();

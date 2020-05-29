@@ -1,4 +1,5 @@
 package app16;
+
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.PrintStream;
@@ -12,10 +13,10 @@ public class PrintStreamDemo1 {
     public static void main(String[] args) {
         Path debugFile = Paths.get("C:\\temp\\debug.txt");
         try (OutputStream outputStream = Files.newOutputStream(
-                debugFile, StandardOpenOption.CREATE, 
+                debugFile, StandardOpenOption.CREATE,
                 StandardOpenOption.APPEND);
-            PrintStream printStream = new PrintStream(outputStream, 
-                    true)) {
+             PrintStream printStream = new PrintStream(outputStream,
+                     true)) {
 
             System.setOut(printStream);
             System.out.println("To file");

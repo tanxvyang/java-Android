@@ -18,21 +18,21 @@ public class Test {
 //        ps.sleep();
 //        ps.eat("饭");
 
-        Person p =new Person(true);
+        Person p = new Person(true);
 //        p.age=-67;
 //        p.money-=5000;
 //        System.out.println(p.name);
         p.setAge(100);
         System.out.println(p.getAge());
-      //  System.out.println(p.getName());
+        //  System.out.println(p.getName());
         System.out.println(p.getSex());
         p.setName("abc");
         System.out.println(p.getName());
 
-        System.out.println("main p:"+p);
+        System.out.println("main p:" + p);
 
-        Person ps=new Person(  false);
-        System.out.println("main ps:"+ps);
+        Person ps = new Person(false);
+        System.out.println("main ps:" + ps);
 
         ps.setName("aaa");
         System.out.println(ps.getName());

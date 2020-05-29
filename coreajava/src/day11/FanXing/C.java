@@ -9,7 +9,7 @@ package day11.FanXing;
 //运行时当做Object
 
 
-public class C <E,T extends Number>{  //限定  T传的值只能是Number 类型或其子类型
+public class C<E, T extends Number> {  //限定  T传的值只能是Number 类型或其子类型
     private E e;
 
     public E getE() {
@@ -19,7 +19,8 @@ public class C <E,T extends Number>{  //限定  T传的值只能是Number 类型
     public void setE(E e) {
         this.e = e;
     }
-    public T f(E e){
+
+    public T f(E e) {
         return null;
     }
 }

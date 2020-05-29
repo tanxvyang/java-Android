@@ -1,4 +1,5 @@
 package com.example.canvasdemo;
+
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
@@ -16,6 +17,7 @@ public class CustomView extends View {
     public CustomView(Context context) {
         super(context);
     }
+
     Paint paint = new Paint(Paint.FAKE_BOLD_TEXT_FLAG);
     Path starPath;
     Path curvePath;
@@ -23,6 +25,7 @@ public class CustomView extends View {
 
     Paint textPaint = new Paint(Paint.LINEAR_TEXT_FLAG);
     Paint shaderPaint = new Paint();
+
     {
         Typeface typeface = Typeface.create(
                 Typeface.SERIF, Typeface.BOLD);
@@ -37,9 +40,9 @@ public class CustomView extends View {
 
     protected void onDraw(Canvas canvas) {
         // draw basic shapes 
-        canvas.drawLine(5,  5, 200, 5, paint);
-        canvas.drawLine(5,  15, 200, 15, paint);
-        canvas.drawLine(5,  25, 200, 25, paint);
+        canvas.drawLine(5, 5, 200, 5, paint);
+        canvas.drawLine(5, 15, 200, 15, paint);
+        canvas.drawLine(5, 25, 200, 25, paint);
 
         paint.setColor(Color.YELLOW);
         canvas.drawCircle(50, 70, 35, paint);

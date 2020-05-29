@@ -10,7 +10,7 @@ public class Test1 {
 
         for (int i = 1; i <= 20; i++) {
             System.out.println(g(i));
-      }
+        }
 
     }
 
@@ -35,7 +35,7 @@ public class Test1 {
         if (n == 1 || n == 2) {
             ni = 1;
         } else {
-            ni=g(n-1) + g(n-2);
+            ni = g(n - 1) + g(n - 2);
         }
         return ni;
     }

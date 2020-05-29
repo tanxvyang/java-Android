@@ -1,4 +1,5 @@
 package app22;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -12,18 +13,16 @@ public class URLDemo2 {
             URL url = new URL("http://www.google.com/");
             InputStream inputStream = url.openStream();
             BufferedReader bufferedReader = new BufferedReader(
-                        new InputStreamReader(inputStream));
+                    new InputStreamReader(inputStream));
             String line = bufferedReader.readLine();
-            while (line!= null) {
+            while (line != null) {
                 System.out.println(line);
                 line = bufferedReader.readLine();
             }
             bufferedReader.close();
-        }
-        catch (MalformedURLException e) {
+        } catch (MalformedURLException e) {
             e.printStackTrace();
-        }
-        catch (IOException e) {
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }

@@ -1,4 +1,5 @@
 package com.example.listviewdemo1;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.Bundle;
@@ -23,20 +24,20 @@ public class MainActivity extends Activity {
         ListView listView = (ListView) findViewById(R.id.listView1);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new
-            AdapterView.OnItemClickListener() {
-                @Override
-                public void onItemClick(AdapterView<?> parent,
-                                        final View view, int position, long id) {
-                    String item = (String)
-                            parent.getItemAtPosition(position);
-                    AlertDialog.Builder builder = new
-                            AlertDialog.Builder(MainActivity.this);
-                    builder.setMessage("Selected item: "
-                            + item).setTitle("ListView");
-                    builder.create().show();
-                    Log.d("ListView", "Selected item : " + item);
-                }
-            });
+                                                AdapterView.OnItemClickListener() {
+                                                    @Override
+                                                    public void onItemClick(AdapterView<?> parent,
+                                                                            final View view, int position, long id) {
+                                                        String item = (String)
+                                                                parent.getItemAtPosition(position);
+                                                        AlertDialog.Builder builder = new
+                                                                AlertDialog.Builder(MainActivity.this);
+                                                        builder.setMessage("Selected item: "
+                                                                + item).setTitle("ListView");
+                                                        builder.create().show();
+                                                        Log.d("ListView", "Selected item : " + item);
+                                                    }
+                                                });
     }
 
     @Override

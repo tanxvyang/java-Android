@@ -5,35 +5,35 @@ import com.ttb.entity.User;
 import com.ttb.mapper.UserMapper;
 import com.ttb.util.JDBCTemplate;
 
-public class UserDaoImpl implements UserDao{
-	JDBCTemplate<User> temp = new JDBCTemplate<User>();
-	
-	public User selectUserByNameAndPwd(String username,String password){
-		String sql = new StringBuffer()
-			.append(" select ")
-			.append(" 	uid,username,password,usermoney ")
-			.append(" from ")
-			.append(" 	t_user ")
-			.append(" where ")
-			.append(" 	username = ? and ")
-			.append(" 	password = ? ")
-			.toString();//·ÀÖ¹Õ³ð¤
-		User user = temp.selectOne(new UserMapper(), sql, username, password);
-		return user;
-	}
+public class UserDaoImpl implements UserDao {
+    JDBCTemplate<User> temp = new JDBCTemplate<User>();
 
-	public void updateUser(User user) {//ÐÞ¸ÄµÄÊÇÒ»¸ö¶ÔÏó£¬²»ÊÇÒ»¸ö×Ö¶Î£¬ÊÇ½«ÐÞ¸Ä¹ýµÄ¶ÔÏó³Ö¾Ã»¯£¬²»ÊÇÕë¶Ô×Ö¶ÎµÄÐÞ¸Ä£¨±£´æ£©
-		String sql = new StringBuffer()
-			.append(" update ")
-			.append(" 	t_user ")
-			.append(" set ")
-			.append(" 	username = ?,password = ?,usermoney = ? ")
-			.append(" where ")
-			.append(" 	uid = ? ")
-			.toString();
-		temp.update(sql, user.getUsername(),user.getPassword(),user.getUsermoney(),
-				user.getUid());
-	}
+    public User selectUserByNameAndPwd(String username, String password) {
+        String sql = new StringBuffer()
+                .append(" select ")
+                .append(" 	uid,username,password,usermoney ")
+                .append(" from ")
+                .append(" 	t_user ")
+                .append(" where ")
+                .append(" 	username = ? and ")
+                .append(" 	password = ? ")
+                .toString();//ï¿½ï¿½Ö¹Õ³ï¿½
+        User user = temp.selectOne(new UserMapper(), sql, username, password);
+        return user;
+    }
+
+    public void updateUser(User user) {//ï¿½Þ¸Äµï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ó£¬²ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½Ö¶Î£ï¿½ï¿½Ç½ï¿½ï¿½Þ¸Ä¹ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½Ö¾Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¶Îµï¿½ï¿½Þ¸Ä£ï¿½ï¿½ï¿½ï¿½æ£©
+        String sql = new StringBuffer()
+                .append(" update ")
+                .append(" 	t_user ")
+                .append(" set ")
+                .append(" 	username = ?,password = ?,usermoney = ? ")
+                .append(" where ")
+                .append(" 	uid = ? ")
+                .toString();
+        temp.update(sql, user.getUsername(), user.getPassword(), user.getUsermoney(),
+                user.getUid());
+    }
 }
 
 

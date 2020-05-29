@@ -27,7 +27,7 @@ public class DesignClient {
              *  exists()：判断文件是否存在
              *  isFile()：判断是不是文件
              */
-            if(file.exists() && file.isFile()) {
+            if (file.exists() && file.isFile()) {
 
                 /**
                  * 3.创建文件输入流，发送文件
@@ -74,46 +74,46 @@ public class DesignClient {
                 // 向服务器发送[文件字节内容]
                 byte[] data = new byte[1024];
                 int i = 0;
-                while((i = in.read(data)) != -1) {
+                while ((i = in.read(data)) != -1) {
                     out.write(data, 0, i);
                 }
 
-            }else {
+            } else {
                 System.out.println("文件不存在或者一个文件~~");
             }
         } catch (Exception e) {
 
             e.printStackTrace();
-        }finally {
+        } finally {
             /**
              * 关闭Scanner，文件输入流，套接字
              * 套接字装饰了输出流，所以不用关闭输出流
              */
-            if(scan != null) {
+            if (scan != null) {
                 scan.close();
             }
 
-            if(in != null) {
-                    try {
-                        in.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }finally {
-                // 强制将输入流置为空
-                in = null;
+            if (in != null) {
+                try {
+                    in.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } finally {
+                    // 强制将输入流置为空
+                    in = null;
+                }
             }
-                }
 
-                if(socket != null) {
-                    try {
-                        socket.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }finally {
-                        // 强制释放socket
-                        socket = null;
-                    }
+            if (socket != null) {
+                try {
+                    socket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } finally {
+                    // 强制释放socket
+                    socket = null;
                 }
+            }
 
         }
         System.out.println("文件传输完毕");

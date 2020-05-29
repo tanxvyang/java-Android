@@ -1,5 +1,7 @@
 package com.example.soundmeter;
+
 import java.io.IOException;
+
 import android.media.MediaRecorder;
 
 public class SoundMeter {
@@ -41,6 +43,7 @@ public class SoundMeter {
             started = false;
         }
     }
+
     public double getAmplitude() {
         return mediaRecorder.getMaxAmplitude() / 100;
     }

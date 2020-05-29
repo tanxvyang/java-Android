@@ -6,15 +6,15 @@ import com.ttb.exception.LoginFailException;
 import com.ttb.factoy.ObjectFactory;
 import com.ttb.service.UserService;
 
-public class UserServiceImpl implements UserService{
-	UserDao userDao = (UserDao) ObjectFactory.getObject("userDao");
-	
-	//µÇÂ¼¹¦ÄÜ
-	public User login(String username,String password) throws LoginFailException{
-		User user = userDao.selectUserByNameAndPwd(username, password);
-		if(user == null){
-			throw new LoginFailException("ÓÃ»§ÃûÓëÃÜÂë²»Æ¥Åä");
-		}
-		return user;
-	}
+public class UserServiceImpl implements UserService {
+    UserDao userDao = (UserDao) ObjectFactory.getObject("userDao");
+
+    //ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+    public User login(String username, String password) throws LoginFailException {
+        User user = userDao.selectUserByNameAndPwd(username, password);
+        if (user == null) {
+            throw new LoginFailException("ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë²»Æ¥ï¿½ï¿½");
+        }
+        return user;
+    }
 }

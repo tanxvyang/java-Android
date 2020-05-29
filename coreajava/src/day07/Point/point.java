@@ -10,16 +10,12 @@ public class point {
     private double x;
     private double y;
 
- public static  int count=0;
+    public static int count = 0;
 
- public static void f(){
-     System.out.println(count);
-    // System.out.println(x);//调用失败,static是在类加载时开始的,   类加载时没有x,只有当类创建以后才有x
- }
-
-
-
-
+    public static void f() {
+        System.out.println(count);
+        // System.out.println(x);//调用失败,static是在类加载时开始的,   类加载时没有x,只有当类创建以后才有x
+    }
 
 
     public point(double x, double y) {
@@ -31,7 +27,7 @@ public class point {
     }
 
     public point() {
-        this(0,0);
+        this(0, 0);
     }
 
     public double getX() {
@@ -52,24 +48,24 @@ public class point {
 
 
     //计算距离
-    public double distance(double x,double y){
-    return Math.sqrt(Math.pow(this.x-x,2))+Math.pow(this.y-y,2);
+    public double distance(double x, double y) {
+        return Math.sqrt(Math.pow(this.x - x, 2)) + Math.pow(this.y - y, 2);
 
     }
 
-//调用了上一个方法
-    public double distance(point point){
-        return  distance(point.getX(),point.getY());     //??????????
+    //调用了上一个方法
+    public double distance(point point) {
+        return distance(point.getX(), point.getY());     //??????????
 
     }
 
     //到原点的距离
-    public double distance(){
+    public double distance() {
         return distance(new point());
 
     }
-/*
-*/
+    /*
+     */
 
 
     @Override

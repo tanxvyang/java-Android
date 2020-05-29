@@ -1,4 +1,5 @@
 package com.example.gesturedemo;
+
 import android.app.Activity;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
@@ -126,7 +127,7 @@ public class MainActivity extends Activity {
                         swapImages(cellView,
                                 cellViews[downY][downX + 1]);
                     } else if (downX > 0 && x < 0
-                            && y >=0 && y <= h) {
+                            && y >= 0 && y <= h) {
                         // swap with left cell
                         swapping = true;
                         swapImages(cellView,

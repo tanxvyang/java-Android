@@ -1,4 +1,5 @@
 package app08;
+
 import java.util.Scanner;
 
 public class NumberDoubler {

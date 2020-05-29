@@ -9,10 +9,10 @@ import java.util.Scanner;
 
 public class TimePowerOff {
     public static void main(String[] args) throws ParseException, InterruptedException, IOException {
-        DateFormat format =new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
+        DateFormat format = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
         System.out.println("请输入关机时间:yyyy/MM/dd HH:mm:ss");
-        Scanner sc =new Scanner(System.in);
-String regex="\\d{4}/\\d{2}/\\d{2} \\d{2}:\\d{2}:\\d{2}";
+        Scanner sc = new Scanner(System.in);
+        String regex = "\\d{4}/\\d{2}/\\d{2} \\d{2}:\\d{2}:\\d{2}";
 
 
       /*  String targetStr = sc.nextLine();
@@ -47,7 +47,7 @@ String regex="\\d{4}/\\d{2}/\\d{2} \\d{2}:\\d{2}:\\d{2}";
             now = new Date();
         } while (targetDate.before(now));//比较日期
 
-        Thread.sleep(targetDate.getTime()-now.getTime());
+        Thread.sleep(targetDate.getTime() - now.getTime());
 //调用命令
         Runtime.getRuntime().exec("shutdown -s -t 0");
     }

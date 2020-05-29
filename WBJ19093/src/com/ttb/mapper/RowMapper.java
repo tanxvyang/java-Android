@@ -2,8 +2,9 @@ package com.ttb.mapper;
 
 import java.sql.ResultSet;
 
-//ÐÐÓ³Éä¹ØÏµ¼ÇÂ¼Æ÷
-public interface RowMapper<T> {//Õ¼Î»·û
-	public T mapperObject(ResultSet rs) throws Exception;
+//ï¿½ï¿½Ó³ï¿½ï¿½ï¿½Ïµï¿½ï¿½Â¼ï¿½ï¿½
+public interface RowMapper<T> {//Õ¼Î»ï¿½ï¿½
+
+    public T mapperObject(ResultSet rs) throws Exception;
 
 }

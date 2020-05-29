@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Test1 {
     public static void main(String[] args) {
-      Scanner sc =new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
 //        int i=sc.nextInt();//获取int类型
 //        double d= sc.nextDouble();//获取double类型
 //        String s= sc.next();//获取下一个

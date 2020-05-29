@@ -1,4 +1,5 @@
 package com.example.fragmentdemo2;
+
 import android.app.Activity;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
@@ -13,6 +14,7 @@ public class MainActivity extends Activity
         setContentView(R.layout.activity_main);
 
     }
+
     @Override
     public void onItemSelected(String value) {
 

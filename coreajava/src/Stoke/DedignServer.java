@@ -28,17 +28,17 @@ public class DedignServer {
          * 持续接收客户端发来的信息，并交给线程处理
          */
 
-        while(true) {
+        while (true) {
 
-                Socket socket = ss.accept();
+            Socket socket = ss.accept();
 
-                new Thread(new UpLoad(socket)).start();
+            new Thread(new UpLoad(socket)).start();
 
         }
     }
 }
 
-class UpLoad implements Runnable{
+class UpLoad implements Runnable {
 
     private Socket socket = null;
 
@@ -62,7 +62,7 @@ class UpLoad implements Runnable{
              */
             String line1 = "";
             byte[] by1 = new byte[1];
-            while(!line1.endsWith("\r\n")) {
+            while (!line1.endsWith("\r\n")) {
                 in.read(by1);
                 String str = new String(by1);
                 line1 += str;
@@ -86,7 +86,7 @@ class UpLoad implements Runnable{
             // 获取文件内容字节长度
             String line2 = "";
             byte[] by2 = new byte[1];
-            while(!line2.endsWith("\r\n")) {
+            while (!line2.endsWith("\r\n")) {
                 in.read(by2);
                 String str = new String(by2);
                 line2 += str;
@@ -102,30 +102,31 @@ class UpLoad implements Runnable{
             in.read(by3);
             out.write(by3);
 
-            System.out.println("接受到来自"+socket.getInetAddress().getHostAddress()+"上传的文件"+path);
+            System.out.println("接受到来自" + socket.getInetAddress().getHostAddress() + "上传的文件" + path);
 
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             // 关闭资源
             // 关闭输出流
 
-                if(out != null) {
-                    try {
-                        out.close();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-            }finally {
-                out = null;
-            }}
+            if (out != null) {
+                try {
+                    out.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                } finally {
+                    out = null;
+                }
+            }
             // 关闭socket
             try {
-                if(socket != null) {
+                if (socket != null) {
                     socket.close();
                 }
             } catch (IOException e) {
                 e.printStackTrace();
-            }finally {
+            } finally {
                 socket = null;
             }
         }

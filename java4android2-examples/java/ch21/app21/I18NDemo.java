@@ -1,4 +1,5 @@
 package app21;
+
 import java.awt.GridLayout;
 import java.util.Locale;
 import java.util.ResourceBundle;
@@ -12,7 +13,7 @@ import javax.swing.SwingUtilities;
 public class I18NDemo {
     private static void constructGUI() {
         Locale locale = Locale.getDefault();
-        ResourceBundle rb = 
+        ResourceBundle rb =
                 ResourceBundle.getBundle("MyResources", locale);
         JFrame.setDefaultLookAndFeelDecorated(true);
         JFrame frame = new JFrame("I18N Test");
@@ -26,7 +27,7 @@ public class I18NDemo {
         frame.pack();
         frame.setVisible(true);
     }
-      
+
     public static void main(String[] args) {
         SwingUtilities.invokeLater(new Runnable() {
             public void run() {

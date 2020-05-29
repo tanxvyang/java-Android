@@ -1,19 +1,20 @@
 package day03;
-//	 ´òÓ¡³Ë·¨¿Ú¾÷±í
+
+//	 ï¿½ï¿½Ó¡ï¿½Ë·ï¿½ï¿½Ú¾ï¿½ï¿½ï¿½
 public class Test13 {
 
-	public static void main(String[] args) {
-		
-		for(int i=1;i<9;i++){//¿ØÖÆÐÐ
-			
-			for(int j=1;j<i;j++){//¿ØÖÆÁÐ
-				System.out.print(j+"X"+i+"="+(j*i)+"\t");
-				
-				
-			}
-			System.out.println();//»»ÐÐ
-		}
-		
-	}
+    public static void main(String[] args) {
+
+        for (int i = 1; i < 9; i++) {//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+
+            for (int j = 1; j < i; j++) {//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+                System.out.print(j + "X" + i + "=" + (j * i) + "\t");
+
+
+            }
+            System.out.println();//ï¿½ï¿½ï¿½ï¿½
+        }
+
+    }
 
 }

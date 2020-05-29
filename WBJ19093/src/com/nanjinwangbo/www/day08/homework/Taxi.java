@@ -7,9 +7,9 @@ public class Taxi extends Car {
         super(merchant, owner);
     }
 
-    public void reception(){ //接待乘客
+    public void reception() { //接待乘客
         boolean isnull = false;
-        while (true){
+        while (true) {
 
         }
 

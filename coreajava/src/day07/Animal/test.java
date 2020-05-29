@@ -11,24 +11,24 @@ public class test {
         // * */
 
 
-         Animal b=new Bird("aaa","red");
+        Animal b = new Bird("aaa", "red");
         //Bird b=new Bird("aaaa","red");
         System.out.println(b.getName());
-        System.out.println(((Bird)b).getColor());
+        System.out.println(((Bird) b).getColor());
         b.eat();
         //如果b是鸟类型才可以转换成鸟
 
-        if( b instanceof Bird) {
+        if (b instanceof Bird) {
 
             ((Bird) b).sing();
         }
 
-        Animal d=new Dog("qqq");
-       // Dog d=new Dog("jingba");
+        Animal d = new Dog("qqq");
+        // Dog d=new Dog("jingba");
         System.out.println(d.getName());
-       // ((Bird) d).sing();    //java.lang.ClassCastException  报错
- 
-        if( d instanceof Bird) {
+        // ((Bird) d).sing();    //java.lang.ClassCastException  报错
+
+        if (d instanceof Bird) {
 
             ((Bird) d).sing();
         }
@@ -37,13 +37,12 @@ public class test {
         d.eat();
         System.out.println("----------------------------------");
 
-        Bird c=new Bird("aaa","erer");
+        Bird c = new Bird("aaa", "erer");
         c.eat();
-        Dog e=new Dog("bbbb");
-          e.eat();
-        Animal cc=new Bird("ererer","re");
+        Dog e = new Dog("bbbb");
+        e.eat();
+        Animal cc = new Bird("ererer", "re");
         cc.eat();
-        
 
 
     }

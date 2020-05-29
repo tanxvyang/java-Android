@@ -1,11 +1,12 @@
 package java_android.app18;
 //局部内部类实例
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 
 
-interface Logger{
+interface Logger {
     public void log(String message);
 }
 
@@ -14,9 +15,9 @@ public class LocalClassDemo1 {
     String appStartTime = LocalDateTime.now().format(
             DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM));
 
-    public Logger getLogger(){
+    public Logger getLogger() {
         //LoggerImpl 局部类,位于 getLogger方法中
-        class  LoggerImpl implements Logger{
+        class LoggerImpl implements Logger {
             public void log(String message) {
                 System.out.println(appStartTime + " : " + message);
             }

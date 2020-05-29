@@ -1,6 +1,6 @@
 package day08.interface_test;
 
-public class C2 implements I3{
+public class C2 implements I3 {
 
     @Override
     public void f3() {

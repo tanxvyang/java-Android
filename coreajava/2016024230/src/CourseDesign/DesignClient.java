@@ -10,13 +10,12 @@ public class DesignClient {
         Scanner scan = null;
         InputStream in = null;
         Socket socket = null;
-        BufferedReader br=null;
-        PrintWriter pw=null;
+        BufferedReader br = null;
+        PrintWriter pw = null;
 
         try {
             socket = new Socket();
             socket.connect(new InetSocketAddress("127.0.0.1", 12345));
-
 
 
 //
@@ -38,12 +37,11 @@ public class DesignClient {
 //
 
 
-
-            in= socket.getInputStream();
-            br=new BufferedReader(
+            in = socket.getInputStream();
+            br = new BufferedReader(
                     new InputStreamReader(in)
             );
-            String message=br.readLine();//读取传回消息,使当前线程阻塞,数据读完时,回到线程
+            String message = br.readLine();//读取传回消息,使当前线程阻塞,数据读完时,回到线程
             System.out.println(message);
 
             /**
@@ -60,7 +58,7 @@ public class DesignClient {
              *  exists()：判断文件是否存在
              *  isFile()：判断是不是文件
              */
-            if(file.exists() && file.isFile()) {
+            if (file.exists() && file.isFile()) {
 
                 /**
                  * 3.创建文件输入流，发送文件
@@ -73,14 +71,14 @@ public class DesignClient {
                  *
                  * 4.创建客户端套接字
                  */
-              //  socket = new Socket();
+                //  socket = new Socket();
                 //InetSocketAddress Inets = new InetSocketAddress("127.0.0.1", 12345);
 
                 /**
                  * 5.连接TCP服务器
                  *       确定服务端的IP和端口号
                  */
-             //   socket.connect(new InetSocketAddress("127.0.0.1", 12345));
+                //   socket.connect(new InetSocketAddress("127.0.0.1", 12345));
 
                 /**
                  * 6.获取到客户端的输出流
@@ -107,25 +105,25 @@ public class DesignClient {
                 // 向服务器发送[文件字节内容]
                 byte[] data = new byte[1024];
                 int i = 0;
-                while((i = in.read(data)) != -1) {
+                while ((i = in.read(data)) != -1) {
                     out.write(data, 0, i);
                 }
                 System.out.println("文件上传完成!");
 
-            }else {
+            } else {
                 System.out.println("未找到文件,文件不存在或者路径不正确");
                 System.out.println("请重试");
             }
         } catch (Exception e) {
 
             e.printStackTrace();
-        }finally {
+        } finally {
             /**
              * 关闭Scanner，文件输入流，套接字
              * 套接字装饰了输出流，所以不用关闭输出流
              */
 
-            if (br!=null){
+            if (br != null) {
                 try {
                     br.close();
                 } catch (IOException e) {
@@ -133,31 +131,31 @@ public class DesignClient {
                 }
             }
 
-            if(scan != null) {
+            if (scan != null) {
                 scan.close();
             }
-            if (br!=null){
+            if (br != null) {
                 try {
                     br.close();
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
             }
-            if(in != null) {
-                    try {
-                        in.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+            if (in != null) {
+                try {
+                    in.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
+            }
 
-                if(socket != null) {
-                    try {
-                        socket.close();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
+            if (socket != null) {
+                try {
+                    socket.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
+            }
 
         }
         System.out.println("本次会话结束!");

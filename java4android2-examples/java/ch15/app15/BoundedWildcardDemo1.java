@@ -1,6 +1,8 @@
 package app15;
+
 import java.util.ArrayList;
 import java.util.List;
+
 public class BoundedWildcardDemo1 {
     public static double getAverage(
             List<? extends Number> numberList) {
@@ -8,9 +10,9 @@ public class BoundedWildcardDemo1 {
         for (Number number : numberList) {
             total += number.doubleValue();
         }
-        return total/numberList.size();    
+        return total / numberList.size();
     }
-   
+
     public static void main(String[] args) {
         List<Integer> integerList = new ArrayList<>();
         integerList.add(3);

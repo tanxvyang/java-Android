@@ -1,4 +1,5 @@
 package app16;
+
 import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -20,23 +21,23 @@ public class InputStreamReaderDemo1 {
         chars[1] = '\u597D'; // representing 好;
 
         // write text
-        try (BufferedWriter writer =        
-                Files.newBufferedWriter(textFile, 
-                     chineseSimplifiedCharset, 
-                     StandardOpenOption.CREATE)) {
+        try (BufferedWriter writer =
+                     Files.newBufferedWriter(textFile,
+                             chineseSimplifiedCharset,
+                             StandardOpenOption.CREATE)) {
             writer.write(chars);
         } catch (IOException e) {
             System.out.println(e.toString());
         }
-        
+
         // read back
-        try (InputStream inputStream = 
-                Files.newInputStream(textFile, 
-                StandardOpenOption.READ);
-                
-            InputStreamReader reader = new   
-                    InputStreamReader(inputStream, 
-                            chineseSimplifiedCharset)) {
+        try (InputStream inputStream =
+                     Files.newInputStream(textFile,
+                             StandardOpenOption.READ);
+
+             InputStreamReader reader = new
+                     InputStreamReader(inputStream,
+                     chineseSimplifiedCharset)) {
             char[] chars2 = new char[2];
             reader.read(chars2);
             System.out.print(chars2[0]);

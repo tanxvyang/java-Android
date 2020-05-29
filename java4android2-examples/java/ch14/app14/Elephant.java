@@ -1,8 +1,10 @@
 package app14;
+
 public class Elephant implements Comparable {
     public float weight;
     public int age;
     public float tuskLength;
+
     public int compareTo(Object obj) {
         Elephant anotherElephant = (Elephant) obj;
         if (this.weight > anotherElephant.weight) {

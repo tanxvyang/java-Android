@@ -1,4 +1,5 @@
 package app19;
+
 public class Consistent {
     static boolean started = false;
 

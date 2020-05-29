@@ -1,4 +1,5 @@
 package com.example.animationdemo;
+
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
@@ -36,22 +37,23 @@ public class MainActivity extends Activity {
         valueAnimator.setDuration(15000);
 
         valueAnimator.addUpdateListener(new
-            ValueAnimator.AnimatorUpdateListener() {
-                @Override
-                public void onAnimationUpdate(ValueAnimator animation) {
-                    Float value = (Float) animation.getAnimatedValue();
-                    view.setRotationX(value);
-                    if (value < 3600) {
-                        view.setTranslationX(value/20);
-                        view.setTranslationY(value/20);
-                    } else {
-                        view.setTranslationX((7200-value)/20);
-                        view.setTranslationY((7200-value)/20);
-                    }
-                }
-            });
+                                                ValueAnimator.AnimatorUpdateListener() {
+                                                    @Override
+                                                    public void onAnimationUpdate(ValueAnimator animation) {
+                                                        Float value = (Float) animation.getAnimatedValue();
+                                                        view.setRotationX(value);
+                                                        if (value < 3600) {
+                                                            view.setTranslationX(value / 20);
+                                                            view.setTranslationY(value / 20);
+                                                        } else {
+                                                            view.setTranslationX((7200 - value) / 20);
+                                                            view.setTranslationY((7200 - value) / 20);
+                                                        }
+                                                    }
+                                                });
         valueAnimator.start();
     }
+
     public void animate3(View source) {
         View view = findViewById(R.id.imageView1);
         ObjectAnimator objectAnimator1 =

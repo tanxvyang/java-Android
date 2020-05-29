@@ -1,4 +1,5 @@
 package app13;
+
 import java.time.LocalDate;
 import java.time.Period;
 import java.time.format.DateTimeFormatter;
@@ -7,11 +8,12 @@ import java.util.Scanner;
 
 public class AgeCalculator {
     DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-M-d");
+
     public Period calculateAge(LocalDate birthday) {
         LocalDate today = LocalDate.now();
         return Period.between(birthday, today);
     }
-    
+
     public LocalDate getBirthday() {
         Scanner scanner = new Scanner(System.in);
         LocalDate birthday;
@@ -22,18 +24,18 @@ public class AgeCalculator {
             try {
                 birthday = LocalDate.parse(input, formatter);
                 return birthday;
-            } catch(DateTimeParseException e) {
+            } catch (DateTimeParseException e) {
                 System.out.println("Error! Please try again");
             }
         }
     }
-    
+
     public static void main(String[] args) {
         AgeCalculator ageCalculator = new AgeCalculator();
         LocalDate birthday = ageCalculator.getBirthday();
         Period age = ageCalculator.calculateAge(birthday);
         System.out.printf("Today you are %d years, %d months"
-                + " and %d days old%n",
+                        + " and %d days old%n",
                 age.getYears(), age.getMonths(), age.getDays());
     }
 }

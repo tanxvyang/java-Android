@@ -52,9 +52,9 @@ public class Person {
     }
 
     public void setName(String name) {
-     // name = name;
-        System.out.println("setName THIS:"+this);
-        this.name=name;//当前对象，谁调用这个方法谁就是this
+        // name = name;
+        System.out.println("setName THIS:" + this);
+        this.name = name;//当前对象，谁调用这个方法谁就是this
     }
 
     public String getSex() {

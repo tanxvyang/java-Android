@@ -1,4 +1,5 @@
 package app04;
+
 public class Book {
     String isbn;
     String title;

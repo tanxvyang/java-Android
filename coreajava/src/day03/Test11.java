@@ -2,18 +2,18 @@ package day03;
 
 public class Test11 {
 
-	public static void main(String[] args) {
-		int i=0;
-		while(true){
-			
+    public static void main(String[] args) {
+        int i = 0;
+        while (true) {
+
+
+            System.out.println(i);
+            i = ++i % 10;//Êµï¿½ï¿½0ï¿½ï¿½9ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½     ï¿½Îºï¿½ï¿½ï¿½ï¿½Ö¶ï¿½10È¡ï¿½ï¿½
+        }
 		
-			System.out.println(i);
-			i=++i%10;//ÊµÏÖ0µ½9ÎÞÏÞÑ­»·     ÈÎºÎÊý×Ö¶Ô10È¡Óà
-		}
-		
-		/*for(;;){  //ÎÞÏÞÑ­»·
+		/*for(;;){  //ï¿½ï¿½ï¿½ï¿½Ñ­ï¿½ï¿½
 		System.out.println(1);
 	}
 */
+    }
 }
-	}

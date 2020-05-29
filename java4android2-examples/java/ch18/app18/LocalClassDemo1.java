@@ -1,4 +1,5 @@
 package app18;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
@@ -10,7 +11,8 @@ interface Logger {
 public class LocalClassDemo1 {
     String appStartTime = LocalDateTime.now().format(
             DateTimeFormatter
-            .ofLocalizedDateTime(FormatStyle.MEDIUM));
+                    .ofLocalizedDateTime(FormatStyle.MEDIUM));
+
     public Logger getLogger() {
         class LoggerImpl implements Logger {
             public void log(String message) {
@@ -19,7 +21,7 @@ public class LocalClassDemo1 {
         }
         return new LoggerImpl();
     }
-  
+
     public static void main(String[] args) {
         LocalClassDemo1 test = new LocalClassDemo1();
         Logger logger = test.getLogger();

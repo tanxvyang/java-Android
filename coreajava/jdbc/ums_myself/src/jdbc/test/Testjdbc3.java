@@ -3,10 +3,11 @@ package jdbc.test;
 import java.sql.*;
 
 public class Testjdbc3 {
-    private static String driverClassName="com.mysql.jdbc.Driver";
-    private  static  String url="jdbc:mysql://127.0.0.1:3306/jdbc";//192.168.140.1
-    private  static  String username="root" ;
-    private  static  String password="610322";
+    private static String driverClassName = "com.mysql.jdbc.Driver";
+    private static String url = "jdbc:mysql://127.0.0.1:3306/jdbc";//192.168.140.1
+    private static String username = "root";
+    private static String password = "610322";
+
     public static void main(String[] args) {
         //create();
         //	insert("aaa");
@@ -14,41 +15,38 @@ public class Testjdbc3 {
 //	deleteById(2);
 //		updateNameById(1, "bbb");
         // 	selectAll();
-       selectByName("b");
+        selectByName("b");
     }
 
 
+    public static void create() {
 
-
-
-    public static void create(){
-
-        Connection con=null;
-        PreparedStatement ps=null;
+        Connection con = null;
+        PreparedStatement ps = null;
         try {
             Class.forName(driverClassName);
-            con=DriverManager.getConnection(url,username,password);
-            String sql=new StringBuffer()
+            con = DriverManager.getConnection(url, username, password);
+            String sql = new StringBuffer()
                     .append("create table t_test( ")
                     .append("	id int primary key auto_increment, ")
                     .append("	name varchar(10) ")
                     .append(") ")
                     .toString();
-            ps=con.prepareStatement(sql);
+            ps = con.prepareStatement(sql);
 
             ps.execute();
 
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            if(ps!=null){
+            if (ps != null) {
                 try {
                     ps.close();
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
             }
-            if(con!=null){
+            if (con != null) {
                 try {
                     con.close();
                 } catch (SQLException e) {
@@ -59,22 +57,21 @@ public class Testjdbc3 {
     }
 
 
-
-    public static void insert(String name){
-        Connection con=null;
-        PreparedStatement ps=null;
+    public static void insert(String name) {
+        Connection con = null;
+        PreparedStatement ps = null;
         try {
             Class.forName(driverClassName);
-            con=DriverManager.getConnection(url,username,password);
+            con = DriverManager.getConnection(url, username, password);
 
-            String sql=new StringBuffer()
+            String sql = new StringBuffer()
                     .append("insert into t_test ")
                     .append("    (name) ")
                     .append("values ")
                     .append("    (?) ")
                     .toString();
 
-            ps=con.prepareStatement(sql);
+            ps = con.prepareStatement(sql);
 
             ps.setString(1, name);
 
@@ -83,14 +80,14 @@ public class Testjdbc3 {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-            if(ps!=null){
+            if (ps != null) {
                 try {
                     ps.close();
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
             }
-            if(con!=null){
+            if (con != null) {
                 try {
                     con.close();
                 } catch (SQLException e) {
@@ -100,19 +97,19 @@ public class Testjdbc3 {
         }
     }
 
-    public static void deleteById(int id){
+    public static void deleteById(int id) {
         Connection con = null;
         PreparedStatement ps = null;
         try {
             Class.forName(driverClassName);
             con = DriverManager.getConnection(url, username, password);
 
-            String sql=new StringBuffer()
+            String sql = new StringBuffer()
                     .append("delete from t_test ")
                     .append("where id=? ")
                     .toString();
 
-            ps=con.prepareStatement(sql);
+            ps = con.prepareStatement(sql);
 
             ps.setInt(1, id);
 
@@ -139,20 +136,20 @@ public class Testjdbc3 {
     }
 
 
-    public static void updateNameById(int id,String name){
+    public static void updateNameById(int id, String name) {
         Connection con = null;
         PreparedStatement ps = null;
         try {
             Class.forName(driverClassName);
             con = DriverManager.getConnection(url, username, password);
 
-            String sql=new StringBuffer()
+            String sql = new StringBuffer()
                     .append("update t_test ")
                     .append("set name=? ")
                     .append("where id=? ")
                     .toString();
 
-            ps=con.prepareStatement(sql);
+            ps = con.prepareStatement(sql);
 
             ps.setString(1, name);
             ps.setInt(2, id);
@@ -180,9 +177,7 @@ public class Testjdbc3 {
     }
 
 
-
-
-    public static void selectAll(){
+    public static void selectAll() {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -190,17 +185,17 @@ public class Testjdbc3 {
             Class.forName(driverClassName);
             con = DriverManager.getConnection(url, username, password);
 
-            String sql=new StringBuffer()
+            String sql = new StringBuffer()
                     .append("select * ")
                     .append("from t_test ")
                     .toString();
 
-            ps=con.prepareStatement(sql);
+            ps = con.prepareStatement(sql);
 
-            rs=ps.executeQuery();
+            rs = ps.executeQuery();
 
-            while(rs.next()){
-                System.out.println(rs.getInt("id")+"\t"+rs.getString("name"));
+            while (rs.next()) {
+                System.out.println(rs.getInt("id") + "\t" + rs.getString("name"));
             }
 
         } catch (Exception e) {
@@ -231,8 +226,7 @@ public class Testjdbc3 {
     }
 
 
-
-    public static void selectByName(String name){
+    public static void selectByName(String name) {
         Connection con = null;
         PreparedStatement ps = null;
         ResultSet rs = null;
@@ -240,22 +234,22 @@ public class Testjdbc3 {
             Class.forName(driverClassName);
             con = DriverManager.getConnection(url, username, password);
 
-            String sql=new StringBuffer()
+            String sql = new StringBuffer()
                     .append("select * ")
                     .append("from t_test ")
 //				.append("where name=? ")
                     .append("where name like ? ")
                     .toString();
 
-            ps=con.prepareStatement(sql);
+            ps = con.prepareStatement(sql);
 
 //			ps.setString(1, name);
-            ps.setString(1, name+"%");
+            ps.setString(1, name + "%");
 
-            rs=ps.executeQuery();
+            rs = ps.executeQuery();
 
-            while(rs.next()){
-                System.out.println(rs.getInt("id")+"\t"+rs.getString("name"));
+            while (rs.next()) {
+                System.out.println(rs.getInt("id") + "\t" + rs.getString("name"));
             }
 
         } catch (Exception e) {

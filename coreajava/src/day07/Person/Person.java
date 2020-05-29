@@ -25,16 +25,15 @@ public class Person {
     }
 
 
-    public  void move(){
-        System.out.println(name+"在走路");
+    public void move() {
+        System.out.println(name + "在走路");
     }
 
-    public void move(Transport t){
+    public void move(Transport t) {
 
-        System.out.print(name+"乘坐");
+        System.out.print(name + "乘坐");
         t.move();
     }
-
 
 
 }

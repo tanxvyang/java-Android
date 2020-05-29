@@ -1,4 +1,5 @@
 package app19;
+
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,7 +24,7 @@ public class StopThreadDemo extends JFrame {
                 }
                 if (count == 1000) {
                     count = 1;
-                }    
+                }
                 counterLabel.setText(Integer.toString(count++));
             }
         }
@@ -64,7 +65,7 @@ public class StopThreadDemo extends JFrame {
         thread = new CounterThread();
         thread.start();
     }
-    
+
     public synchronized void stopThread() {
         stopped = true;
     }

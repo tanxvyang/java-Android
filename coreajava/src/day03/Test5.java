@@ -3,13 +3,13 @@ package day03;
 import java.util.Scanner;
 
 public class Test5 {
-	public static void main(String[] args) {
-		Scanner sc=new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÊı×Ö:");
-		//»ñÈ¡ÓÃ»§ÊäÈë
-		int num=sc.nextInt();
-		System.out.println("ÊäÈëÊı×ÖÎª£º"+num);
-	  String s=	num%2!=0?"ÆæÊı": "Å¼Êı";
-			System.out.println(s);	
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:");
+        //ï¿½ï¿½È¡ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
+        int num = sc.nextInt();
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½" + num);
+        String s = num % 2 != 0 ? "ï¿½ï¿½ï¿½ï¿½" : "Å¼ï¿½ï¿½";
+        System.out.println(s);
+    }
 }

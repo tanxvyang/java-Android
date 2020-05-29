@@ -1,4 +1,5 @@
 package app16;
+
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.channels.SeekableByteChannel;
@@ -24,15 +25,15 @@ public class SeekableByteChannelDemo1 {
 
         Path path = Paths.get("C:/temp/channel");
         System.out.println("-------------------------");
-        try (SeekableByteChannel byteChannel = 
-                Files.newByteChannel(path, 
-                    StandardOpenOption.CREATE,
-                    StandardOpenOption.READ, 
-                    StandardOpenOption.WRITE);) {
+        try (SeekableByteChannel byteChannel =
+                     Files.newByteChannel(path,
+                             StandardOpenOption.CREATE,
+                             StandardOpenOption.READ,
+                             StandardOpenOption.WRITE);) {
             System.out.println(byteChannel.position()); // prints 0
             byteChannel.write(buffer);
             System.out.println(byteChannel.position()); //prints 20
-            
+
             // read file
             ByteBuffer buffer3 = ByteBuffer.allocate(40);
             byteChannel.position(0);

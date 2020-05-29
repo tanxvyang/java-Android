@@ -2,44 +2,45 @@ package OS_Test.file;
 
 public class Myarray {
     private long[] array;
-    //±íÊ¾ÓÐÐ§Êý¾ÝµÄ³¤¶È
+    //ï¿½ï¿½Ê¾ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ÝµÄ³ï¿½ï¿½ï¿½
     private int elements;
 
     public Myarray() {
         array = new long[50];
     }
 
-    public Myarray(int maxSize){
-        array = new long[maxSize];//Õâ¸ö´óÐ¡ÊÇ´Ó´´½¨ÎÄ¼þÊ±´«ÈëµÄ
+    public Myarray(int maxSize) {
+        array = new long[maxSize];//ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½Ç´Ó´ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½
     }
 
-    //½ÓÏÂÀ´²åÈëÊý¾Ý
-    public void insert(int values){
-        //µÚÒ»´ÎÌí¼ÓÊÇÎª0µÄ£¬¼´values
-        array[elements]=values;
-        elements++;//ÈÃËýµÝÔö
-        //µ±µÚ¶þ´Îµ÷ÓÃÕâ¶ùÌí¼ÓµÄÊ±ºò£¬array[elements]ÀïÃæÊÇÎª1,È»ºóµÝÔöÎª2
+    //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public void insert(int values) {
+        //ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0ï¿½Ä£ï¿½ï¿½ï¿½values
+        array[elements] = values;
+        elements++;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        //ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½Îµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Óµï¿½Ê±ï¿½ï¿½array[elements]ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª1,È»ï¿½ï¿½ï¿½ï¿½ï¿½Îª2
     }
-    //ÏÔÊ¾Êý¾Ý
-    public void diplay(){
+
+    //ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½
+    public void diplay() {
         System.out.print("[");
-        //ÓÃforÑ­»·±éÀú£¬i=0£¬ÏÂ±êÎª0
+        //ï¿½ï¿½forÑ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½i=0ï¿½ï¿½ï¿½Â±ï¿½Îª0
         for (int i = 0; i < elements; i++) {
-            System.out.print(array[i]+"  ");
+            System.out.print(array[i] + "  ");
         }
         System.out.println("]");
     }
 
-    public void diplayone(int j){
+    public void diplayone(int j) {
         System.out.print("[");
-        //ÓÃforÑ­»·±éÀú£¬i=0£¬ÏÂ±êÎª0
-        if (j>elements||j<0){
-            //ÅÐ¶ÏÊý×éÏÂ±êÊÇ·ñÔ½½ç
+        //ï¿½ï¿½forÑ­ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½i=0ï¿½ï¿½ï¿½Â±ï¿½Îª0
+        if (j > elements || j < 0) {
+            //ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â±ï¿½ï¿½Ç·ï¿½Ô½ï¿½ï¿½
             throw new ArrayIndexOutOfBoundsException();
         }
         for (int i = 0; i < elements; i++) {
-            if (array[i] == array[j]){
-                System.out.print(array[j]+"  ");
+            if (array[i] == array[j]) {
+                System.out.print(array[j] + "  ");
             }
         }
         System.out.println("]");
@@ -50,30 +51,27 @@ public class Myarray {
     }
 
 
-
-
-    //É¾³ýÊý¾Ý
-//    ¸ù¾ÝindexÀ´É¾³ýÊý¾Ý
-    public void delete(int index){
-        //É¾³ýÒ²ÐèÒª¶Ôindex½øÐÐÅÐ¶Ï
-        if(index >=elements || index<0)//Èç¹ûindex´óÓÚÓÐÐ§ÔªËØ£¬»òÕßÐ¡ÓÚ0
+    //É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//    ï¿½ï¿½ï¿½ï¿½indexï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public void delete(int index) {
+        //É¾ï¿½ï¿½Ò²ï¿½ï¿½Òªï¿½ï¿½indexï¿½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
+        if (index >= elements || index < 0)//ï¿½ï¿½ï¿½indexï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§Ôªï¿½Ø£ï¿½ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½ï¿½0
         {
-            //Å×³öÒ»¸öÒì³£
+            //ï¿½×³ï¿½Ò»ï¿½ï¿½ï¿½ì³£
             throw new ArrayIndexOutOfBoundsException();
         }
-        //¼ÙÉèÊý×éµÄÖµ·Ö±ðÎª1,3,4£¬5£¬Èç¹ûÒªÉ¾³ý3£¬ÄÇÃ´ÎÒÃÇ°Ñ4µÄÖµ¸³Öµ¸øarray[1]£¬¼´3¾Í¿ÉÒÔÁË£¬¸²¸ÇËý
-//        5½Ó×Å¸²¸Ç4£¬×îºó°Ñelements¼õÈ¥1£»±íÊ¾ÓÐÐ§³¤¶È¼õÈ¥1
-        else{
-            //i´Óindex¿ªÊ¼£¬Ð¡ÓÚi++
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½Ö±ï¿½Îª1,3,4ï¿½ï¿½5ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÉ¾ï¿½ï¿½3ï¿½ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½Ç°ï¿½4ï¿½ï¿½Öµï¿½ï¿½Öµï¿½ï¿½array[1]ï¿½ï¿½ï¿½ï¿½3ï¿½Í¿ï¿½ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//        5ï¿½ï¿½ï¿½Å¸ï¿½ï¿½ï¿½4ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½elementsï¿½ï¿½È¥1ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ð§ï¿½ï¿½ï¿½È¼ï¿½È¥1
+        else {
+            //iï¿½ï¿½indexï¿½ï¿½Ê¼ï¿½ï¿½Ð¡ï¿½ï¿½i++
             for (int i = index; i < elements; i++) {
-                //Ç°ÃæµÄÖµµÈÓÚºóÃæµÄÖµ
-                array[index]=array[index+1];
+                //Ç°ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Úºï¿½ï¿½ï¿½ï¿½Öµ
+                array[index] = array[index + 1];
             }
-            //×îºó»¹Òª¶ÔÓÐÐ§µÄ³¤¶È¼õ1
+            //ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½Ð§ï¿½Ä³ï¿½ï¿½È¼ï¿½1
             elements--;
         }
     }
-
 
 
 }

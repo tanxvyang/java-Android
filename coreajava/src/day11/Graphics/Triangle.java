@@ -1,7 +1,7 @@
 package day11.Graphics;
 
 public class Triangle extends Graphics {
-    private  Double a;
+    private Double a;
     private Double h;
 
     public Triangle() {
@@ -30,6 +30,6 @@ public class Triangle extends Graphics {
 
     @Override
     public Double area() {
-        return a*h/2;
+        return a * h / 2;
     }
 }

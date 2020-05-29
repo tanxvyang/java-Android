@@ -1,9 +1,11 @@
 package app18;
+
 class Outer1 {
     private static int value = 9;
+
     static class Nested1 {
         int calculate() {
-            return value; 
+            return value;
         }
     }
 }

@@ -1,4 +1,5 @@
 package java_android.app18;
+
 /*
 import com.sun.javafx.print.PrinterImpl;
 
@@ -37,21 +38,25 @@ public class MemberInnerDemo2 {
 interface Printer {
     void print(String message);
 }
+
 class PrinterImpl implements Printer {
     public void print(String message) {
         System.out.println(message);
     }
 }
+
 class SecretPrinterImpl {
     private class Inner implements Printer {
         public void print(String message) {
             System.out.println("Inner:" + message);
         }
     }
+
     public Printer getPrinter() {
         return new Inner();
     }
 }
+
 public class MemberInnerDemo2 {
     public static void main(String[] args) {
         Printer printer = new PrinterImpl();

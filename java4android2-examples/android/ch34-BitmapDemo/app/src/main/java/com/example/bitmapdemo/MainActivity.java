@@ -1,4 +1,5 @@
 package com.example.bitmapdemo;
+
 import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -38,6 +39,7 @@ public class MainActivity extends Activity {
             refreshImage();
         }
     }
+
     private void refreshImage() {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;

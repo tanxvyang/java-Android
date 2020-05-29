@@ -3,6 +3,7 @@ package java_android.app18;
 interface PrefixLogger {
     public void log(String message);
 }
+
 public class LocalClassDemo2 {
     public PrefixLogger getLogger(final String prefix) {
         class LoggerImpl implements PrefixLogger {
@@ -12,6 +13,7 @@ public class LocalClassDemo2 {
         }
         return new LoggerImpl();
     }
+
     public static void main(String[] args) {
         LocalClassDemo2 test = new LocalClassDemo2();
         PrefixLogger logger = test.getLogger("DEBUG");

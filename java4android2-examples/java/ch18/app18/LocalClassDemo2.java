@@ -1,4 +1,5 @@
 package app18;
+
 import java.util.Date;
 
 interface PrefixLogger {
@@ -14,7 +15,7 @@ public class LocalClassDemo2 {
         }
         return new LoggerImpl();
     }
-  
+
     public static void main(String[] args) {
         LocalClassDemo2 test = new LocalClassDemo2();
         PrefixLogger logger = test.getLogger("DEBUG");

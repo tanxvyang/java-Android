@@ -1,4 +1,5 @@
 package app19;
+
 import java.awt.BorderLayout;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -13,12 +14,12 @@ import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 public class TimerDemo extends JFrame {
-    String[] questions = { "What is the largest mammal?",
+    String[] questions = {"What is the largest mammal?",
             "Who is the current prime minister of Japan?",
             "Who invented the Internet?",
             "What is the smallest country in the world?",
             "What is the biggest city in America?",
-            "Finished. Please remain seated" };
+            "Finished. Please remain seated"};
 
     JLabel questionLabel = new JLabel("Click Start to begin");
     JTextField answer = new JTextField();
@@ -81,7 +82,7 @@ public class TimerDemo extends JFrame {
             questionLabel.setText(nextQuestion);
             if (counter == questions.length) {
                 timer.cancel();
-            }    
+            }
         }
     }
 }

@@ -6,12 +6,12 @@ import java.util.Map;
 import java.util.Set;
 
 /*
-        * HashMap     Key 为哈希散列表,线程不安全,允许一个Key为null,value可以为null
-        * Hash table   Key为哈希散列表   ,线程安全,key和value都不能为null
-        * TreeMap     可key为平衡二叉树
-        *LinkedHashMap              key为哈希散列表和链表
-        * Properties          访问属性文件,特殊的map ,key 和value 都是string类型
-        * */
+ * HashMap     Key 为哈希散列表,线程不安全,允许一个Key为null,value可以为null
+ * Hash table   Key为哈希散列表   ,线程安全,key和value都不能为null
+ * TreeMap     可key为平衡二叉树
+ *LinkedHashMap              key为哈希散列表和链表
+ * Properties          访问属性文件,特殊的map ,key 和value 都是string类型
+ * */
 public class TestMap {
     public static void main(String[] args) {
      /*   Map<String ,Integer > m = new HashMap<>();
@@ -43,40 +43,38 @@ public class TestMap {
         }*/
 
 
-
-      entry e = new entry();
-        e.put("a","1");
-        e.put("b","2");
-        e.put("c","3");
-        e.put("d","4");
-        e.put("e","5");
-        e.put("f","6");
-        e.put("g","7");
+        entry e = new entry();
+        e.put("a", "1");
+        e.put("b", "2");
+        e.put("c", "3");
+        e.put("d", "4");
+        e.put("e", "5");
+        e.put("f", "6");
+        e.put("g", "7");
         System.out.println(e.get("e"));
 
     }
 
-    private  static  class entry{
-        private  String key;
+    private static class entry {
+        private String key;
         private String value;
 
-        private String[]  values = new String[100];
+        private String[] values = new String[100];
 
 
-        public void put(String key,String value){
-            int i = Math.abs(key.hashCode())%(values.length);
+        public void put(String key, String value) {
+            int i = Math.abs(key.hashCode()) % (values.length);
             values[i] = value;
 
         }
 
-        public String get(String key){
-            int i = Math.abs(key.hashCode())%(values.length);
+        public String get(String key) {
+            int i = Math.abs(key.hashCode()) % (values.length);
 
             return values[i];
         }
 
     }
-
 
 
 }

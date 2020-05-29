@@ -3,19 +3,19 @@ package day03;
 import java.util.Scanner;
 
 /*           x*x-1    x<-1
-   	Á·Ï°£º  y=  |x|+1     -1<=x<=1 
+   	ï¿½ï¿½Ï°ï¿½ï¿½  y=  |x|+1     -1<=x<=1 
    	         3x+3     x>1
    	        */
 
 public class Test12 {
 
-	public static void main(String[] args) {
-	 //
-	 Scanner sc=new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÊý×Ö:");
-		//»ñÈ¡ÓÃ»§ÊäÈë
-		int x=sc.nextInt();
-		System.out.println("x="+x);
+    public static void main(String[] args) {
+        //
+        Scanner sc = new Scanner(System.in);
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:");
+        //ï¿½ï¿½È¡ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
+        int x = sc.nextInt();
+        System.out.println("x=" + x);
 	/*	int y;
 	 * if(x<-1){
 			y=x*x-1 ;
@@ -24,28 +24,28 @@ public class Test12 {
 			y=3*x+3  ;
 			//System.out.println("y="+y);
 		}else{
-			y=Math.abs(x)+1; //¾ø¶ÔÖµº¯Êý Math.abs(x)
+			y=Math.abs(x)+1; //ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ Math.abs(x)
 			//System.out.println("y="+y);
 		}
 		
 		*/
-		int y=0;//ÔÚÖ®Ç°Òª¶¨Òå£¬·ñÔò±¨´í,µ«Êµ¼ÊÉÏ²¢²»ÊÇÕæÕýµÄ½â¾öÁËÎÊÌâ
-		//Interger y=null;   //ÕæÕýµÄ½â¾öÎÊÌâ£¬ºóÐøÑ§Ï°½âÊÍ
-		if(x<-1){
-			y=x*x-1 ;
-			//System.out.println( "y="+y);
-		}
-		if(x>1){
-			y=3*x+3  ;
-			//System.out.println("y="+y);
-		}
-       if(x<=-1&&x>=1) {
-			y=Math.abs(x)+1; //¾ø¶ÔÖµº¯Êý Math.abs(x)
-			//System.out.println("y="+y);
-		}
-		System.out.println(y); //È«ifÓï¾äÊ± »á±¨´í
-	 
-	}
+        int y = 0;//ï¿½ï¿½Ö®Ç°Òªï¿½ï¿½ï¿½å£¬ï¿½ï¿½ï¿½ò±¨´ï¿½,ï¿½ï¿½Êµï¿½ï¿½ï¿½Ï²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        //Interger y=null;   //ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½ï¿½â£¬ï¿½ï¿½ï¿½ï¿½Ñ§Ï°ï¿½ï¿½ï¿½ï¿½
+        if (x < -1) {
+            y = x * x - 1;
+            //System.out.println( "y="+y);
+        }
+        if (x > 1) {
+            y = 3 * x + 3;
+            //System.out.println("y="+y);
+        }
+        if (x <= -1 && x >= 1) {
+            y = Math.abs(x) + 1; //ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ Math.abs(x)
+            //System.out.println("y="+y);
+        }
+        System.out.println(y); //È«ifï¿½ï¿½ï¿½Ê± ï¿½á±¨ï¿½ï¿½
 
-	
+    }
+
+
 }

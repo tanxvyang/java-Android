@@ -1,4 +1,5 @@
 package app16;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -10,19 +11,19 @@ import java.nio.file.StandardOpenOption;
 public class OutputStreamDemo1 {
     public void copyFiles(Path originPath, Path destinationPath)
             throws IOException {
-        if (Files.notExists(originPath) 
+        if (Files.notExists(originPath)
                 || Files.exists(destinationPath)) {
             throw new IOException(
-                    "Origin file must exist and " + 
-                    "Destination file must not exist");
+                    "Origin file must exist and " +
+                            "Destination file must not exist");
         }
         byte[] readData = new byte[1024];
         try (InputStream inputStream =
-                    Files.newInputStream(originPath, 
-                    StandardOpenOption.READ);
-            OutputStream outputStream = 
-                    Files.newOutputStream(destinationPath, 
-                    StandardOpenOption.CREATE)) {
+                     Files.newInputStream(originPath,
+                             StandardOpenOption.READ);
+             OutputStream outputStream =
+                     Files.newOutputStream(destinationPath,
+                             StandardOpenOption.CREATE)) {
             int i = inputStream.read(readData);
             while (i != -1) {
                 outputStream.write(readData, 0, i);

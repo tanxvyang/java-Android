@@ -1,4 +1,5 @@
 package app19;
+
 import java.awt.FlowLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -36,6 +37,7 @@ public class ThreadDemo3 extends JFrame {
             }
         }
     }
+
     public ThreadDemo3(String title) {
         super(title);
         init();

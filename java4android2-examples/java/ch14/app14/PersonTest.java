@@ -1,4 +1,5 @@
 package app14;
+
 import java.util.Arrays;
 
 public class PersonTest {
@@ -30,7 +31,7 @@ public class PersonTest {
             String lastName = person.getLastName();
             String firstName = person.getFirstName();
             int age = person.getAge();
-            System.out.println(lastName + ", " + firstName + 
+            System.out.println(lastName + ", " + firstName +
                     ". Age:" + age);
         }
 
@@ -42,7 +43,7 @@ public class PersonTest {
             String lastName = person.getLastName();
             String firstName = person.getFirstName();
             int age = person.getAge();
-            System.out.println(lastName + ", " + firstName + 
+            System.out.println(lastName + ", " + firstName +
                     ". Age:" + age);
         }
 
@@ -54,7 +55,7 @@ public class PersonTest {
             String lastName = person.getLastName();
             String firstName = person.getFirstName();
             int age = person.getAge();
-            System.out.println(lastName + ", " + firstName + 
+            System.out.println(lastName + ", " + firstName +
                     ". Age:" + age);
         }
 
@@ -66,7 +67,7 @@ public class PersonTest {
             String lastName = person.getLastName();
             String firstName = person.getFirstName();
             int age = person.getAge();
-            System.out.println(lastName + ", " + firstName + 
+            System.out.println(lastName + ", " + firstName +
                     ". Age:" + age);
         }
     }

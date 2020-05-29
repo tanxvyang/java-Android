@@ -1,5 +1,6 @@
 package app12;
-public enum CustomerType { 
-    INDIVIDUAL, 
-    ORGANIZATION 
+
+public enum CustomerType {
+    INDIVIDUAL,
+    ORGANIZATION
 }

@@ -1,4 +1,5 @@
 package app11;
+
 class Employee {
     public void work() {
         System.out.println("I am an employee.");

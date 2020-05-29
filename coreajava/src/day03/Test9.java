@@ -1,9 +1,9 @@
 package day03;
 
 public class Test9 {
-public static void main(String[] args) {
+    public static void main(String[] args) {
 //	  int f=1;
-	
+
 //	  double sum=0.0;
 //		for(double i=1;i<=20;i++){
 //		double temp=f*(i+((2.0*i-1.0)/(i*i)));
@@ -11,7 +11,7 @@ public static void main(String[] args) {
 //		f=-f;
 //		}
 //		System.out.println(sum);
-	//Á·Ï°£ºÇó12709µ½45368Ö®¼äÓÐÄÄÐ©Æä¸÷Î»ÊýÖ®ºÍÊÇ5µÄ±¶ÊýµÄÕýÕûÊý
+        //ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ï¿½12709ï¿½ï¿½45368Ö®ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½Î»ï¿½ï¿½Ö®ï¿½ï¿½ï¿½ï¿½5ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
    	/*
 	int a,b,c,d,e;
 	for(int i=12709;i<=45368;i++){
@@ -28,13 +28,13 @@ public static void main(String[] args) {
 	
 	
 	*/
-	
-	
-	//    Á·Ï°£º¼ÇËã1+£¨1+2£©+£¨1+2+3£©¡£¡£¡£¡£µÄÖµ
-	   //1.¹«Ê½ i*(i+1)/2
-	
-	
-	//2
+
+
+        //    ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½1+ï¿½ï¿½1+2ï¿½ï¿½+ï¿½ï¿½1+2+3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+        //1.ï¿½ï¿½Ê½ i*(i+1)/2
+
+
+        //2
 	/*
 	int sum=0 ,temp=0;
 	for(int i=1;i<=100;i++){
@@ -47,7 +47,7 @@ public static void main(String[] args) {
 	System.out.println(sum);
    }
 	*/
-   /*//3.Ã¿Ò»ÏîÊÇÇ°Ò»Ïî¼Ói
+   /*//3.Ã¿Ò»ï¿½ï¿½ï¿½ï¿½Ç°Ò»ï¿½ï¿½ï¿½i
 	int temp=0;
 	int sum=0;
 	for(int i=0;i<=100;i++){
@@ -57,14 +57,14 @@ public static void main(String[] args) {
 System.out.println(sum);
 }
 */
-    int temp=1;
-    int sum=0;
-	for(int i=0;i<50;i++){
-		temp+=i;
-		sum+=temp;
-		
-	}
-	System.out.println(sum);
-}
+        int temp = 1;
+        int sum = 0;
+        for (int i = 0; i < 50; i++) {
+            temp += i;
+            sum += temp;
+
+        }
+        System.out.println(sum);
+    }
 
 }

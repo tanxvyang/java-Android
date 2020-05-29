@@ -10,17 +10,17 @@ public class circle {
         this.center = center;
         this.r = r;
     }
-    public circle(double x,double y,double r){
-        this(new point(x,y),r );
+
+    public circle(double x, double y, double r) {
+        this(new point(x, y), r);
 
     }
 
 
     //单位圆
-    public circle(){
+    public circle() {
         this(1);
     }
-
 
 
     public point getCenter() {
@@ -39,52 +39,50 @@ public class circle {
         this.r = r;
     }
 
-    public circle(double r){
-        this(new point(),r);
+    public circle(double r) {
+        this(new point(), r);
     }
 
     public double getX() {
-        if (center!=null){
-           return  center.getX() ;
+        if (center != null) {
+            return center.getX();
         }
         return 0;//不应该return 0 ,后面解决,暂时return0        ,因为如果这个圆没有圆心,也就不存在圆心,应该返回null
 
     }
 
     public void setX(double x) {   //非空保护
-        if (center!=null){
-      center.setX(x);
+        if (center != null) {
+            center.setX(x);
         }
     }
 
     public double getY() {         //改成Double 可解决
-        if (center!=null){
-            return  center.getY() ;
+        if (center != null) {
+            return center.getY();
         }
         return 0;//不应该return 0 ,后面解决,暂时return0        ,因为如果这个圆没有圆心,也就不存在圆心,应该返回null
 
     }
 
     public void setY(double y) {
-        if (center!=null){
+        if (center != null) {
             center.setY(y);
         }
     }
 
 
-
-
-
-    public double area(){
-        return Math.PI*r*r;
+    public double area() {
+        return Math.PI * r * r;
     }
 
 
-    public boolean contains(point point){
-        return point.distance(center)<r;
+    public boolean contains(point point) {
+        return point.distance(center) < r;
     }
-    public  boolean contains(double x,double  y){
-        return contains(new point(x,y));
+
+    public boolean contains(double x, double y) {
+        return contains(new point(x, y));
     }
 
 }

@@ -3,179 +3,178 @@ package com.nanjinwangbo.www.day06;
 import java.util.Scanner;
 
 public class SuperMarket {
-	public static void main(String[] args) {
-		Scanner sc= new Scanner(System.in);
-		//1„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤75„1¤7„1¤7„1¤7„1¤703„1¤7„1¤7„1¤7„1¤70Î4„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤703„1¤7„1¤7„1¤7„1¤7„1¤71˜8ª5Œ5„1¤7—¥
-		//2„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤70Ð9„1¤7„1¤7„1¤7„1¤70†411„1¤7„1¤7„1¤7„1¤7„1¤70…8„1¤7„1¤7„1¤703„1¤7„1¤70°1„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤703„1¤7„1¤7
-		//3„1¤7„1¤7„1¤7„1¤7„1¤70é5„1¤7„1¤7„1¤7„1¤7„1¤703„1¤7„1¤7„1¤7„1¤7„1¤71¦01˜8„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤71Ÿ61–7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤70¯7„1¤7„1¤7„1¤71Œ7„1¤7—¨„1¤7„1¤7ÖÎ„1¤7„1¤70µ2„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7
-		//4„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤703„1¤7„1¤70ð50¶5„1¤7„1¤7„1¤7„1¤7„1¤7„1¤703„1¤7„1¤70Î4„1¤7„1¤7
-		//5„1¤7„1¤7„1¤70»3„1¤70Ð30È1„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7
-		System.out.println("„1¤7„1¤70â5„1¤7„1¤7„1¤71‹3„1¤7„1¤7„1¤7„1¤7„1¤7");
-		String[] goodNames = new String[10];//„1¤7„1¤703„1¤7„1¤7„1¤7„1¤7
-		goodNames[0] = "„1¤7„1¤7„1¤7";
-		goodNames[1] = "„1¤7„1¤70§90º8";
-		goodNames[2] = "„1¤7§Ù„1¤7";
-		double[] goodPrices = new double[10];//„1¤7„1¤703„1¤71˜8„1¤7
-		goodPrices[0] = 4.5;
-		goodPrices[1] = 2;
-		goodPrices[2] = 12;
-		int[] goodNums = new int[10];//„1¤7„1¤703„1¤7„1¤7„1¤7„1¤7
-		goodNums[0] = 200;
-		goodNums[1] = 1000;
-		goodNums[2] = 1;
-		while (true) {
-			System.out.println(" „1¤7„1¤7„1¤7„1¤7„1¤7„1¤70ö8„1¤7ƒ6Þ9 ");
-			System.out.println(" 1„1¤7„1¤7„1¤7‚5—1„1¤7„1¤7„1¤7„1¤7„1¤7„1¤703");
-			System.out.println(" 2„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤703");
-			System.out.println(" 3„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤703");
-			System.out.println(" 4„1¤7„1¤70°1„1¤7„1¤7„1¤7„1¤703");
-			System.out.println(" 5„1¤7„1¤7„1¤70»3„1¤70Ð30È1");
-			int code = sc.nextInt();
-			switch (code) {
-			case 1:
-				for (int i = 0; i < goodNames.length; i++) {
-					if(goodNames[i] == null){
-						continue;
-					}
-					System.out.println("„1¤7„1¤703„1¤7„1¤7„1¤7„1¤7"+goodNames[i]+
-							",„1¤71˜8„1¤70Ë2„1¤7„1¤7"+goodPrices[i]+",„1¤7„1¤7¹×"+goodNums[i]);
-				}
-				break;
-			case 2:
-				//„1¤7„1¤7„1¤7„1¤7„1¤7„1¤703
-				System.err.println("0Û8„1¤7„1¤7„1¤70‘4„1¤7„1¤7„1¤703„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤70Û8„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤703„1¤7„1¤7„1¤7„1¤7");
-				String goodNameTypeIn = sc.next();
-				System.out.println("0Û8„1¤7„1¤7„1¤7„1¤71Œ4„1¤7„1¤7„1¤7");
-				int nums = sc.nextInt();
-				boolean isGet = false;
-				for (int i = 0; i < goodNums.length; i++) {
-					if(goodNames[i] != null && goodNames[i].equals(goodNameTypeIn)){
-						isGet = true;
-						if(goodNums[i] >= nums){
-							goodNums[i] -= nums;
-							System.out.println("„1¤7„1¤7„1¤7„1¤70Û80õ1„1¤7„1¤7„1¤7„1¤7"+goodPrices[i]*nums);
-						}else{
-							System.out.println("„1¤7„1¤7ÖÎ„1¤7„1¤7");
-						}
-						break;
-					}
-				}
-				if(!isGet){
-					System.out.println("¦Ä„1¤7„1¤70Õ9„1¤7„1¤7„1¤7„1¤70Ë2„1¤7„1¤7"+goodNameTypeIn+"„1¤7„1¤7„1¤7„1¤703„1¤7„1¤70Î4");
-				}
-				break;
-			case 3:
-				int emptyIndex = -1;
-				for (int i = 0; i < goodNums.length; i++) {
-					if(goodNames[i] == null){
-						emptyIndex = i;
-						break;
-					}
-				}
-				if(emptyIndex == -1){
-					System.out.println("„1¤70Ñ01Ÿ90ð8„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤71«9„1¤7„1¤7„1¤7„1¤7„1¤7„1¤703");
-				}
-				//„1¤7„1¤7„1¤7„1¤7
-				String newGoodName;
-				double newGoodPrice;
-				int newGoodNum;
-				//0§00ö5„1¤7„1¤7§µ„1¤7ï‚
-				while (true) {
-					System.out.println("„1¤7„1¤7„1¤7„1¤7„1¤7„1¤70Û8„1¤7„1¤70ã3„1¤7„1¤7„1¤703„1¤7„1¤7„1¤70›3„1¤7");
-					newGoodName = sc.next();
-					if(newGoodName==null||newGoodName.equals("")){//„1¤7„1¤7„1¤7„1¤7§µ„1¤7„1¤7
-						System.out.println("„1¤7„1¤703„1¤7„1¤7„1¤7„1¤7„1¤7„1¤70Ë2„1¤70î3„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7");
-						continue;
-					}
-					boolean hasSameName = false;
-					for (int i = 0; i < goodNames.length; i++) {//0Ü9„1¤7„1¤7„1¤71²8„1¤7„1¤7§Ø„1¤7
-						if(newGoodName.equals(goodNames[i])){
-							System.out.println("„1¤7„1¤703„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤71…6„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7");
-							hasSameName = true;
-							break;
-						}
-					}
-					if(hasSameName){
-						continue;
-					}
-					break;
-				}
-				while (true) {
-					System.out.println("„1¤7„1¤7„1¤7„1¤7„1¤7„1¤70Û8„1¤7„1¤70ã3„1¤7„1¤7„1¤703„1¤71˜8„1¤7");
-					newGoodPrice = sc.nextDouble();
-					if(newGoodPrice < 0){
-						System.out.println("„1¤7„1¤703„1¤71˜8„1¤7„1¤7„1¤70Ë2„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7");
-						continue;
-					}
-					break;
-				}
-				while (true) {
-					System.out.println("„1¤7„1¤7„1¤7„1¤7„1¤7„1¤70Û8„1¤7„1¤70ã3„1¤7„1¤7„1¤703„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7");
-					newGoodNum = sc.nextInt();
-					if(newGoodNum < 0) {
-						System.out.println("„1¤7„1¤703„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤70Ë2„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7");
-						continue;
-					}
-					break;
-				}
-				//„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤70¶0„1¤7¡Â„1¤7¦¶„1¤7„1¤7
-				//„1¤7„1¤7„1¤7„1¤70¶0„1¤7¡Â„1¤7¦¶
-				//„1¤7„1¤70ö5
-				goodNames[emptyIndex] = newGoodName;
-				goodPrices[emptyIndex] = newGoodPrice;
-				goodNums[emptyIndex] = newGoodNum;
-				System.out.println("„1¤7„1¤70ã0„1¤7„1¤7„1¤70ö4„1¤7§Ô0¯6„1¤7");
-				break;
-			case 4:
-				//„1¤7„1¤70§0„1¤7„1¤70Û80°1„1¤7„1¤7„1¤7„1¤7„1¤7„1¤703
-				int deleteIndex;
-				while(true){
-					System.out.println("„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤70Û80°1„1¤7„1¤7„1¤7„1¤7„1¤7„1¤703„1¤7„1¤7„1¤7„1¤7");
-					String deleteGoodName = sc.next();//„1¤70‹4„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7
-					deleteIndex = -1;//0µ6„1¤7„1¤70¶0„1¤70‹1„1¤7
-					
-					for (int i = 0; i < goodNames.length; i++) {//0Ü9„1¤7„1¤7„1¤71²8„1¤7„1¤7§Ø„1¤7
-						if(deleteGoodName.equals(goodNames[i])){
-							deleteIndex = i;
-							break;
-						}
-					}
-					if(deleteIndex == -1){
-						System.out.println("„1¤7„1¤7„1¤7„1¤7„1¤7„1¤703„1¤7„1¤7¦Ä„1¤70Ü9„1¤7„1¤7„1¤70á8„1¤7„1¤703„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7„1¤7ƒ0Ÿ2");
-						continue;
-					}
-					break;
-				}
-				if(deleteIndex == goodNames.length - 1){//„1¤7§Ø„1¤7„1¤70¢9„1¤70Ë2„1¤7„1¤7„1¤70Ý5¦Ë
-					goodNames[deleteIndex] = null;
-					goodNums[deleteIndex] = 0;
-					goodPrices[deleteIndex] = 0.0;
-				}
-				for (int i = deleteIndex;i < goodNums.length - 1;i++) {
-					if(goodNames[i+1] == null){
-						goodNames[i] = null;
-						goodNums[i] = 0;
-						goodPrices[i] = 0.0;
-						break;
-					}else{
-						goodNames[i] = goodNames[i+1];
-						goodPrices[i] = goodPrices[i+1];
-						goodNums[i] = goodNums[i+1];
-					}
-				}
-				System.out.println("0°1„1¤7„1¤7„1¤7„1¤7„1¤7„1¤70ö4„1¤7§Ô0¯6„1¤7");
-				break;
-			case 5:
-				System.out.println("„1¤7„1¤7§Ý0¶0„1¤70Š9„1¤70Ð30È1„1¤7„1¤7„1¤71’0„1¤7„1¤7„1¤7„1¤7„1¤7„1¤70…7„1¤7„1¤7„1¤7„1¤7„1¤7");
-				return;
-			}
-		}
-		
-		
-		
-		//„1¤7„1¤703„1¤7„1¤7„1¤7„1¤70•0„1¤7„1¤7„1¤703„1¤7„1¤7„1¤7„1¤7„1¤71˜8«27„1¤7—¥
-		//insert   delete
-		//update    select num*
-		//select * 
-	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        //1ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½75ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½4ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½8ï¿½5ï¿½5ï¿½1ï¿½7ï¿½ï¿½
+        //2ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½9ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½4ï¿½1ï¿½1ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½8ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½1ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7
+        //3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½5ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½0ï¿½1ï¿½8ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½6ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½ï¿½ï¿½1ï¿½7ï¿½1ï¿½7ï¿½Î„1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½2ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7
+        //4ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½5ï¿½0ï¿½5ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½4ï¿½1ï¿½7ï¿½1ï¿½7
+        //5ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½0ï¿½3ï¿½0ï¿½1ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7
+        System.out.println("ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½5ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7");
+        String[] goodNames = new String[10];//ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7
+        goodNames[0] = "ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7";
+        goodNames[1] = "ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½9ï¿½0ï¿½8";
+        goodNames[2] = "ï¿½1ï¿½7ï¿½Ù„1ï¿½7";
+        double[] goodPrices = new double[10];//ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½8ï¿½1ï¿½7
+        goodPrices[0] = 4.5;
+        goodPrices[1] = 2;
+        goodPrices[2] = 12;
+        int[] goodNums = new int[10];//ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7
+        goodNums[0] = 200;
+        goodNums[1] = 1000;
+        goodNums[2] = 1;
+        while (true) {
+            System.out.println(" ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½8ï¿½1ï¿½7ï¿½6ï¿½9 ");
+            System.out.println(" 1ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½5ï¿½1ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3");
+            System.out.println(" 2ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3");
+            System.out.println(" 3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3");
+            System.out.println(" 4ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½1ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3");
+            System.out.println(" 5ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½0ï¿½3ï¿½0ï¿½1");
+            int code = sc.nextInt();
+            switch (code) {
+                case 1:
+                    for (int i = 0; i < goodNames.length; i++) {
+                        if (goodNames[i] == null) {
+                            continue;
+                        }
+                        System.out.println("ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7" + goodNames[i] +
+                                ",ï¿½1ï¿½7ï¿½1ï¿½8ï¿½1ï¿½7ï¿½0ï¿½2ï¿½1ï¿½7ï¿½1ï¿½7" + goodPrices[i] + ",ï¿½1ï¿½7ï¿½1ï¿½7ï¿½ï¿½" + goodNums[i]);
+                    }
+                    break;
+                case 2:
+                    //ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3
+                    System.err.println("ï¿½0ï¿½8ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½4ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½8ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7");
+                    String goodNameTypeIn = sc.next();
+                    System.out.println("ï¿½0ï¿½8ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½4ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7");
+                    int nums = sc.nextInt();
+                    boolean isGet = false;
+                    for (int i = 0; i < goodNums.length; i++) {
+                        if (goodNames[i] != null && goodNames[i].equals(goodNameTypeIn)) {
+                            isGet = true;
+                            if (goodNums[i] >= nums) {
+                                goodNums[i] -= nums;
+                                System.out.println("ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½8ï¿½0ï¿½1ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7" + goodPrices[i] * nums);
+                            } else {
+                                System.out.println("ï¿½1ï¿½7ï¿½1ï¿½7ï¿½Î„1ï¿½7ï¿½1ï¿½7");
+                            }
+                            break;
+                        }
+                    }
+                    if (!isGet) {
+                        System.out.println("ï¿½Ä„1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½9ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½2ï¿½1ï¿½7ï¿½1ï¿½7" + goodNameTypeIn + "ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½4");
+                    }
+                    break;
+                case 3:
+                    int emptyIndex = -1;
+                    for (int i = 0; i < goodNums.length; i++) {
+                        if (goodNames[i] == null) {
+                            emptyIndex = i;
+                            break;
+                        }
+                    }
+                    if (emptyIndex == -1) {
+                        System.out.println("ï¿½1ï¿½7ï¿½0ï¿½0ï¿½1ï¿½9ï¿½0ï¿½8ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½9ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3");
+                    }
+                    //ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7
+                    String newGoodName;
+                    double newGoodPrice;
+                    int newGoodNum;
+                    //ï¿½0ï¿½0ï¿½0ï¿½5ï¿½1ï¿½7ï¿½1ï¿½7ï¿½ï¿½ï¿½1ï¿½7ï¿½
+                    while (true) {
+                        System.out.println("ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½8ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7");
+                        newGoodName = sc.next();
+                        if (newGoodName == null || newGoodName.equals("")) {//ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½ï¿½ï¿½1ï¿½7ï¿½1ï¿½7
+                            System.out.println("ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½2ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7");
+                            continue;
+                        }
+                        boolean hasSameName = false;
+                        for (int i = 0; i < goodNames.length; i++) {//ï¿½0ï¿½9ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½8ï¿½1ï¿½7ï¿½1ï¿½7ï¿½Ø„1ï¿½7
+                            if (newGoodName.equals(goodNames[i])) {
+                                System.out.println("ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½6ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7");
+                                hasSameName = true;
+                                break;
+                            }
+                        }
+                        if (hasSameName) {
+                            continue;
+                        }
+                        break;
+                    }
+                    while (true) {
+                        System.out.println("ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½8ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½8ï¿½1ï¿½7");
+                        newGoodPrice = sc.nextDouble();
+                        if (newGoodPrice < 0) {
+                            System.out.println("ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½8ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½2ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7");
+                            continue;
+                        }
+                        break;
+                    }
+                    while (true) {
+                        System.out.println("ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½8ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7");
+                        newGoodNum = sc.nextInt();
+                        if (newGoodNum < 0) {
+                            System.out.println("ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½2ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7");
+                            continue;
+                        }
+                        break;
+                    }
+                    //ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½0ï¿½1ï¿½7ï¿½Â„1ï¿½7ï¿½ï¿½ï¿½1ï¿½7ï¿½1ï¿½7
+                    //ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½0ï¿½1ï¿½7ï¿½Â„1ï¿½7ï¿½ï¿½
+                    //ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½5
+                    goodNames[emptyIndex] = newGoodName;
+                    goodPrices[emptyIndex] = newGoodPrice;
+                    goodNums[emptyIndex] = newGoodNum;
+                    System.out.println("ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½0ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½4ï¿½1ï¿½7ï¿½Ô0ï¿½6ï¿½1ï¿½7");
+                    break;
+                case 4:
+                    //ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½0ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½8ï¿½0ï¿½1ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3
+                    int deleteIndex;
+                    while (true) {
+                        System.out.println("ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½8ï¿½0ï¿½1ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7");
+                        String deleteGoodName = sc.next();//ï¿½1ï¿½7ï¿½0ï¿½4ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7
+                        deleteIndex = -1;//ï¿½0ï¿½6ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½0ï¿½1ï¿½7ï¿½0ï¿½1ï¿½1ï¿½7
+
+                        for (int i = 0; i < goodNames.length; i++) {//ï¿½0ï¿½9ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½8ï¿½1ï¿½7ï¿½1ï¿½7ï¿½Ø„1ï¿½7
+                            if (deleteGoodName.equals(goodNames[i])) {
+                                deleteIndex = i;
+                                break;
+                            }
+                        }
+                        if (deleteIndex == -1) {
+                            System.out.println("ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½Ä„1ï¿½7ï¿½0ï¿½9ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½8ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½2");
+                            continue;
+                        }
+                        break;
+                    }
+                    if (deleteIndex == goodNames.length - 1) {//ï¿½1ï¿½7ï¿½Ø„1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½9ï¿½1ï¿½7ï¿½0ï¿½2ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½5ï¿½ï¿½
+                        goodNames[deleteIndex] = null;
+                        goodNums[deleteIndex] = 0;
+                        goodPrices[deleteIndex] = 0.0;
+                    }
+                    for (int i = deleteIndex; i < goodNums.length - 1; i++) {
+                        if (goodNames[i + 1] == null) {
+                            goodNames[i] = null;
+                            goodNums[i] = 0;
+                            goodPrices[i] = 0.0;
+                            break;
+                        } else {
+                            goodNames[i] = goodNames[i + 1];
+                            goodPrices[i] = goodPrices[i + 1];
+                            goodNums[i] = goodNums[i + 1];
+                        }
+                    }
+                    System.out.println("ï¿½0ï¿½1ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½4ï¿½1ï¿½7ï¿½Ô0ï¿½6ï¿½1ï¿½7");
+                    break;
+                case 5:
+                    System.out.println("ï¿½1ï¿½7ï¿½1ï¿½7ï¿½Ý0ï¿½0ï¿½1ï¿½7ï¿½0ï¿½9ï¿½1ï¿½7ï¿½0ï¿½3ï¿½0ï¿½1ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½0ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7");
+                    return;
+            }
+        }
+
+
+        //ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½0ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½0ï¿½3ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½7ï¿½1ï¿½8ï¿½2ï¿½7ï¿½1ï¿½7ï¿½ï¿½
+        //insert   delete
+        //update    select num*
+        //select *
+    }
 }

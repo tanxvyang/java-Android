@@ -9,79 +9,79 @@ import java.util.List;
 
 import com.ttb.mapper.RowMapper;
 
-public class JDBCTemplate<T> {//Ä£°åÀà£¬Ìá¹©ÔöÉ¾¸Ä²éµÄ±ê×¼·½·¨
-	
-	public Integer update(String sql ,Object... params){
-		Integer countRow = null;
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		try {
-			conn = JDBCUtil.getConnection();
-			pstmt = conn.prepareStatement(sql);
-			for (int i = 0; i < params.length; i++) {
-				if(params[i] instanceof Integer){
-					pstmt.setInt(i + 1, Integer.valueOf(String.valueOf(params[i])));
-				}else if(params[i] instanceof String){
-					pstmt.setString(i + 1, String.valueOf(params[i]));
-				}else {
-					pstmt.setObject(i + 1, params[i]);
-				}
-			}
-			countRow = pstmt.executeUpdate();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} finally {
-			JDBCUtil.close(conn,pstmt,null);
-		}
-		return countRow;
-	}
-	
-	public Integer insert(String sql ,Object... params){
-		return update(sql, params);
-	}
-	
-	public Integer delete(String sql ,Object... params){
-		return update(sql, params);
-	}
-	
-	public List<T> selectAll(RowMapper<T> rm,String sql,Object... params){
-		List<T> result = new ArrayList<T>();//½á¹û¼¯ºÏ       ÎªÊ²Ã´Òª»ñÈ¡½á¹û¼¯µÄÊý×éÐÎÊ½£¿¾ÍÊÇÎªÁË¹Ø±Õ½á¹û¼¯Âð£¿
-		Connection conn = null;
-		PreparedStatement pstmt = null;
-		ResultSet rs = null;
-		try {
-			conn = JDBCUtil.getConnection();
-			pstmt = conn.prepareStatement(sql);
-			for (int i = 0; i < params.length; i++) {
-				if(params[i] instanceof String){
-					pstmt.setString(i + 1, String.valueOf(params[i]));
-				}else if(params[i] instanceof Integer){
-					pstmt.setInt(i + 1, Integer.parseInt(String.valueOf(params[i])));
-				}else{
-					pstmt.setObject(i + 1, params[i]);
-				}
-			}
-			rs = pstmt.executeQuery();//²éÑ¯½á¹û¡£Î±±í  ÐÐ   ÁÐ
-			while (rs.next()) {//ÖðÐÐ¶ÁÈ¡²éÑ¯µ½µÄÊý¾Ý
-//				rs --> object  Ó³Éä
-				result.add(rm.mapperObject(rs));
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			JDBCUtil.close(conn, pstmt, rs);
-		}
-		return result;
-	}
-	
-	public T selectOne(RowMapper<T> rm,String sql,Object... params){
-		List<T> list = selectAll(rm, sql, params);
-		T obj = null;
-		if(list.size() != 0){
-			obj = list.get(0);
-		}
-		return obj;
-	}
+public class JDBCTemplate<T> {//Ä£ï¿½ï¿½ï¿½à£¬ï¿½á¹©ï¿½ï¿½É¾ï¿½Ä²ï¿½Ä±ï¿½×¼ï¿½ï¿½ï¿½ï¿½
+
+    public Integer update(String sql, Object... params) {
+        Integer countRow = null;
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        try {
+            conn = JDBCUtil.getConnection();
+            pstmt = conn.prepareStatement(sql);
+            for (int i = 0; i < params.length; i++) {
+                if (params[i] instanceof Integer) {
+                    pstmt.setInt(i + 1, Integer.valueOf(String.valueOf(params[i])));
+                } else if (params[i] instanceof String) {
+                    pstmt.setString(i + 1, String.valueOf(params[i]));
+                } else {
+                    pstmt.setObject(i + 1, params[i]);
+                }
+            }
+            countRow = pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            JDBCUtil.close(conn, pstmt, null);
+        }
+        return countRow;
+    }
+
+    public Integer insert(String sql, Object... params) {
+        return update(sql, params);
+    }
+
+    public Integer delete(String sql, Object... params) {
+        return update(sql, params);
+    }
+
+    public List<T> selectAll(RowMapper<T> rm, String sql, Object... params) {
+        List<T> result = new ArrayList<T>();//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½       ÎªÊ²Ã´Òªï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Ë¹Ø±Õ½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        try {
+            conn = JDBCUtil.getConnection();
+            pstmt = conn.prepareStatement(sql);
+            for (int i = 0; i < params.length; i++) {
+                if (params[i] instanceof String) {
+                    pstmt.setString(i + 1, String.valueOf(params[i]));
+                } else if (params[i] instanceof Integer) {
+                    pstmt.setInt(i + 1, Integer.parseInt(String.valueOf(params[i])));
+                } else {
+                    pstmt.setObject(i + 1, params[i]);
+                }
+            }
+            rs = pstmt.executeQuery();//ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½Î±ï¿½ï¿½  ï¿½ï¿½   ï¿½ï¿½
+            while (rs.next()) {//ï¿½ï¿½ï¿½Ð¶ï¿½È¡ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//				rs --> object  Ó³ï¿½ï¿½
+                result.add(rm.mapperObject(rs));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            JDBCUtil.close(conn, pstmt, rs);
+        }
+        return result;
+    }
+
+    public T selectOne(RowMapper<T> rm, String sql, Object... params) {
+        List<T> list = selectAll(rm, sql, params);
+        T obj = null;
+        if (list.size() != 0) {
+            obj = list.get(0);
+        }
+        return obj;
+    }
 }

@@ -1,11 +1,12 @@
 package app19;
+
 public class DriverThread extends Thread {
     DeliveryNoteHolder deliveryNoteHolder;
     boolean stopped = false;
     String driverName;
 
-    public DriverThread(DeliveryNoteHolder holder, String    
-                driverName) {
+    public DriverThread(DeliveryNoteHolder holder, String
+            driverName) {
         deliveryNoteHolder = holder;
         this.driverName = driverName;
     }

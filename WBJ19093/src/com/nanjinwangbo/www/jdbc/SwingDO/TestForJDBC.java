@@ -7,10 +7,10 @@ import java.sql.Statement;
 
 public class TestForJDBC {
     public static void main(String[] args) {
-      String dirverClassName = "com.mysql.jdbc.Driver";
-      String url = "jdbc:mysql://127.0.0.1:3306/jdbc";
+        String dirverClassName = "com.mysql.jdbc.Driver";
+        String url = "jdbc:mysql://127.0.0.1:3306/jdbc";
         Connection con = null;
-        Statement stmt= null;
+        Statement stmt = null;
         ResultSet rs = null;
         try {
             Class.forName(dirverClassName);

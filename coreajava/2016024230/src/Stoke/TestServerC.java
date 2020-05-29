@@ -27,54 +27,55 @@ public class TestServerC {
 
             }
 
-    }catch(Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
-        }finally {
-            if (ss!=null){
+        } finally {
+            if (ss != null) {
                 try {
                     ss.close();
-                }catch (IOException e){
+                } catch (IOException e) {
                     e.printStackTrace();
                 }
 
             }
         }
-        }
+    }
 }
 
 
-class SocketThread extends Thread{
-private Socket s;
-public SocketThread(Socket s){
-    super();
-    this.s=s;
-}
+class SocketThread extends Thread {
+    private Socket s;
+
+    public SocketThread(Socket s) {
+        super();
+        this.s = s;
+    }
 
     @Override
     public void run() {
-         BufferedReader br=null;
-         PrintWriter pw=null;
+        BufferedReader br = null;
+        PrintWriter pw = null;
         try {
 
-            br=new BufferedReader(
+            br = new BufferedReader(
                     new InputStreamReader(
                             s.getInputStream()));//获得输入流
-            String name =br.readLine();
+            String name = br.readLine();
             System.out.println(name);
 
-            pw=new PrintWriter(
+            pw = new PrintWriter(
                     s.getOutputStream()
             );
-            if ("aaa".equals(name)){//让aaa等待
+            if ("aaa".equals(name)) {//让aaa等待
                 Thread.sleep(10000000);
             }
-            pw.println("hello  "+name);
+            pw.println("hello  " + name);
             pw.flush();
 
         } catch (Exception e) {
             e.printStackTrace();
-        }finally {
-            if (s!=null){
+        } finally {
+            if (s != null) {
                 try {
                     s.close();
                 } catch (IOException e) {

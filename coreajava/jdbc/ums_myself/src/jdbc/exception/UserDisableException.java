@@ -1,8 +1,9 @@
 package jdbc.exception;
+
 /**
  * 用户被禁用异常
- * @author 谭旭洋
  *
+ * @author 谭旭洋
  */
 public class UserDisableException extends Exception {
     public UserDisableException() {

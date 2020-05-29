@@ -1,4 +1,5 @@
 package app19;
+
 public class DeliveryNoteHolder {
     private String deliveryNote;
     private boolean available = false;
@@ -7,10 +8,11 @@ public class DeliveryNoteHolder {
         while (available == false) {
             try {
                 wait();
-            } catch (InterruptedException e) { }
+            } catch (InterruptedException e) {
+            }
         }
         available = false;
-        System.out.println(System.currentTimeMillis() 
+        System.out.println(System.currentTimeMillis()
                 + ": got " + deliveryNote);
         notifyAll();
         return deliveryNote;
@@ -20,11 +22,12 @@ public class DeliveryNoteHolder {
         while (available == true) {
             try {
                 wait();
-            } catch (InterruptedException e) { }
+            } catch (InterruptedException e) {
+            }
         }
         this.deliveryNote = deliveryNote;
         available = true;
-        System.out.println(System.currentTimeMillis() + 
+        System.out.println(System.currentTimeMillis() +
                 ": Put " + deliveryNote);
         notifyAll();
     }

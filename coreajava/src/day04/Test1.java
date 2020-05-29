@@ -43,9 +43,9 @@ public class Test1 {
             }
             i++;
         } while (i < 10);
-      if (i>=10){
-          System.out.println("你就是个垃圾，下次再来吧！");
-      }
+        if (i >= 10) {
+            System.out.println("你就是个垃圾，下次再来吧！");
+        }
 
     }
 

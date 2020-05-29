@@ -1,4 +1,5 @@
 package app07;
+
 public class Box {
     public int length;
     public int width;

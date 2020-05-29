@@ -1,4 +1,5 @@
 package com.example.fragmentdemo2;
+
 import android.app.Activity;
 import android.app.ListFragment;
 import android.os.Bundle;
@@ -55,6 +56,7 @@ public class NamesListFragment extends ListFragment {
             callback = (Callback) activity;
         }
     }
+
     @Override
     public void onDetach() {
         super.onDetach();

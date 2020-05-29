@@ -1,6 +1,6 @@
 package day07.Person;
 
-public class Boby extends Person{
+public class Boby extends Person {
 
     public Boby(String name) {
         super(name);
@@ -8,6 +8,6 @@ public class Boby extends Person{
 
     @Override
     public void move() {
-        System.out.println(getName()+"在爬");
+        System.out.println(getName() + "在爬");
     }
 }

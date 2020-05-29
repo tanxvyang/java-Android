@@ -1,5 +1,7 @@
 package com.example.camerademo;
+
 import java.io.File;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -74,10 +76,10 @@ public class MainActivity extends Activity {
                 fileUri = Uri.fromFile(image);
                 imageView.setImageURI(fileUri);
             } else if (resultCode == RESULT_CANCELED) {
-                Toast.makeText(this,  "Action cancelled",
+                Toast.makeText(this, "Action cancelled",
                         Toast.LENGTH_LONG).show();
             } else {
-                Toast.makeText(this,  "Error",
+                Toast.makeText(this, "Error",
                         Toast.LENGTH_LONG).show();
             }
         }

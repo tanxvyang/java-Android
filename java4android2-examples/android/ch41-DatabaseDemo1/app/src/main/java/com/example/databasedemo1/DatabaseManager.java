@@ -1,6 +1,8 @@
 package com.example.databasedemo1;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -15,12 +17,14 @@ public class DatabaseManager extends SQLiteOpenHelper {
     public static final String LAST_NAME_FIELD = "last_name";
     public static final String PHONE_FIELD = "phone";
     public static final String EMAIL_FIELD = "email";
+
     public DatabaseManager(Context context) {
-        super(context, 
-                /*db name=*/ "contacts_db2", 
-                /*cursorFactory=*/ null, 
+        super(context,
+                /*db name=*/ "contacts_db2",
+                /*cursorFactory=*/ null,
                 /*db version=*/1);
     }
+
     @Override
     public void onCreate(SQLiteDatabase db) {
         Log.d("db", "onCreate");
@@ -60,10 +64,10 @@ public class DatabaseManager extends SQLiteOpenHelper {
     // Getting single contact 
     Contact getContact(long id) {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor cursor = db.query(TABLE_NAME, new String[] {
+        Cursor cursor = db.query(TABLE_NAME, new String[]{
                         ID_FIELD, FIRST_NAME_FIELD, LAST_NAME_FIELD,
-                        PHONE_FIELD, EMAIL_FIELD }, ID_FIELD + "=?",
-                new String[] { String.valueOf(id) }, null,
+                        PHONE_FIELD, EMAIL_FIELD}, ID_FIELD + "=?",
+                new String[]{String.valueOf(id)}, null,
                 null, null, null);
         if (cursor != null) {
             cursor.moveToFirst();
@@ -114,13 +118,13 @@ public class DatabaseManager extends SQLiteOpenHelper {
         values.put(EMAIL_FIELD, contact.getEmail());
 
         return db.update(TABLE_NAME, values, ID_FIELD + " = ?",
-                new String[] { String.valueOf(contact.getId()) });
+                new String[]{String.valueOf(contact.getId())});
     }
 
     public void deleteContact(long id) {
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete(TABLE_NAME, ID_FIELD + " = ?",
-                new String[] { String.valueOf(id) });
+                new String[]{String.valueOf(id)});
         db.close();
     }
 }

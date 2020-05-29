@@ -33,46 +33,46 @@ public class ViewActivity extends Activity {
                 String[] files = dir.list();
                 ArrayAdapter<String> dataAdapter =
                         new ArrayAdapter<String>(this,
-                        android.R.layout.simple_spinner_item, files);
+                                android.R.layout.simple_spinner_item, files);
                 dataAdapter.setDropDownViewResource(
                         android.R.layout.simple_spinner_dropdown_item);
                 spinner.setAdapter(dataAdapter);
                 spinner.setOnItemSelectedListener(
                         new AdapterView.OnItemSelectedListener() {
-                    @Override
-                    public void onItemSelected(AdapterView<?>
-                                adapterView, View view, int pos, long id) {
-                        //open file
-                        Object itemAtPosition = adapterView
-                                .getItemAtPosition(pos);
-                        File file = new File(getFilesDir(),
-                                itemAtPosition.toString());
-                        FileReader fileReader = null;
-                        BufferedReader bufferedReader = null;
-                        try {
-                            fileReader = new FileReader(file);
-                            bufferedReader =
-                                    new BufferedReader(fileReader);
-                            StringBuilder sb = new StringBuilder();
-                            String line = bufferedReader.readLine();
-                            while (line != null) {
-                                sb.append(line);
-                                line = bufferedReader.readLine();
+                            @Override
+                            public void onItemSelected(AdapterView<?>
+                                                               adapterView, View view, int pos, long id) {
+                                //open file
+                                Object itemAtPosition = adapterView
+                                        .getItemAtPosition(pos);
+                                File file = new File(getFilesDir(),
+                                        itemAtPosition.toString());
+                                FileReader fileReader = null;
+                                BufferedReader bufferedReader = null;
+                                try {
+                                    fileReader = new FileReader(file);
+                                    bufferedReader =
+                                            new BufferedReader(fileReader);
+                                    StringBuilder sb = new StringBuilder();
+                                    String line = bufferedReader.readLine();
+                                    while (line != null) {
+                                        sb.append(line);
+                                        line = bufferedReader.readLine();
+                                    }
+                                    WebView webView = (WebView)
+                                            findViewById(R.id.webview);
+                                    webView.loadData(sb.toString(),
+                                            "text/html", "utf-8");
+                                } catch (FileNotFoundException e) {
+                                } catch (IOException e) {
+                                }
                             }
-                            WebView webView = (WebView)
-                                    findViewById(R.id.webview);
-                            webView.loadData(sb.toString(),
-                                    "text/html", "utf-8");
-                        } catch (FileNotFoundException e) {
-                        } catch (IOException e) {
-                        }
-                    }
 
-                    @Override
-                    public void onNothingSelected(AdapterView<?>
-                            adapterView) {
-                    }
-                });
+                            @Override
+                            public void onNothingSelected(AdapterView<?>
+                                                                  adapterView) {
+                            }
+                        });
             }
         }
     }

@@ -7,20 +7,23 @@ public class Room {
 
     public Room(int id) {
         this.id = id;
-        state=false;
-        coustomer=null;
+        state = false;
+        coustomer = null;
     }
-    public boolean in(Coustomer coustomer){
-        this.coustomer=coustomer;
-        state=true;
+
+    public boolean in(Coustomer coustomer) {
+        this.coustomer = coustomer;
+        state = true;
         return true;
     }
-    public boolean out(){
-        this.coustomer=null;
-        state=false;
+
+    public boolean out() {
+        this.coustomer = null;
+        state = false;
         return true;
 
     }
+
     public int getId() {
         return id;
     }
@@ -33,8 +36,8 @@ public class Room {
         return coustomer;
     }
 
-    public String toString(){
-        if (false==state){
+    public String toString() {
+        if (false == state) {
             return "空房";
 
         }

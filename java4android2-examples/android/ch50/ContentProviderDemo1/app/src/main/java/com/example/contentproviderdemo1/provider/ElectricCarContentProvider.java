@@ -60,7 +60,7 @@ public class ElectricCarContentProvider extends ContentProvider {
                       String selection,
                       String[] selectionArgs) {
         String id = uri.getPathSegments().get(1);
-        Log.d("provider", "update in CP. uri:"  + uri);
+        Log.d("provider", "update in CP. uri:" + uri);
         DatabaseManager databaseManager = getDatabaseManager();
         String make = values.getAsString("make");
         String model = values.getAsString("model");
@@ -68,6 +68,7 @@ public class ElectricCarContentProvider extends ContentProvider {
     }
 
     private DatabaseManager dbMgr;
+
     private DatabaseManager getDatabaseManager() {
         if (dbMgr == null) {
             dbMgr = new DatabaseManager(getContext());

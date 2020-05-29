@@ -4,19 +4,19 @@ import java.util.Scanner;
 
 public class Test7 {
 
-	public static void main(String[] args) {
-/*		//Ëæ»úÉú³ÉÒ»¸ö¡¾-10~10¡¿µÄËæ»úÕûÊý
+    public static void main(String[] args) {
+/*		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½-10~10ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
   int num=(int) (Math.random()*(10-(-10+1))+(-10));
   //
   System.out.println(num);
-   /*  //Êµ¼Ê¿ª·¢ÖÐÖ÷ÒªÊ¹ÓÃ  £¬Ò×¶Á£¬²»Ò×³ö´í
+   /*  //Êµï¿½Ê¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÒªÊ¹ï¿½ï¿½  ï¿½ï¿½ï¿½×¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×³ï¿½ï¿½ï¿½
  
   if(num>0){
 	   //
-    	System.out.println("ÕýÊý");
+    	System.out.println("ï¿½ï¿½ï¿½ï¿½");
     }
    if(num<0){
-	   System.out.println("¸ºÊý");   
+	   System.out.println("ï¿½ï¿½ï¿½ï¿½");   
    }
    if(num==0){
 	   System.out.println("0");
@@ -47,38 +47,38 @@ public class Test7 {
   */
   
 		/*
-		// Á·Ï°£ºÊäÈëÒ»¸öÄê £¬ÅÐ¶ÏÊÇ·ñÊÇÈòÄê
-		//ÈòÄêÄÜ±»400Õû³ý  »ò£¨ÄÜ±»4Õû³ýÇÒ²»ÄÜ±»100Õû³ý£©
+		// ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Ü±ï¿½400ï¿½ï¿½ï¿½ï¿½  ï¿½ï¿½ï¿½Ü±ï¿½4ï¿½ï¿½ï¿½ï¿½ï¿½Ò²ï¿½ï¿½Ü±ï¿½100ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		
 		Scanner sc=new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÄê·Ý£º");
-		//»ñÈ¡ÓÃ»§ÊäÈë
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý£ï¿½");
+		//ï¿½ï¿½È¡ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
 		int num=sc.nextInt();
 		
-		System.out.println("ÊäÈëµÄÄê·ÝÊÇ£º"+num);
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç£ï¿½"+num);
 		//
 		if((num%400==0)
 				||(num%4==0&&num%100!=0)){
-			//ÊÇÈòÄê
-			System.out.println(num+"ÊÇÈòÄê");
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			System.out.println(num+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		}else{
-			//·ñÔò²»ÊÇÈòÄê
-			System.out.println(num+"²»ÊÇÈòÄê");
+			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			System.out.println(num+"ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 		}
   */
-		
-		/*  ÊäÈëÒ»¸ö³É¼¨ 0-100Ö®¼ä£¬ÅÐ¶ÏµÈ¼¶
-		
-		*/
-			System.out.println("ÇëÊäÈë³É¼¨£º");
-			Scanner sc=new Scanner(System.in);
-			int score=sc.nextInt();
-			
-			//Èç¹ûÊäÈë·ÖÊý²»ºÏ·¨£»·ÖÊýÎÞÐ§£¬ÌáÊ¾£¬²¢Í£Ö¹³ÌÐò
+
+        /*  ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½É¼ï¿½ 0-100Ö®ï¿½ä£¬ï¿½Ð¶ÏµÈ¼ï¿½
+
+         */
+        System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½");
+        Scanner sc = new Scanner(System.in);
+        int score = sc.nextInt();
+
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Í£Ö¹ï¿½ï¿½ï¿½ï¿½
 		 /*   if(score<0||score>100){
-				System.out.println("·ÖÊýÎÞÐ§ £¡");
-			  //return;      //³ÌÐòÍ£Ö¹
-				System.exit(0);//  Í£Ö¹ÐéÄâ»ú
+				System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ ï¿½ï¿½");
+			  //return;      //ï¿½ï¿½ï¿½ï¿½Í£Ö¹
+				System.exit(0);//  Í£Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½
 			}
 			
 			System.out.println(score);
@@ -97,34 +97,34 @@ public class Test7 {
 			System.out.println(lv);
   
   */
-			
-		//switch£¨³£Á¿±í´ïÊ½£©{ 
-//			case ³£Á¿1£º
-//		´úÂë1  }	
-			char lv;
-			
-			switch(score/10){
-			case 10:
-				lv='A';
-				break;
-			case 9:
-				lv='A';
-				break;
-			case 8:
-				lv='B';
-				break;
-			case 7:
-				lv='C';
-				break;
-			case 6:
-				lv='D';
-				break;
-			default:
-				lv='E';
-				break;
-			}
-			
-			System.out.println(lv);
-	}
+
+        //switchï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½{
+//			case ï¿½ï¿½ï¿½ï¿½1ï¿½ï¿½
+//		ï¿½ï¿½ï¿½ï¿½1  }	
+        char lv;
+
+        switch (score / 10) {
+            case 10:
+                lv = 'A';
+                break;
+            case 9:
+                lv = 'A';
+                break;
+            case 8:
+                lv = 'B';
+                break;
+            case 7:
+                lv = 'C';
+                break;
+            case 6:
+                lv = 'D';
+                break;
+            default:
+                lv = 'E';
+                break;
+        }
+
+        System.out.println(lv);
+    }
 
 }

@@ -1,6 +1,8 @@
 package com.example.videorecorder;
+
 import java.io.File;
 import java.io.IOException;
+
 import android.app.Activity;
 import android.media.MediaRecorder;
 import android.os.Bundle;

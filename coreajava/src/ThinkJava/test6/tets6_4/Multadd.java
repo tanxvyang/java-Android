@@ -7,27 +7,27 @@ public class Multadd {
 
     }
 
-    public static double multadd(double a, double b, double c){
-        return a*b+c;
+    public static double multadd(double a, double b, double c) {
+        return a * b + c;
     }
 
-    public  double Multadd(double a,double b) {
-        return  Math.sin (a) + (Math.cos(b))/2;
+    public double Multadd(double a, double b) {
+        return Math.sin(a) + (Math.cos(b)) / 2;
 
     }
 
     public static void main(String[] args) {
-        double a=Math.PI/4;
-        double b=Math.PI/4;
-        Multadd multadd = new Multadd(a,b);
-        double out = multadd(1,2,5);
+        double a = Math.PI / 4;
+        double b = Math.PI / 4;
+        Multadd multadd = new Multadd(a, b);
+        double out = multadd(1, 2, 5);
         System.out.println(out);
-        System.out.println(multadd.multadd(1,2,3));
+        System.out.println(multadd.multadd(1, 2, 3));
         System.out.println("==============");
-        System.out.println(multadd.Multadd(a,b));
+        System.out.println(multadd.Multadd(a, b));
 
 
-        Multadd multadd1 = new Multadd(a,b){
+        Multadd multadd1 = new Multadd(a, b) {
 
         };
 

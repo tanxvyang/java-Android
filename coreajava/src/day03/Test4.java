@@ -2,20 +2,20 @@ package day03;
 
 public class Test4 {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) {
 //		int i=1;
 //		System.out.println(i);
-		
-		String 	username="abc";
-		//String username=null 
-		//Èç¹û£¨»ñµÃÓÃ»§Ãû ²¢ÇÒ»ñµÃµÄÓÃ»§Ãû²»ÊÇÊ²Ã´¶¼Ã»Ìî£©
-		if(username!=null&&!username.equals("")){
-			System.out.println("µÇÂ¼²Ù×÷");
-			//·ñÔò 
-		}else{
-			System.out.println("ÖØÐÂÊäÈëÓÃ»§Ãû");
-		}
 
-	}
+        String username = "abc";
+        //String username=null
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ò»ï¿½Ãµï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê²Ã´ï¿½ï¿½Ã»ï¿½î£©
+        if (username != null && !username.equals("")) {
+            System.out.println("ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½");
+            //ï¿½ï¿½ï¿½ï¿½
+        } else {
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½");
+        }
+
+    }
 
 }

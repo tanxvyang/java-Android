@@ -18,13 +18,13 @@ public class UserDaoImpl implements UserDao {
 
     @Override
     public void insert(User user) {
-       String sql=new StringBuffer()
-               .append("insert into t_user ")
-               .append("  (username,password,phone,regist_date,status) ")
-               .append(" values " )
-               .append(" (?,?,?,?,?) ")
-               .toString();
-        JdbcTemplate.update(sql,new Object[]{
+        String sql = new StringBuffer()
+                .append("insert into t_user ")
+                .append("  (username,password,phone,regist_date,status) ")
+                .append(" values ")
+                .append(" (?,?,?,?,?) ")
+                .toString();
+        JdbcTemplate.update(sql, new Object[]{
                 user.getCreateDate(),
                 user.getId(),
                 user.getUsername(),

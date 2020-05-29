@@ -1,4 +1,5 @@
 package app04;
+
 class Chapter {
     String title;
     int numberOfPages;

@@ -1,4 +1,5 @@
 package com.example.databasedemo1;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -22,6 +23,7 @@ public class AddContactActivity extends Activity {
     public void cancel(View view) {
         finish();
     }
+
     public void addContact(View view) {
         DatabaseManager dbMgr = new DatabaseManager(this);
         String firstName = ((TextView) findViewById(

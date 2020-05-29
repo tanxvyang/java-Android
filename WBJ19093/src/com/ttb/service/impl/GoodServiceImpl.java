@@ -15,63 +15,64 @@ import com.ttb.exception.StoreNotEnoughException;
 import com.ttb.service.GoodService;
 import com.ttb.view.MainFrame;
 
-public class GoodServiceImpl implements GoodService{
-	GoodDao gd = new GoodDaoImpl();
-	UserDao ud = new UserDaoImpl();
+public class GoodServiceImpl implements GoodService {
+    GoodDao gd = new GoodDaoImpl();
+    UserDao ud = new UserDaoImpl();
 
-	public List<Good> queryGoodsByGoodName(String goodName){
-		return gd.selectGoodsByGoodName(goodName);
-	}
+    public List<Good> queryGoodsByGoodName(String goodName) {
+        return gd.selectGoodsByGoodName(goodName);
+    }
 
-	public void buy(User user, Good good, Integer buyNums) throws StoreNotEnoughException, MoneyNotEnoughException {
-		//ÅÐ¶Ï¹ºÂòÊýÁ¿ÊÇ·ñ´óÓÚ¿â´æÊýÁ¿
-		if(good.getNums()<buyNums){
-			throw new StoreNotEnoughException("¿â´æ²»×ã");
-		}
-		//¼ÆËã×Ü¼Û¸ñ
-		Double totalPrice = buyNums * good.getGoodPrice();
-		//ÅÐ¶ÏÓÃ»§µÄÓà¶îÊÇ·ñ×ã¹»½øÐÐ¹ºÂò²Ù×÷
-		if(user.getUsermoney() < totalPrice){
-			throw new MoneyNotEnoughException("ÓÃ»§Óà¶î²»×ã");
-		}
-		//´ÓÓÃ»§ÕË»§ÖÐ¿Û³ý×Ü¼Û¸ñ£¬²¢ÔÚÉÌµêÓà¶îÖÐÌí¼Ó×Ü¼Û¸ñ
-		MainFrame.setShopMoney(MainFrame.getShopMoney()+totalPrice);
-		user.setUsermoney(user.getUsermoney() - totalPrice);
-		//½«ÓÃ»§½ð¶î¸Ä¶¯Ð´ÈëÊý¾Ý¿â
-		ud.updateUser(user);
-		//½«ÉÌÆ·ÊýÁ¿¸Ä¶¯Ð´ÈëÊý¾Ý¿â
-		good.setNums(good.getNums() - buyNums);
-		gd.updateGood(good);
-	}
-//	1¡¢ÉÏ¼ÜÉÌÆ·£¨ÉÏ¼ÜµÄÊ±ºòÒª¿¼ÂÇµ½´ÓµêÆÌÖÐ¿ÛÈ¡»õ¿î£©
-	public void addGood(Good good) throws GoodAlreadyExistException, MoneyNotEnoughException{
-//		1¡¢ÑéÖ¤ÉÌÆ·ÃûÊÇ·ñÖØ¸´
-		if(gd.selectGoodByGoodName(good.getGoodName()) != null){
-			throw new GoodAlreadyExistException("ÉÌÆ·Ãû³ÆÖØ¸´");
-		}
-//		2¡¢ÅÐ¶Ï»õ¿îÊÇ·ñ×ã¹»½ø»õ
-		Double shopMoney = MainFrame.getShopMoney() - good.getGoodPrice() * good.getNums();
-		if(shopMoney < 0){
-			throw new MoneyNotEnoughException("»õ¿î²»×ã");
-		}
-//		3¡¢½«ÉÌÆ··ÅÈë¿âÖÐ
-		gd.insertGood(good);
-		MainFrame.setShopMoney(shopMoney);
-	}
-	
-//	2¡¢ÏÂ¼ÜÉÌÆ·£¨ÍË»Ø»õ¿î£©
-	public void removeGood(Integer gid) throws GoodNotFoundException{
-//		1¡¢ÑéÖ¤ÉÌÆ·ÊÇ·ñ´æÔÚ
-		Good good = gd.selectGoodByGid(gid);
-		if(good == null){
-			throw new GoodNotFoundException("ÉÌÆ·²»´æÔÚ");
-		}
-//		2¡¢É¾³ýÉÌÆ·
-		gd.deleteGood(gid);
-//		3¡¢ÍË¿î
-		Double shopMoney = MainFrame.getShopMoney() + good.getGoodPrice() * good.getNums();
-		MainFrame.setShopMoney(shopMoney);
-	}
+    public void buy(User user, Good good, Integer buyNums) throws StoreNotEnoughException, MoneyNotEnoughException {
+        //ï¿½Ð¶Ï¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        if (good.getNums() < buyNums) {
+            throw new StoreNotEnoughException("ï¿½ï¿½æ²»ï¿½ï¿½");
+        }
+        //ï¿½ï¿½ï¿½ï¿½ï¿½Ü¼Û¸ï¿½
+        Double totalPrice = buyNums * good.getGoodPrice();
+        //ï¿½Ð¶ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ã¹»ï¿½ï¿½ï¿½Ð¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        if (user.getUsermoney() < totalPrice) {
+            throw new MoneyNotEnoughException("ï¿½Ã»ï¿½ï¿½ï¿½î²»ï¿½ï¿½");
+        }
+        //ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ë»ï¿½ï¿½Ð¿Û³ï¿½ï¿½Ü¼Û¸ñ£¬²ï¿½ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ü¼Û¸ï¿½
+        MainFrame.setShopMoney(MainFrame.getShopMoney() + totalPrice);
+        user.setUsermoney(user.getUsermoney() - totalPrice);
+        //ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½
+        ud.updateUser(user);
+        //ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½Ð´ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½
+        good.setNums(good.getNums() - buyNums);
+        gd.updateGood(good);
+    }
+
+    //	1ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Ï¼Üµï¿½Ê±ï¿½ï¿½Òªï¿½ï¿½ï¿½Çµï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½Ð¿ï¿½È¡ï¿½ï¿½ï¿½î£©
+    public void addGood(Good good) throws GoodAlreadyExistException, MoneyNotEnoughException {
+//		1ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Ç·ï¿½ï¿½Ø¸ï¿½
+        if (gd.selectGoodByGoodName(good.getGoodName()) != null) {
+            throw new GoodAlreadyExistException("ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½Ø¸ï¿½");
+        }
+//		2ï¿½ï¿½ï¿½Ð¶Ï»ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ã¹»ï¿½ï¿½ï¿½ï¿½
+        Double shopMoney = MainFrame.getShopMoney() - good.getGoodPrice() * good.getNums();
+        if (shopMoney < 0) {
+            throw new MoneyNotEnoughException("ï¿½ï¿½ï¿½î²»ï¿½ï¿½");
+        }
+//		3ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        gd.insertGood(good);
+        MainFrame.setShopMoney(shopMoney);
+    }
+
+    //	2ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Ë»Ø»ï¿½ï¿½î£©
+    public void removeGood(Integer gid) throws GoodNotFoundException {
+//		1ï¿½ï¿½ï¿½ï¿½Ö¤ï¿½ï¿½Æ·ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
+        Good good = gd.selectGoodByGid(gid);
+        if (good == null) {
+            throw new GoodNotFoundException("ï¿½ï¿½Æ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
+        }
+//		2ï¿½ï¿½É¾ï¿½ï¿½ï¿½ï¿½Æ·
+        gd.deleteGood(gid);
+//		3ï¿½ï¿½ï¿½Ë¿ï¿½
+        Double shopMoney = MainFrame.getShopMoney() + good.getGoodPrice() * good.getNums();
+        MainFrame.setShopMoney(shopMoney);
+    }
 }
 
 

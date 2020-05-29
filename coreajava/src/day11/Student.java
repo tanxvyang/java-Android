@@ -1,8 +1,8 @@
 package day11;
 
-public class Student implements Comparable<Student>{ //是对象可以比较
+public class Student implements Comparable<Student> { //是对象可以比较
     private Integer id;
-    private  String name;
+    private String name;
     private Integer score;
 
     public Student(Integer id, String name, Integer score) {
@@ -46,6 +46,6 @@ public class Student implements Comparable<Student>{ //是对象可以比较
 
     @Override
     public int compareTo(Student o) { //写比较规则
-            return this.id-o.id;
+        return this.id - o.id;
     }
 }

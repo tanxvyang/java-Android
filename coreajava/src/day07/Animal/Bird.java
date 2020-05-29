@@ -1,6 +1,7 @@
 package day07.Animal;
+
 //鸟是动物
-public class Bird extends Animal{
+public class Bird extends Animal {
 
     private String color;
 
@@ -17,13 +18,13 @@ public class Bird extends Animal{
         this.color = color;
     }
 
-    public void sing(){
+    public void sing() {
         System.out.println("singsong");
     }
 
-    public void eat(){
+    public void eat() {
         // System.out.println(name+"正在吃虫");
-        System.out.println(getName()+"正在吃虫");
+        System.out.println(getName() + "正在吃虫");
     }
 
 }

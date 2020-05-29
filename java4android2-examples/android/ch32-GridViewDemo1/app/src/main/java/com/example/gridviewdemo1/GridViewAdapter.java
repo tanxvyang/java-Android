@@ -1,4 +1,5 @@
 package com.example.gridviewdemo1;
+
 import android.content.Context;
 import android.view.View;
 import android.view.ViewGroup;
@@ -12,6 +13,7 @@ public class GridViewAdapter extends BaseAdapter {
     public GridViewAdapter(Context context) {
         this.context = context;
     }
+
     private int[] icons = {
             android.R.drawable.btn_star_big_off,
             android.R.drawable.btn_star_big_on,

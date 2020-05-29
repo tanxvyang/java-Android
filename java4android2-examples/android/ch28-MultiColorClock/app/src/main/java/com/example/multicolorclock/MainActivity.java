@@ -1,4 +1,5 @@
 package com.example.multicolorclock;
+
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -9,9 +10,9 @@ import android.widget.AnalogClock;
 public class MainActivity extends Activity {
 
     int counter = 0;
-    int[] colors = { Color.BLACK, Color.BLUE, Color.CYAN,
+    int[] colors = {Color.BLACK, Color.BLUE, Color.CYAN,
             Color.DKGRAY, Color.GRAY, Color.GREEN, Color.LTGRAY,
-            Color.MAGENTA, Color.RED, Color.WHITE, Color.YELLOW };
+            Color.MAGENTA, Color.RED, Color.WHITE, Color.YELLOW};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

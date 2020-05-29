@@ -6,47 +6,50 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class JDBCUtil {//¹¤¾ßÀà£¬Ö÷ÒªÌá¹©Êý¾Ý¿âÁ¬½Ó£¬¹Ø±ÕÁ¬½Ó
-	//¾²Ì¬´úÂë¿é   ¼ÓÔØÇý¶¯
-	static{
-		try {
-			Class.forName("com.mysql.jdbc.Driver");
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		}
-	}
-	//¸ù¾ÝurlÓÃ»§ÃûÃÜÂë£¬»ñÈ¡Á¬½Ó
-	public static Connection getConnection(){
-		Connection conn = null;
-		try {
-			conn =  DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/jdbc", "root", "root");
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
-		return conn;
-	}
-	//¹Ø±ÕÁ¬½Ó¡¢×´Ì¬¼¯¡¢½á¹û¼¯
-	public static void close(Connection conn,Statement stmt,ResultSet rs){
-		if (rs != null) {
-			try {
-				rs.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		if (stmt != null) {
-			try {
-				stmt.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-		if (conn != null) {
-			try {
-				conn.close();
-			} catch (SQLException e) {
-				e.printStackTrace();
-			}
-		}
-	}
+public class JDBCUtil {//ï¿½ï¿½ï¿½ï¿½ï¿½à£¬ï¿½ï¿½Òªï¿½á¹©ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½Ó£ï¿½ï¿½Ø±ï¿½ï¿½ï¿½ï¿½ï¿½
+
+    //ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½   ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    static {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //ï¿½ï¿½ï¿½ï¿½urlï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ë£¬ï¿½ï¿½È¡ï¿½ï¿½ï¿½ï¿½
+    public static Connection getConnection() {
+        Connection conn = null;
+        try {
+            conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/jdbc", "root", "root");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return conn;
+    }
+
+    //ï¿½Ø±ï¿½ï¿½ï¿½ï¿½Ó¡ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    public static void close(Connection conn, Statement stmt, ResultSet rs) {
+        if (rs != null) {
+            try {
+                rs.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if (stmt != null) {
+            try {
+                stmt.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        if (conn != null) {
+            try {
+                conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
 }

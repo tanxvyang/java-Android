@@ -1,4 +1,5 @@
 package app22.webserver;
+
 import java.net.Socket;
 import java.net.ServerSocket;
 import java.net.InetAddress;
@@ -51,7 +52,7 @@ public class HttpServer {
                 socket.close();
 
                 // check if the previous URI is a shutdown command
-                shutdown = 
+                shutdown =
                         request.getUri().equals(SHUTDOWN_COMMAND);
             } catch (Exception e) {
                 e.printStackTrace();

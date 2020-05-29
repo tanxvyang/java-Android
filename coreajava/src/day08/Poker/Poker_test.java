@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class Poker_test {
     public static void main(String[] args) {
-        Poker poker=new Poker();
+        Poker poker = new Poker();
 
         System.out.println(Arrays.toString(poker.getP()));
 

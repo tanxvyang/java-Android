@@ -1,10 +1,11 @@
 package jdbc.exception;
+
 /**
  * 服务失败异常
- * @author 谭旭洋
  *
+ * @author 谭旭洋
  */
-public class ServiceException extends RuntimeException{
+public class ServiceException extends RuntimeException {
     public ServiceException() {
     }
 

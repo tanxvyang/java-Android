@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
                 R.id.listView);
         Cursor cursor = getContentResolver().query(
                 Util.CONTENT_URI,
-                /*projection=*/ new String[] {
+                /*projection=*/ new String[]{
                         Util.ID_FIELD, Util.MAKE_FIELD,
                         Util.MODEL_FIELD},
                 /*selection=*/ null,
@@ -37,9 +37,9 @@ public class MainActivity extends Activity {
                 this,
                 android.R.layout.two_line_list_item,
                 cursor,
-                new String[] {Util.MAKE_FIELD,
+                new String[]{Util.MAKE_FIELD,
                         Util.MODEL_FIELD},
-                new int[] {android.R.id.text1, android.R.id.text2},
+                new int[]{android.R.id.text1, android.R.id.text2},
                 CursorAdapter.FLAG_REGISTER_CONTENT_OBSERVER);
 
         listView.setAdapter(adapter);

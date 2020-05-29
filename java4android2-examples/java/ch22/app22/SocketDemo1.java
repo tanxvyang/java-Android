@@ -1,4 +1,5 @@
 package app22;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -17,7 +18,7 @@ public class SocketDemo1 {
                     PrintWriter(socket.getOutputStream(),
                     autoflush);
             BufferedReader in = new BufferedReader(
-                   new InputStreamReader(socket.getInputStream()));
+                    new InputStreamReader(socket.getInputStream()));
 
             // send an HTTP request to the web server
             out.println("GET / HTTP/1.1");

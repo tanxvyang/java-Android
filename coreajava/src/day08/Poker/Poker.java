@@ -16,7 +16,6 @@ public class Poker {
     private Pai[] p4;
 
 
-
     public Pai[] getP() {
         return p;
     }
@@ -103,10 +102,10 @@ public class Poker {
         // this.p=(Pai[]) l.toArray();
 
 
-       p1 = new Pai[25];//玩家1牌组集合
-       p2 = new Pai[25];//玩家2牌组集合
-       p3 = new Pai[25];//玩家3牌组集合
-       p4 = new Pai[25];//底牌牌组集合
+        p1 = new Pai[25];//玩家1牌组集合
+        p2 = new Pai[25];//玩家2牌组集合
+        p3 = new Pai[25];//玩家3牌组集合
+        p4 = new Pai[25];//底牌牌组集合
 
         Pai[] p = this.p;
   /*
@@ -165,14 +164,14 @@ public class Poker {
         */
 
         for (int i = 0; i < p.length; i++) {
-            if (i >= p.length-3) {
-                p1[i]=p[i];
-            }else if (i%3 == 0) {
-                p2[i]=p[i];
-            }else if (i%3 == 1) {
-                p3[i]=p[i];
-            }else {
-                p4[i]=p[i];
+            if (i >= p.length - 3) {
+                p1[i] = p[i];
+            } else if (i % 3 == 0) {
+                p2[i] = p[i];
+            } else if (i % 3 == 1) {
+                p3[i] = p[i];
+            } else {
+                p4[i] = p[i];
             }
         }
         //("玩家1的牌"+p1+"玩家2的牌"+p2+"玩家3的牌"+p3+"玩家4的牌"+p4);

@@ -1,4 +1,5 @@
 package com.example.contentproviderdemo1.activity;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.ContentUris;
@@ -30,11 +31,11 @@ public class ShowElectricCarActivity extends Activity {
             electricCarId = extras.getLong("id");
             Cursor cursor = getContentResolver().query(
                     Util.CONTENT_URI,
-                    /*projection=*/ new String[] {
+                    /*projection=*/ new String[]{
                             Util.ID_FIELD, Util.MAKE_FIELD,
                             Util.MODEL_FIELD},
                     /*selection=*/ "_id=?",
-                    /*selectionArgs*/ new String[] {
+                    /*selectionArgs*/ new String[]{
                             Long.toString(electricCarId)},
                     /*sortOrder*/ null);
             if (cursor != null && cursor.moveToFirst()) {
@@ -67,33 +68,33 @@ public class ShowElectricCarActivity extends Activity {
 
     private void deleteElectricCar() {
         new AlertDialog.Builder(this)
-            .setTitle("Please confirm")
-            .setMessage(
-                    "Are you sure you want to delete " +
-                            "this electric car?")
-            .setPositiveButton("Yes",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(
-                            DialogInterface dialog,
-                            int whichButton) {
-                        Uri uri = ContentUris.withAppendedId(
-                                Util.CONTENT_URI, electricCarId);
-                        getContentResolver().delete(
-                                uri, null, null);
-                        dialog.dismiss();
-                        finish();
-                    }
-                })
-            .setNegativeButton("No",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(
-                                DialogInterface dialog,
-                                int which) {
-                            dialog.dismiss();
-                        }
-                    })
-            .create()
-            .show();
+                .setTitle("Please confirm")
+                .setMessage(
+                        "Are you sure you want to delete " +
+                                "this electric car?")
+                .setPositiveButton("Yes",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(
+                                    DialogInterface dialog,
+                                    int whichButton) {
+                                Uri uri = ContentUris.withAppendedId(
+                                        Util.CONTENT_URI, electricCarId);
+                                getContentResolver().delete(
+                                        uri, null, null);
+                                dialog.dismiss();
+                                finish();
+                            }
+                        })
+                .setNegativeButton("No",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(
+                                    DialogInterface dialog,
+                                    int which) {
+                                dialog.dismiss();
+                            }
+                        })
+                .create()
+                .show();
     }
 
     public void updateElectricCar(View view) {
@@ -101,10 +102,10 @@ public class ShowElectricCarActivity extends Activity {
                 electricCarId);
         ContentValues values = new ContentValues();
         values.put(Util.MAKE_FIELD,
-                ((EditText)findViewById(R.id.make)).getText()
+                ((EditText) findViewById(R.id.make)).getText()
                         .toString());
         values.put(Util.MODEL_FIELD,
-                ((EditText)findViewById(R.id.model)).getText()
+                ((EditText) findViewById(R.id.model)).getText()
                         .toString());
         getContentResolver().update(uri, values, null, null);
         finish();

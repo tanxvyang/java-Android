@@ -5,14 +5,17 @@ import com.example.FuelEfficiency;
 abstract class Car {
     protected String name;
     protected FuelEfficiency fuelEfficiency;
+
     public double calculateMinGasUsage(int miles) {
         int mpg = fuelEfficiency.getMax();
         return (double) miles / mpg;
     }
+
     public double calculateMaxGasUsage(int miles) {
         int mpg = fuelEfficiency.getMin();
         return (double) miles / mpg;
     }
+
     public String getName() {
         return this.name;
     }
@@ -24,12 +27,14 @@ class EfficientCar extends Car {
         this.fuelEfficiency = FuelEfficiency.EFFICIENT;
     }
 }
+
 class AcceptableCar extends Car {
     public AcceptableCar(String name) {
         this.name = name;
         this.fuelEfficiency = FuelEfficiency.ACCEPTABLE;
     }
 }
+
 class GasGuzzler extends Car {
     public GasGuzzler(String name) {
         this.name = name;
@@ -46,9 +51,9 @@ public class FuelEfficiencyTest {
         int miles = 1000;
         for (Car car : cars) {
             System.out.printf("To drive %d miles in a \"%s\",%n"
-                    + "you need between %.2f and %.2f gallons "
-                    + "of gasoline.%n%n",
-                    miles, car.name, 
+                            + "you need between %.2f and %.2f gallons "
+                            + "of gasoline.%n%n",
+                    miles, car.name,
                     car.calculateMinGasUsage(miles),
                     car.calculateMaxGasUsage(miles));
         }

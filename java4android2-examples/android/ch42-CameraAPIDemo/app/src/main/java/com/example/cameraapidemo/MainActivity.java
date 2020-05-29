@@ -1,8 +1,10 @@
 package com.example.cameraapidemo;
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
 import android.app.Activity;
 import android.hardware.Camera;
 import android.hardware.Camera.PictureCallback;
@@ -148,7 +150,7 @@ public class MainActivity extends Activity
         try {
             camera.setPreviewDisplay(holder);
             camera.startPreview();
-        } catch (Exception e){
+        } catch (Exception e) {
             Log.d("camera", e.getMessage());
         }
     }
@@ -156,7 +158,7 @@ public class MainActivity extends Activity
     @Override
     public void surfaceChanged(SurfaceHolder holder,
                                int format, int w, int h3) {
-        if (holder.getSurface() == null){
+        if (holder.getSurface() == null) {
             Log.d(TAG, "surface does not exist, return");
             return;
         }
@@ -164,7 +166,7 @@ public class MainActivity extends Activity
         try {
             camera.setPreviewDisplay(holder);
             camera.startPreview();
-        } catch (Exception e){
+        } catch (Exception e) {
             Log.d("camera", e.getMessage());
         }
     }

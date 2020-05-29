@@ -1,4 +1,5 @@
 package app19;
+
 import java.awt.FlowLayout;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -9,6 +10,7 @@ public class ThreadPriorityDemo extends JFrame {
 
     class CounterThread extends Thread {
         JLabel counterLabel;
+
         public CounterThread(JLabel counterLabel) {
             super();
             this.counterLabel = counterLabel;

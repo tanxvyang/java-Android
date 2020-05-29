@@ -1,4 +1,5 @@
 package app20;
+
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class AtomicCounter {

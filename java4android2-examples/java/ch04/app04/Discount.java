@@ -1,8 +1,10 @@
 package app04;
+
 import java.time.LocalDate;
 
 public class Discount {
     private int value;
+
     private Discount(int value) {
         this.value = value;
     }

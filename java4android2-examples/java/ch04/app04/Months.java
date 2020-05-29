@@ -1,4 +1,5 @@
 package app04;
+
 public class Months {
     public static final int JANUARY = 1;
     public static final int FEBRUARY = 2;

@@ -1,4 +1,5 @@
 package com.example.listviewdemo2;
+
 import android.app.ListActivity;
 import android.content.Context;
 import android.content.res.Resources;
@@ -33,6 +34,6 @@ public class MainActivity extends ListActivity {
                                 View view, int position, long id) {
         Log.d("listView2", "listView:" + listView +
                 ", view:" + view.getClass() +
-                ", position:" + position );
+                ", position:" + position);
     }
 }

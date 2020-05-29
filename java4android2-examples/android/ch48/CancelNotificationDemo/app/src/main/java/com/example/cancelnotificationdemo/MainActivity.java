@@ -50,7 +50,7 @@ public class MainActivity extends Activity {
                 PendingIntent.getBroadcast(this, 100,
                         cancelIntent, 0);
 
-        Notification notification  = new Notification.Builder(this)
+        Notification notification = new Notification.Builder(this)
                 .setContentTitle("Stop Press")
                 .setContentText(
                         "Everyone gets extra vacation week!")

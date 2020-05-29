@@ -1,6 +1,8 @@
 package app19;
+
 public class Inconsistent {
     static boolean started = false;
+
     public static void main(String[] args) {
         Thread thread1 = new Thread(new Runnable() {
             public void run() {

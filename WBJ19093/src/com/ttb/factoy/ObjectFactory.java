@@ -9,26 +9,26 @@ import java.util.Properties;
 import java.util.Set;
 
 public class ObjectFactory {
-	static Map<String, Object> store = new HashMap<String, Object>();
-	
-	static{
-		BufferedReader br = new BufferedReader(new InputStreamReader(
-				ObjectFactory.class.getClassLoader().getResourceAsStream("object.properties")));
-		try {
-			String line = null;
-			while ((line = br.readLine()) != null) {
-				String[] params = line.split("=");
-					store.put(params[0], Class.forName(params[1]).newInstance());			
-				}
-		} catch (Exception e) {
-			e.printStackTrace();
-		} finally {
-			try {
-				br.close();
-			} catch (IOException e) {
-				e.printStackTrace();
-			}
-		}
+    static Map<String, Object> store = new HashMap<String, Object>();
+
+    static {
+        BufferedReader br = new BufferedReader(new InputStreamReader(
+                ObjectFactory.class.getClassLoader().getResourceAsStream("object.properties")));
+        try {
+            String line = null;
+            while ((line = br.readLine()) != null) {
+                String[] params = line.split("=");
+                store.put(params[0], Class.forName(params[1]).newInstance());
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                br.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
 //		Properties prop = new Properties();
 //		try {
 //			prop.load(ObjectFactory.class.getClassLoader()
@@ -50,9 +50,9 @@ public class ObjectFactory {
 //		} catch (IllegalAccessException e) {
 //			e.printStackTrace();
 //		}
-	}
-	
-	public static Object getObject(String name){
-		return store.get(name);
-	}
+    }
+
+    public static Object getObject(String name) {
+        return store.get(name);
+    }
 }

@@ -1,4 +1,5 @@
 package app16;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
@@ -9,9 +10,9 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
 public class InputStreamDemo1 {
-    public boolean compareFiles(Path path1, Path path2) 
+    public boolean compareFiles(Path path1, Path path2)
             throws NoSuchFileException {
-        
+
         if (Files.notExists(path1)) {
             throw new NoSuchFileException(path1.toString());
         }
@@ -26,10 +27,10 @@ public class InputStreamDemo1 {
             e.printStackTrace();
         }
         try (InputStream inputStream1 = Files.newInputStream(
-                    path1, StandardOpenOption.READ);
-            InputStream inputStream2 = Files.newInputStream(
-                    path2, StandardOpenOption.READ)) {
-            
+                path1, StandardOpenOption.READ);
+             InputStream inputStream2 = Files.newInputStream(
+                     path2, StandardOpenOption.READ)) {
+
             int i1, i2;
             do {
                 i1 = inputStream1.read();
@@ -57,7 +58,7 @@ public class InputStreamDemo1 {
         } catch (NoSuchFileException e) {
             e.printStackTrace();
         }
-        
+
         // the compareFiles method is not the same as 
         // Files.isSameFile
         try {

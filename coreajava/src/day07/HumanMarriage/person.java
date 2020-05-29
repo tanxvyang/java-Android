@@ -2,8 +2,8 @@ package day07.HumanMarriage;
 
 public class person {
     private String name;
-    private boolean  sex;
-    private person  partener;
+    private boolean sex;
+    private person partener;
 
     public person(String name, boolean sex) {
         this.name = name;
@@ -14,25 +14,24 @@ public class person {
     }
 
 
-    public boolean marry(person partener){
-     if (this.sex==partener.sex){
-         System.out.println("同性不能结婚");
-         return false;
-     }
-     if (this.partener!=null||partener.partener!=null){
-         System.out.println("已经结婚的不能在结婚");
-         return false;
-     }
+    public boolean marry(person partener) {
+        if (this.sex == partener.sex) {
+            System.out.println("同性不能结婚");
+            return false;
+        }
+        if (this.partener != null || partener.partener != null) {
+            System.out.println("已经结婚的不能在结婚");
+            return false;
+        }
 
         //我的配偶是跟我结婚的人
-        this.partener=partener;
+        this.partener = partener;
         //跟我结婚的人的配偶是我
-        partener.partener=this;
+        partener.partener = this;
 
         return true;
 
     }
-
 
 
     public String getName() {

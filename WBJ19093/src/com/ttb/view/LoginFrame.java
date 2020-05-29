@@ -17,68 +17,71 @@ import com.ttb.service.UserService;
 import com.ttb.service.impl.UserServiceImpl;
 
 public class LoginFrame {
-	JFrame mainFrame = null;
-	JLabel usernameLabel = null;
-	JTextField usernameField = null;
-	JLabel passwordLabel = null;
-	JPasswordField passwordField = null;
-	JButton loginButton = null;
-	UserService us = null;
+    JFrame mainFrame = null;
+    JLabel usernameLabel = null;
+    JTextField usernameField = null;
+    JLabel passwordLabel = null;
+    JPasswordField passwordField = null;
+    JButton loginButton = null;
+    UserService us = null;
 
-	public void init(){
-		mainFrame = new JFrame("ÌÔÌÔ±¦ - ÓÃ»§µÇÂ¼");
-		usernameLabel = new JLabel("ÓÃ»§Ãû£º");
-		usernameField = new JTextField();
-		passwordLabel = new JLabel("ÃÜ    Âë£º");
-		passwordField = new JPasswordField();
-		loginButton = new JButton("µÇÂ¼");
-		us = new UserServiceImpl();
-	}
-	public void build(){
-		mainFrame.setSize(300, 300);
-		mainFrame.setLocation(500, 100);
-		mainFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-		mainFrame.setLayout(null);
-		
-		usernameLabel.setBounds(50, 50, 60, 25);
-		mainFrame.add(usernameLabel);
-		
-		usernameField.setBounds(120, 50, 120, 25);
-		mainFrame.add(usernameField);
-		
-		passwordLabel.setBounds(50, 100, 60, 25);
-		mainFrame.add(passwordLabel);
-		
-		passwordField.setBounds(120, 100, 120, 25);
-		mainFrame.add(passwordField);
-		
-		loginButton.setBounds(100, 150, 60, 25);
-		mainFrame.add(loginButton);
-		
-		mainFrame.setVisible(true);
-	}
-	public void addAction(){
-		loginButton.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent arg0) {
-				String username = usernameField.getText();
-				String password = new String(passwordField.getPassword());
-				try {
-					User user = us.login(username, password);
-					JOptionPane.showMessageDialog(mainFrame,"µÇÂ¼³É¹¦","µÇÂ¼³É¹¦",JOptionPane.INFORMATION_MESSAGE);
-					new MainFrame(user).start();
-					mainFrame.setVisible(false);
-				} catch (LoginFailException e) {
-					JOptionPane.showMessageDialog(mainFrame,e.getMessage(),"µÇÂ¼Ê§°Ü",JOptionPane.ERROR_MESSAGE);
-//					e.printStackTrace();//´òÓ¡´íÎóµÄ¶ÑÕ»ÐÅÏ¢
-				}
-			}
-		});
-	}
-	public void start(){
-		init();
-		addAction();
-		build();
-	}
+    public void init() {
+        mainFrame = new JFrame("ï¿½ï¿½ï¿½Ô±ï¿½ - ï¿½Ã»ï¿½ï¿½ï¿½Â¼");
+        usernameLabel = new JLabel("ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½");
+        usernameField = new JTextField();
+        passwordLabel = new JLabel("ï¿½ï¿½    ï¿½ë£º");
+        passwordField = new JPasswordField();
+        loginButton = new JButton("ï¿½ï¿½Â¼");
+        us = new UserServiceImpl();
+    }
+
+    public void build() {
+        mainFrame.setSize(300, 300);
+        mainFrame.setLocation(500, 100);
+        mainFrame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+        mainFrame.setLayout(null);
+
+        usernameLabel.setBounds(50, 50, 60, 25);
+        mainFrame.add(usernameLabel);
+
+        usernameField.setBounds(120, 50, 120, 25);
+        mainFrame.add(usernameField);
+
+        passwordLabel.setBounds(50, 100, 60, 25);
+        mainFrame.add(passwordLabel);
+
+        passwordField.setBounds(120, 100, 120, 25);
+        mainFrame.add(passwordField);
+
+        loginButton.setBounds(100, 150, 60, 25);
+        mainFrame.add(loginButton);
+
+        mainFrame.setVisible(true);
+    }
+
+    public void addAction() {
+        loginButton.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent arg0) {
+                String username = usernameField.getText();
+                String password = new String(passwordField.getPassword());
+                try {
+                    User user = us.login(username, password);
+                    JOptionPane.showMessageDialog(mainFrame, "ï¿½ï¿½Â¼ï¿½É¹ï¿½", "ï¿½ï¿½Â¼ï¿½É¹ï¿½", JOptionPane.INFORMATION_MESSAGE);
+                    new MainFrame(user).start();
+                    mainFrame.setVisible(false);
+                } catch (LoginFailException e) {
+                    JOptionPane.showMessageDialog(mainFrame, e.getMessage(), "ï¿½ï¿½Â¼Ê§ï¿½ï¿½", JOptionPane.ERROR_MESSAGE);
+//					e.printStackTrace();//ï¿½ï¿½Ó¡ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½Õ»ï¿½ï¿½Ï¢
+                }
+            }
+        });
+    }
+
+    public void start() {
+        init();
+        addAction();
+        build();
+    }
 }

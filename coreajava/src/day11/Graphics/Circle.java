@@ -1,7 +1,7 @@
 package day11.Graphics;
 
 public class Circle extends Graphics {
-    private  Double r;
+    private Double r;
 
     public Circle() {
     }
@@ -20,6 +20,6 @@ public class Circle extends Graphics {
 
     @Override
     public Double area() {
-        return Math.PI*r*r;
+        return Math.PI * r * r;
     }
 }

@@ -1,4 +1,5 @@
 package app20.filecounter;
+
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.concurrent.ExecutionException;
@@ -9,8 +10,8 @@ import java.util.concurrent.Future;
 public class FileCounter {
     public static void main(String[] args) {
         Path[] dirs = {
-            Paths.get("C:/temp"), 
-            Paths.get("C:/temp/data")
+                Paths.get("C:/temp"),
+                Paths.get("C:/temp/data")
         };
 
         ExecutorService executorService =
@@ -28,7 +29,7 @@ public class FileCounter {
             long fileCount = 0L;
             try {
                 fileCount = results[i].get();
-            } catch (InterruptedException | ExecutionException ex){
+            } catch (InterruptedException | ExecutionException ex) {
                 ex.printStackTrace();
             }
             System.out.println(dirs[i] + " contains "

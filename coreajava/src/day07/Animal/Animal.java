@@ -8,18 +8,14 @@ public abstract class Animal {
 
     public Animal(String name) {
         this.name = name;
-        age=1;
+        age = 1;
     }
 
     //方法的同样可以继承
-     public abstract void eat();
+    public abstract void eat();
     /*{
          System.out.println("吃");
      }*/
-
-
-
-
 
 
     public String getName() {

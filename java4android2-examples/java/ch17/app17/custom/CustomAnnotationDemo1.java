@@ -5,11 +5,11 @@ public class CustomAnnotationDemo1 {
         System.out.print(c.getName() + ". ");
         Author author = (Author) c.getAnnotation(Author.class);
         if (author != null) {
-            System.out.println("Author:" + author.firstName() 
+            System.out.println("Author:" + author.firstName()
                     + " " + author.lastName());
         } else {
             System.out.println("Author unknown");
-        }    
+        }
     }
 
     public static void main(String[] args) {

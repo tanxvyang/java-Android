@@ -1,4 +1,5 @@
 package app19;
+
 public class SafeUserStat {
     int userCount;
 

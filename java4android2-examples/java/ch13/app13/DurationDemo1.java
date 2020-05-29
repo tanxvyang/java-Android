@@ -1,9 +1,10 @@
 package app13;
+
 import java.time.Duration;
 import java.time.LocalDateTime;
 
 public class DurationDemo1 {
-    
+
     public static void main(String[] args) {
         LocalDateTime dateTimeA = LocalDateTime
                 .of(2015, 1, 26, 8, 10, 0, 0);
@@ -12,7 +13,7 @@ public class DurationDemo1 {
         Duration duration = Duration.between(
                 dateTimeA, dateTimeB);
         System.out.printf("There are %d hours and %d minutes.%n",
-                duration.toHours(), 
+                duration.toHours(),
                 duration.toMinutes() % 60);
     }
 }

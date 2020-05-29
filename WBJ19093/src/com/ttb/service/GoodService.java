@@ -10,13 +10,13 @@ import com.ttb.exception.MoneyNotEnoughException;
 import com.ttb.exception.StoreNotEnoughException;
 
 public interface GoodService {
-	public List<Good> queryGoodsByGoodName(String goodName);
+    public List<Good> queryGoodsByGoodName(String goodName);
 
-	public void buy(User user, Good good, Integer buyNums) throws StoreNotEnoughException, MoneyNotEnoughException;
+    public void buy(User user, Good good, Integer buyNums) throws StoreNotEnoughException, MoneyNotEnoughException;
 
-	//	1¡¢ÉÏ¼ÜÉÌÆ·£¨ÉÏ¼ÜµÄÊ±ºòÒª¿¼ÂÇµ½´ÓµêÆÌÖÐ¿ÛÈ¡»õ¿î£©
-	public void addGood(Good good) throws GoodAlreadyExistException, MoneyNotEnoughException;
-	
-//	2¡¢ÏÂ¼ÜÉÌÆ·£¨ÍË»Ø»õ¿î£©
-	public void removeGood(Integer gid) throws GoodNotFoundException;
+    //	1ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Ï¼Üµï¿½Ê±ï¿½ï¿½Òªï¿½ï¿½ï¿½Çµï¿½ï¿½Óµï¿½ï¿½ï¿½ï¿½Ð¿ï¿½È¡ï¿½ï¿½ï¿½î£©
+    public void addGood(Good good) throws GoodAlreadyExistException, MoneyNotEnoughException;
+
+    //	2ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½Æ·ï¿½ï¿½ï¿½Ë»Ø»ï¿½ï¿½î£©
+    public void removeGood(Integer gid) throws GoodNotFoundException;
 }

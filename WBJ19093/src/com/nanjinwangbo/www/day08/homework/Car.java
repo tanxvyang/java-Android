@@ -1,7 +1,7 @@
 package com.nanjinwangbo.www.day08.homework;
 
 public class Car {
-    private String merchant ; //商家
+    private String merchant; //商家
     private String owner;//所有者
 
 
@@ -13,8 +13,8 @@ public class Car {
     public Car() {
     }
 
-    public void introduction(){
-        System.out.println("商家:"+getMerchant()+"所有者:"+getOwner());
+    public void introduction() {
+        System.out.println("商家:" + getMerchant() + "所有者:" + getOwner());
     }
 
     public String getMerchant() {

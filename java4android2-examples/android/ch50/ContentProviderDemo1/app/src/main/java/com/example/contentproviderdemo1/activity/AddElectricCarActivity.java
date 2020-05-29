@@ -1,4 +1,5 @@
 package com.example.contentproviderdemo1.activity;
+
 import android.app.Activity;
 import android.content.ContentValues;
 import android.os.Bundle;

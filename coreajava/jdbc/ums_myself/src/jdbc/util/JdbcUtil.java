@@ -11,12 +11,13 @@ import java.util.Properties;
 
 public class JdbcUtil {
     private static Properties config;
+
     static {
-        config=new Properties();
+        config = new Properties();
         try {
             config.load(JdbcUtil.class
-                                .getClassLoader()
-                                .getResourceAsStream("datasource.properties"));
+                    .getClassLoader()
+                    .getResourceAsStream("datasource.properties"));
 
 
             Class.forName(config.getProperty("jdbc.driverClassName"));
@@ -30,13 +31,13 @@ public class JdbcUtil {
     }
 
 
-    public static Connection getConnection(){
-        Connection con=null;
+    public static Connection getConnection() {
+        Connection con = null;
         try {
-            con=DriverManager.getConnection(config.getProperty("jdbc.url"),
-                                            config.getProperty("jdbc.driverClassname"),
-                                            config.getProperty("jdbc.username"),
-                                            config.getProperty("jdbc.password");)
+            con = DriverManager.getConnection(config.getProperty("jdbc.url"),
+                    config.getProperty("jdbc.driverClassname"),
+                    config.getProperty("jdbc.username"),
+                    config.getProperty("jdbc.password");)
 
         } catch (SQLException e) {
             throw new DataAccessException(e);
@@ -44,7 +45,7 @@ public class JdbcUtil {
         return con;
     }
 
-    public static void close(ResultSet rs,Properties ps,Connection con){
+    public static void close(ResultSet rs, Properties ps, Connection con) {
 
 
     }

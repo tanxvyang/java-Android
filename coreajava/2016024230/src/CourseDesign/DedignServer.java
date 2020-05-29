@@ -31,7 +31,7 @@ public class DedignServer {
          * 持续接收客户端发来的信息，并交给线程处理
          */
 
-        while(true) {
+        while (true) {
 
             Socket socket = ss.accept();
 
@@ -40,12 +40,10 @@ public class DedignServer {
         }
     }
 }
-class UpLoad implements Runnable{
+
+class UpLoad implements Runnable {
 
     private Socket socket = null;
-
-
-
 
 
     public UpLoad(Socket socket) {
@@ -58,11 +56,11 @@ class UpLoad implements Runnable{
 
 
         FileOutputStream out = null;
-        PrintWriter pw=null;
-        BufferedReader br=null;
-        OutputStream outputStream=null;
+        PrintWriter pw = null;
+        BufferedReader br = null;
+        OutputStream outputStream = null;
 
-            int i=1;
+        int i = 1;
         try {
 
 //         加阻塞,当访问者是aaa时,sleep
@@ -85,21 +83,16 @@ class UpLoad implements Runnable{
 //
 
 
-
-
-
-
-            System.out.println(socket.getInetAddress().getHostAddress()+"已连接");//打印访问地址
-            outputStream=socket.getOutputStream();
-            pw=new PrintWriter(outputStream);
-            pw.println("你是第"+i+"个访问者,你的IP是:"+socket.getInetAddress());//发送数据
+            System.out.println(socket.getInetAddress().getHostAddress() + "已连接");//打印访问地址
+            outputStream = socket.getOutputStream();
+            pw = new PrintWriter(outputStream);
+            pw.println("你是第" + i + "个访问者,你的IP是:" + socket.getInetAddress());//发送数据
             pw.flush();
             i++;
 
             // 创建文件输入流，接收客户端的socket中的文件流
 
             InputStream in = socket.getInputStream();
-
 
 
             /**
@@ -111,7 +104,7 @@ class UpLoad implements Runnable{
              */
             String line1 = "";
             byte[] by1 = new byte[1];
-            while(!line1.endsWith("\r\n")) {
+            while (!line1.endsWith("\r\n")) {
                 in.read(by1);
                 String str = new String(by1);
                 line1 += str;
@@ -135,7 +128,7 @@ class UpLoad implements Runnable{
             // 获取文件内容字节长度
             String line2 = "";
             byte[] by2 = new byte[1];
-            while(!line2.endsWith("\r\n")) {
+            while (!line2.endsWith("\r\n")) {
                 in.read(by2);
                 String str = new String(by2);
                 line2 += str;
@@ -151,19 +144,18 @@ class UpLoad implements Runnable{
             in.read(by3);
             out.write(by3);
 
-            System.out.println("接收到来自"+socket.getInetAddress().getHostAddress()+"上传的文件,保存位置:"+path);
+            System.out.println("接收到来自" + socket.getInetAddress().getHostAddress() + "上传的文件,保存位置:" + path);
 
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             // 关闭资源
 
 
-
-            if (pw!=null){
+            if (pw != null) {
                 pw.close();
             }
-            if (outputStream!=null){
+            if (outputStream != null) {
                 try {
                     outputStream.close();
                 } catch (IOException e) {
@@ -173,20 +165,21 @@ class UpLoad implements Runnable{
 
             // 关闭输出流
 
-                if(out != null) {
-                    try {
-                        out.close();
-                    } catch (Exception e) {
-                        e.printStackTrace();
-            }}
+            if (out != null) {
+                try {
+                    out.close();
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
             // 关闭socket
-           if (socket!=null){
-               try {
-                   socket.close();
-               } catch (IOException e) {
+            if (socket != null) {
+                try {
+                    socket.close();
+                } catch (IOException e) {
 
-               }
-           }
+                }
+            }
         }
     }
 

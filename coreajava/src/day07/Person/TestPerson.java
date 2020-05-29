@@ -5,13 +5,13 @@ public class TestPerson {
         // Person b=new Boby("boby");
         // b.move();
 
-        Person p=new Person("ppp");
+        Person p = new Person("ppp");
 
-        Plain plain=new Plain();
+        Plain plain = new Plain();
 
         p.move(plain);
 
-        Train train=new Train();
+        Train train = new Train();
 
         p.move(train);
 
@@ -19,8 +19,8 @@ public class TestPerson {
         //-----------------------------------
 
 
-        Transport t =new Train();
-         // Transport t=new Transport() ; //抽象类是不能实例化的
+        Transport t = new Train();
+        // Transport t=new Transport() ; //抽象类是不能实例化的
 
 
     }

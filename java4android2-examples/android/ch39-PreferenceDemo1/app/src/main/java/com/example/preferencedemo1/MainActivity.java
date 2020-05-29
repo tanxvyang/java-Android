@@ -1,4 +1,5 @@
 package com.example.preferencedemo1;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;

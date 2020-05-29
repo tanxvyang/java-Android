@@ -1,4 +1,5 @@
 package app19;
+
 public class UserStat {
     int userCount;
 

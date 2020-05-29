@@ -42,6 +42,7 @@ public class MainActivity extends Activity {
         this.unregisterReceiver(receiver);
         super.onPause();
     }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);

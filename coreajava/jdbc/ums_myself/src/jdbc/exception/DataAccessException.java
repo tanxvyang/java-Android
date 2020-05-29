@@ -1,10 +1,11 @@
 package jdbc.exception;
+
 /**
  * 数据访问失败异常
- * @author 谭旭洋
  *
+ * @author 谭旭洋
  */
-public class DataAccessException extends RuntimeException{
+public class DataAccessException extends RuntimeException {
     public DataAccessException() {
     }
 

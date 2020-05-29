@@ -2,9 +2,9 @@ package day03;
 
 import java.util.Scanner;
 
-//Çó100ÒÔÄÚµÄËùÓÐÖÊÊý
+//ï¿½ï¿½100ï¿½ï¿½ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 public class Test10 {
-  public static void main(String[] args) {
+    public static void main(String[] args) {
 	/* for (int i=2;i<100;i++){
 		 boolean b=true;
 		 for (int j=2;j<i;j++){
@@ -22,43 +22,41 @@ public class Test10 {
 	 }
 */
 
-	  
-		Scanner sc=new Scanner(System.in);
-		int score;
-		
-		do{
-			System.out.println("ÇëÊäÈë³É¼¨£º");
-			 score = sc.nextInt();
-			
-		}while(score<0||score>100);
-		
-		
-		
-		//Èç¹ûÊäÈë·ÖÊý²»ºÏ·¨£»·ÖÊýÎÞÐ§£¬ÌáÊ¾£¬²¢Í£Ö¹³ÌÐò
+
+        Scanner sc = new Scanner(System.in);
+        int score;
+
+        do {
+            System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½É¼ï¿½ï¿½ï¿½");
+            score = sc.nextInt();
+
+        } while (score < 0 || score > 100);
+
+
+        //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Í£Ö¹ï¿½ï¿½ï¿½ï¿½
 	/*  int score=sc.nextInt() 
 	 * 
 	 * while(score<0||score>100){
-			System.out.println("·ÖÊýÎÞÐ§ £¡");
-		  //return;      //³ÌÐòÍ£Ö¹
-			System.exit(0);//  Í£Ö¹ÐéÄâ»ú
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð§ ï¿½ï¿½");
+		  //return;      //ï¿½ï¿½ï¿½ï¿½Í£Ö¹
+			System.exit(0);//  Í£Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½
 		} 
 		*/
-		System.out.println(score);
-		char lv;
-		if(score>=90){
-			lv='A';
-		}else if(score>=80){
-			lv='B';
-		}else if(score>=70){
-			lv='C';
-		}else if(score>=60){
-			lv='D';
-		}else{
-			lv='E';
-		}
-		System.out.println(lv);
- 
-	  
-	  
-}
+        System.out.println(score);
+        char lv;
+        if (score >= 90) {
+            lv = 'A';
+        } else if (score >= 80) {
+            lv = 'B';
+        } else if (score >= 70) {
+            lv = 'C';
+        } else if (score >= 60) {
+            lv = 'D';
+        } else {
+            lv = 'E';
+        }
+        System.out.println(lv);
+
+
+    }
 }
